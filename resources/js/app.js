@@ -1,0 +1,2 @@
+// AlpineJs
+import 'alpinejs';
