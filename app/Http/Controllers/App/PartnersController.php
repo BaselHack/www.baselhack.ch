@@ -20,7 +20,7 @@ class PartnersController extends Controller
             ->whereType(Company::COMPANY_TYPE_PARTNER)
             ->orderBy('name', 'asc')->get();
 
-        return view('app.section.index')->with([
+        return view('app.partners.index')->with([
             'page' => $page,
             'title' => $section->title,
             'teaser' => $section->teaser,
