@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Panel;
 
@@ -15,7 +16,7 @@ class Section extends Resource
 
     public static $title = 'title';
 
-    public static $search = ['title','body'];
+    public static $search = ['title', 'teaser', 'body'];
 
     public static function label()
     {
@@ -37,36 +38,22 @@ class Section extends Resource
     {
         return [
 
-            Text::make('Key','key')
+            Text::make('Key', 'key')
+                ->readonly(),
+
+            Text::make('Title', 'title')
                 ->sortable()
-                ->rules('required', 'string','max:254','unique:sections,key'),
+                ->rules('required', 'string', 'max:100'),
 
-            Text::make('Title','title')
+            Text::make('Teaser', 'teaser')
                 ->sortable()
-                ->rules('required','string','max:254'),
+                ->rules('nullable', 'string', 'max:160'),
 
-            Text::make('URL','url')
-                ->hideFromIndex()
-                ->rules('required', 'url','max:254'),
-
-
-            new Panel('Image', $this->image()),
+            Markdown::make('Body', 'body')
+                ->sortable()
+                ->rules('nullable', 'string', 'max:4500'),
         ];
 
-    }
-
-
-    protected function image()
-    {
-        return [
-            Image::make('Image', 'image')
-                ->disk('public')
-                ->path('companies')
-                ->hideFromIndex()
-                ->rules('dimensions:ratio=2/1')
-                ->creationRules('nullable', 'image', 'max:254')
-                ->updateRules('nullable', 'image', 'max:254'),
-        ];
     }
 
 }

@@ -10,8 +10,10 @@ use App\Models\Password;
 use App\Models\Position;
 use App\Models\Post;
 use App\Models\User;
+use App\Observers\ChannelObserver;
 use App\Observers\CompanyObserver;
 use App\Observers\NewsletterObserver;
+use App\Observers\PageObserver;
 use App\Observers\PasswordObserver;
 use App\Observers\PositionObserver;
 use App\Observers\PostObserver;
@@ -37,10 +39,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Channel::observe(Channel);
+        Channel::observe(ChannelObserver::class);
         Company::observe(CompanyObserver::class);
         Newsletter::observe(NewsletterObserver::class);
-        Page::observe();
+        Page::observe(PageObserver::class);
         Password::observe(PasswordObserver::class);
         Position::observe(PositionObserver::class);
         Post::observe(PostObserver::class);
