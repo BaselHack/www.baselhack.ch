@@ -7,7 +7,7 @@
 
     <x-page :title="$title" :teaser="$teaser">
         <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
-            <div class="pt-10 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
+            <div class="grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
                 @foreach($posts as $post)
                     <div>
                         <p class="text-sm leading-5 text-gray-500">
