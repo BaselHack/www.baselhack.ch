@@ -8,7 +8,7 @@ use Laravel\Nova\Fields\Textarea;
 
 class Page extends Resource
 {
-    public static $group = 'SEO';
+    public static $group = 'Marketing';
 
     public static $model = '\App\Models\Page';
 
