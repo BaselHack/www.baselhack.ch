@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Listeners\LastAuthenticated;
-use Illuminate\Auth\Events\Login;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
 class EventServiceProvider extends ServiceProvider
@@ -13,12 +11,8 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array
      */
-    
-    protected $listen = [
-        Login::class => [
-            LastAuthenticated::class
-        ],
-    ];
+
+    protected $listen = [];
 
     /**
      * Register any events for your application.

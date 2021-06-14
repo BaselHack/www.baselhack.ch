@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 
-class Post extends Model
+class Post extends Model implements Sitemapable
 {
     use HasFactory, SoftDeletes;
 
@@ -32,5 +33,10 @@ class Post extends Model
     public function scopePublished(Builder $builder)
     {
         return $builder->whereNotNull('published_at')->whereDate('published_at', '<=', Carbon::now()->toDateString());
+    }
+
+    public function toSitemapTag(): Url|string|array
+    {
+        return route('posts.show', $this);
     }
 }

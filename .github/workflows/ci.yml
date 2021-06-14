@@ -9,9 +9,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]
-        php: [8.0]
-        node: [14]
+        os: [ ubuntu-latest ]
+        php: [ 8.0 ]
+        node: [ 14 ]
 
     steps:
       - name: Checkout code
@@ -47,8 +47,6 @@ jobs:
           restore-keys: ${{ runner.os }}-composer-
       - name: Install Composer dependencies
         run: composer install -q --no-progress --prefer-dist --no-interaction --no-suggest --optimize-autoloader --no-scripts
-      - name: Codacy setup
-        run: export CODACY_PROJECT_TOKEN=${{ secrets.CODACY }}
 
       # Prepare backend
       - name: Create Database
