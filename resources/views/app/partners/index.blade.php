@@ -4,10 +4,9 @@
 @section('content')
 
     <x-page :title="$title" :teaser="$teaser">
-
         @if(!empty($partners) and $partners->count())
             <div class="mb-12">
-                <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
+                <div class="grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
                     @foreach($partners as $partner)
 
                         <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
@@ -24,7 +23,6 @@
                 </div>
             </div>
         @endif
-
         <div class="prose prose-lg">
             {!! $body !!}
         </div>

@@ -3,19 +3,9 @@
 
 @section('content')
 
-    <x-page :title="$positions" :teaser="$teaser">
+    <x-page :title="$title" :teaser="$teaser">
         @if(!empty($positions) and $positions->count())
 
-            <div class="text-left">
-                <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-                    {{ __('app/positions.title') }}
-                </h3>
-                <p class="mt-4 text-xl leading-7 text-gray-500">
-                    {{ __('app/positions.subtitle') }}
-                </p>
-            </div>
-
-            <div class="mt-8">
                 <div class="flex flex-col">
                     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -85,7 +75,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         @endif
     </x-page>
 
