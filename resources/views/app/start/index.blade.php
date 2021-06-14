@@ -1,4 +1,4 @@
-@extends('app.layouts.app')
+@extends('app.layouts.default')
 
 @section('content')
 
@@ -67,12 +67,9 @@
                         </div>
 
                     @endforeach
-
                 </div>
             </div>
         </div>
-
     </div>
-
 
 @endsection
