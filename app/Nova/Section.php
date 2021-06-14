@@ -3,10 +3,8 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Panel;
 
 class Section extends Resource
 {

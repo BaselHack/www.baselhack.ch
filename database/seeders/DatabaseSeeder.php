@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ChannelsTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(SectionsTableSeeder::class);
+
+        Post::factory(10)->published()->create();
     }
 }
