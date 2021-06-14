@@ -2,18 +2,14 @@
 
 namespace App\Providers;
 
-use App\Models\Channel;
 use App\Models\Company;
 use App\Models\Newsletter;
-use App\Models\Page;
 use App\Models\Password;
 use App\Models\Position;
 use App\Models\Post;
 use App\Models\User;
-use App\Observers\ChannelObserver;
 use App\Observers\CompanyObserver;
 use App\Observers\NewsletterObserver;
-use App\Observers\PageObserver;
 use App\Observers\PasswordObserver;
 use App\Observers\PositionObserver;
 use App\Observers\PostObserver;
@@ -41,7 +37,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Company::observe(CompanyObserver::class);
         Newsletter::observe(NewsletterObserver::class);
-        Page::observe(PageObserver::class);
         Password::observe(PasswordObserver::class);
         Position::observe(PositionObserver::class);
         Post::observe(PostObserver::class);

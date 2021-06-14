@@ -15,11 +15,10 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->uuid('uuid')->unique();
             $table->string('index');
             $table->string('robots')->nullable();
             $table->string('title');
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
             $table->softDeletes();

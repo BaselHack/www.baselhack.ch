@@ -75,7 +75,7 @@ class User extends Resource
     {
         return [
 
-            Boolean::make('Published','profile_published')
+            Boolean::make('Profile Published','profile_published')
                 ->sortable()
                 ->rules('required', 'boolean'),
 

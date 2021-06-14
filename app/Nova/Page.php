@@ -14,7 +14,7 @@ class Page extends Resource
 
     public static $title = 'index';
 
-    public static $search = ['index','title'];
+    public static $search = ['index', 'title'];
 
     public static function label()
     {
@@ -35,18 +35,16 @@ class Page extends Resource
     {
         return [
 
-            Text::make('Index','index')
+            Text::make('Index', 'index')
                 ->sortable()
-                ->rules('required', 'max:254')
-                ->creationRules('unique:pages,index')
-                ->updateRules('unique:pages,index,{{resourceId}}'),
+                ->readonly(),
 
-            Text::make('Title','title')
+            Text::make('Title', 'title')
                 ->sortable()
-                ->rules('required', 'max:254'),
+                ->rules('required', 'string', 'max:100'),
 
-            Textarea::make('Description','description')->alwaysShow()
-                ->rules('required', 'max:254'),
+            Textarea::make('Description', 'description')->alwaysShow()
+                ->rules('required', 'max:180'),
 
         ];
     }

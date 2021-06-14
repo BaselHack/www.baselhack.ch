@@ -23,7 +23,7 @@ class PagePolicy
 
     public function create(User $user)
     {
-        return true;
+        return false;
     }
 
     public function update(User $user, Page $page)
@@ -33,7 +33,7 @@ class PagePolicy
 
     public function delete(User $user, Page $page)
     {
-        return true;
+        return false;
     }
 
     public function restore(User $user, Page $page)
