@@ -6,52 +6,7 @@ on:
       - production
 
 jobs:
-  assets:
-    runs-on: ubuntu-latest
-    name: production | assets
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.0'
-          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
-
-      - name: Apply Nova license
-        run: composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_API_PASSWORD }}
-
-      - name: Install Composer dependencies
-        run: composer install --prefer-dist --no-interaction --no-suggest
-
-      - name: Prepare the environment
-        run: cp .env.ci .env
-
-      - name: Generate app key
-        run: php artisan key:generate
-
-      - name: Install assets
-        run: npm install
-
-      - name: Publish Nova Assets
-        run: php artisan nova:publish
-
-      - name: Set output
-        id: vars
-        run: echo ::set-output name=short_ref::${GITHUB_REF#refs/*/}
-
-      - name: publish production assets
-        env:
-          APP_ENV: ${{ steps.vars.outputs.short_ref }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_PRODUCTION_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_PRODUCTION_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_PRODUCTION_DEFAULT_REGION }}
-          AWS_BUCKET: ${{ secrets.AWS_PRODUCTION_BUCKET }}
-        run: php artisan lasso:publish --no-git
-
   deploy:
-    needs: assets
     runs-on: ubuntu-latest
     name: production | deploy
     steps:

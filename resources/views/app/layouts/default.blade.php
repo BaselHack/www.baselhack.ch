@@ -7,7 +7,9 @@
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
     @include('app.layouts.partials._meta')
     @include('app.layouts.partials._favicon')
-    <link href="{{ mix('css/styles.css') }}" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
+
     @yield('styles')
 </head>
 
@@ -17,13 +19,15 @@
     @include('app.layouts.partials._flash')
     @include('app.layouts.partials._navigation')
     <div class="max-w-screen-xl mx-auto">
-    @yield('content')
+        @yield('content')
     </div>
     @include('app.layouts.partials._newsletter')
     @include('app.layouts.partials._footer')
 </div>
 
-<script src="{{ mix('js/app.js')}}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
+        integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 @if(app()->environment('production'))
     <script src="https://dragonfly.codebar.ch/script.js" site="VIJIXWCP" defer></script>

@@ -20,7 +20,7 @@ class SponsorsController extends Controller
             ->whereType(Company::COMPANY_TYPE_SPONSOR)
             ->orderBy('name', 'asc')->get();
 
-        return view('app.section.index')->with([
+        return view('app.sponsors.index')->with([
             'page' => $page,
             'title' => $section->title,
             'teaser' => $section->teaser,
