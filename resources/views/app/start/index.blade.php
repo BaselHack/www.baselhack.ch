@@ -9,7 +9,7 @@
                  alt="{{ config('app.name') }}">
             <div class="max-w-2xl mx-auto">
                 <h1 class="text-2xl tracking-tight font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                    <span class="block xl:inline">We are more than a Hackathon. We connect people , take fun seriously and grow open innovation.</span>
+                    <span class="block xl:inline">We are more than a Hackathon. We connect people, take fun seriously and grow open innovation.</span>
                 </h1>
             </div>
 
