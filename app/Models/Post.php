@@ -11,10 +11,9 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Post extends Model
 {
-    use HasFactory, LogsActivity, SoftDeletes;
+    use HasFactory, SoftDeletes;
 
-    protected $guraded = [''];
-    protected static $logAttributes = ['published_at', 'title', 'slug', 'teaser', 'body'];
+    protected $guraded = [];
 
     protected $casts = [
         'published_at' => 'date',
@@ -29,7 +28,6 @@ class Post extends Model
     {
         return $this->belongsTo(User::class, 'created_by');
     }
-
 
     public function scopePublished(Builder $builder)
     {

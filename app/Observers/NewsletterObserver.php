@@ -15,8 +15,8 @@ class NewsletterObserver
      */
     public function creating(Newsletter $newsletter)
     {
-        $newsletter->uuid = Str::uuid();
+        $newsletter->uuid = Str::orderedUuid()->toString();
     }
 
-  
+
 }

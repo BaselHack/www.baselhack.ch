@@ -15,6 +15,7 @@ class CreateChannelsTable extends Migration
     {
         Schema::create('channels', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('uuid');
             $table->boolean('published')->default(false);
             $table->string('name');
             $table->string('icon');

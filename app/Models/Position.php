@@ -9,11 +9,9 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Position extends Model
 {
-    use HasFactory, LogsActivity, SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $guraded = [];
-
-    protected static $logAttributes = ['published_at','title','body'];
 
     protected $casts = [
         'published_at' => 'date',

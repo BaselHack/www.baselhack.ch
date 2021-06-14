@@ -15,7 +15,7 @@ class PostObserver
      */
     public function creating(Post $post)
     {
-        $post->uuid = Str::uuid();
+        $post->uuid = Str::orderedUuid()->toString();
     }
 
 

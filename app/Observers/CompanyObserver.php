@@ -15,8 +15,8 @@ class CompanyObserver
      */
     public function creating(Company $company)
     {
-        $company->uuid = Str::uuid();
+        $company->uuid = Str::orderedUuid()->toString();
     }
 
-  
+
 }

@@ -8,10 +8,9 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Newsletter extends Model
 {
-    use LogsActivity, SoftDeletes;
+    use SoftDeletes;
 
-    protected $guarded = [''];
-    protected static $logAttributes = ['company','firstname','lastname','email'];
+    protected $guarded = [];
 
     public function getRouteKeyName()
     {

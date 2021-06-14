@@ -6,24 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Spatie\Activitylog\Traits\LogsActivity;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, LogsActivity, SoftDeletes;
+    use HasFactory, Notifiable, SoftDeletes;
 
-    protected $guarded = [''];
-    protected static $logAttributes = [
-        'name',
-        'email',
-        'password',
-        'profile_published',
-        'profile_gravatar',
-        'profile_website',
-        'profile_github',
-        'profile_twitter',
-        'profile_linkedin',
-    ];
+    protected $guarded = [];
+
 
     protected $hidden = [
         'password', 'remember_token',
@@ -43,7 +32,7 @@ class User extends Authenticatable
         }
 
         return asset('images/placeholders/profile.png');
-        
+
     }
 
 

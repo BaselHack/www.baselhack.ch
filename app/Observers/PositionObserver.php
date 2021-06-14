@@ -15,8 +15,8 @@ class PositionObserver
      */
     public function creating(Position $position)
     {
-        $position->uuid = Str::uuid();
+        $position->uuid = Str::orderedUuid()->toString();
     }
 
-  
+
 }

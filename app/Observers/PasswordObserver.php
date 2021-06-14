@@ -16,9 +16,9 @@ class PasswordObserver
      */
     public function creating(Password $password)
     {
-        $password->uuid = Str::uuid();
-    
+        $password->uuid = Str::orderedUuid()->toString();
+
     }
 
-  
+
 }

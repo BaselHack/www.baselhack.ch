@@ -8,15 +8,13 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Password extends Model
 {
-    use LogsActivity, SoftDeletes;
+    use SoftDeletes;
 
-    protected $guarded = [''];
+    protected $guarded = [];
 
     protected $hidden = [
         'password',
     ];
-
-    protected static $logAttributes = ['name', 'username','password','url'];
 
     public function getRouteKeyName()
     {

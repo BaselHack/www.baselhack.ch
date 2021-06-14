@@ -9,10 +9,9 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Page extends Model
 {
-    use HasFactory, LogsActivity, SoftDeletes;
+    use HasFactory, SoftDeletes;
 
-    protected $guraded = [''];
-    protected static $logAttributes = ['index', 'robots','title','description','image'];
+    protected $guraded = [];
 
     public function getImage()
     {

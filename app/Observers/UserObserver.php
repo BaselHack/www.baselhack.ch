@@ -15,8 +15,8 @@ class UserObserver
      */
     public function creating(User $user)
     {
-        $user->uuid = Str::uuid();
+        $user->uuid = Str::orderedUuid()->toString();
     }
 
-  
+
 }

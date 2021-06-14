@@ -10,11 +10,9 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Channel extends Model
 {
-    use HasFactory, IsPublishable, LogsActivity, SoftDeletes;
+    use HasFactory, IsPublishable,SoftDeletes;
 
-    protected $guarded = [''];
-
-    protected static $logAttributes = ['published', 'name','icon','url'];
+    protected $guarded = [];
 
     public function getRouteKeyName()
     {
