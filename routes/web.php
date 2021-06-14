@@ -10,12 +10,15 @@ use App\Http\Controllers\App\SponsorsController;
 use App\Http\Controllers\App\ContactController;
 use App\Http\Controllers\App\NewsletterController;
 use App\Http\Controllers\App\PositionsController;
+use App\Http\Controllers\App\PrivacyController;
+use App\Http\Controllers\App\TermsController;
 
 use Spatie\Honeypot\ProtectAgainstSpam;
 
 Route::get('/', [StartController::class, 'index'])->name('start.index');
 
-Route::get('/posts/{post}', [PostsController::class, 'show'])->name('posts.show');
+Route::get('/blog', [PostsController::class, 'index'])->name('posts.index');
+Route::get('/blog/{post}', [PostsController::class, 'show'])->name('posts.show');
 
 Route::get('/team', [TeamController::class, 'index'])->name('team.index');
 
@@ -27,5 +30,8 @@ Route::get('/positions', [PositionsController::class, 'index'])->name('positions
 Route::get('/positions/{position}', [PositionsController::class, 'show'])->name('positions.show');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+
+Route::get('/privacy', [PrivacyController::class, 'index'])->name('privacy.index');
+Route::get('/terms', [TermsController::class, 'index'])->name('terms.index');
 
 Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store')->middleware(ProtectAgainstSpam::class);

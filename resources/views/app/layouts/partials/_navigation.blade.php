@@ -28,45 +28,42 @@
 
                         <a href="{{ route('start.index')}}"
                            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                            {{ __('app/start.navigation') }}
+                            {{ __('app/layouts.start') }}
+                        </a>
+
+                        <a href="{{ route('posts.index')}}"
+                           class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                            {{ __('app/layouts.posts') }}
                         </a>
 
                         <a href="{{ route('team.index')}}"
                            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                            {{ __('app/team.navigation') }}
+                            {{ __('app/layouts.team') }}
                         </a>
 
                         <a href="{{ route('sponsors.index')}}"
                            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                            {{ __('app/sponsors.navigation') }}
+                            {{ __('app/layouts.sponsors') }}
                         </a>
 
                         <a href="{{ route('partners.index')}}"
                            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                            {{ __('app/partners.navigation') }}
+                            {{ __('app/layouts.partners') }}
                         </a>
 
                         <a href="{{ route('positions.index')}}"
                            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                            {{ __('app/positions.navigation') }}
+                            {{ __('app/layouts.positions') }}
                         </a>
 
                         <a href="{{ route('contact.index')}}"
                            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
-                            {{ __('app/contact.navigation') }}
+                            {{ __('app/layouts.contact') }}
                         </a>
 
 
                     </nav>
-                    <div class="flex items-center space-x-8">
 
-          <span class="inline-flex rounded-md shadow-sm">
-            <a target="_blank" href="{{ config('baselhack.sign_up_url') }}"
-               class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:border-gray-700 focus:shadow-outline-gray active:bg-gray-700 transition ease-in-out duration-150">
-              {{ __('app/laoutys.sign_up') }}
-            </a>
-          </span>
-                    </div>
                 </div>
 
               <!--

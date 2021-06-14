@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Traits\HasPublished;
+use App\Traits\IsPublishable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -14,7 +14,7 @@ class Company extends Model
     const COMPANY_TYPE_SPONSOR = 'sponsor';
     const COMPANY_TYPE_PARTNER = 'partner';
 
-    use HasFactory, HasPublished, LogsActivity, SoftDeletes;
+    use HasFactory, IsPublishable, LogsActivity, SoftDeletes;
 
     protected $guarded = [''];
     protected static $logAttributes = ['published', 'type','name','image','url'];

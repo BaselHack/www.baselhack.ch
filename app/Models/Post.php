@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -12,7 +14,7 @@ class Post extends Model
     use HasFactory, LogsActivity, SoftDeletes;
 
     protected $guraded = [''];
-    protected static $logAttributes = ['published_at', 'title','slug','teaser','body'];
+    protected static $logAttributes = ['published_at', 'title', 'slug', 'teaser', 'body'];
 
     protected $casts = [
         'published_at' => 'date',
@@ -25,7 +27,12 @@ class Post extends Model
 
     public function author()
     {
-        return $this->belongsTo(User::class,'created_by');
+        return $this->belongsTo(User::class, 'created_by');
     }
 
+
+    public function scopePublished(Builder $builder)
+    {
+        return $builder->whereNotNull('published_at')->whereDate('published_at', '<=', Carbon::now()->toDateString());
+    }
 }

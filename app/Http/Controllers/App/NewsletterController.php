@@ -14,8 +14,6 @@ class NewsletterController extends Controller
 
         flash(__('app/newsletter.notification.success.description'));
 
-
-
         return back();
     }
 }

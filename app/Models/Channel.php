@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Traits\HasPublished;
+use App\Traits\IsPublishable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -10,7 +10,7 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 class Channel extends Model
 {
-    use HasFactory, HasPublished, LogsActivity, SoftDeletes;
+    use HasFactory, IsPublishable, LogsActivity, SoftDeletes;
 
     protected $guarded = [''];
 

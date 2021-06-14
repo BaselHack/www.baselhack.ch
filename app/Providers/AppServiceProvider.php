@@ -39,7 +39,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Channel::observe(ChannelObserver::class);
         Company::observe(CompanyObserver::class);
         Newsletter::observe(NewsletterObserver::class);
         Page::observe(PageObserver::class);

@@ -16,7 +16,9 @@
 <div>
     @include('app.layouts.partials._flash')
     @include('app.layouts.partials._navigation')
+    <div class="max-w-screen-xl mx-auto">
     @yield('content')
+    </div>
     @include('app.layouts.partials._newsletter')
     @include('app.layouts.partials._footer')
 </div>
