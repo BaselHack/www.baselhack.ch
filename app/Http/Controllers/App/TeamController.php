@@ -14,9 +14,10 @@ class TeamController extends Controller
     {
         $page = Page::whereIndex('team:index')->first();
         $section = Section::where('key', 'team')->firstOrFail();
+
         $teams = User::whereProfilePublished(true)->orderBy('name')->get();
 
-        return view('app.section.index')->with([
+        return view('app.team.index')->with([
             'page' => $page,
             'title' => $section->title,
             'teaser' => $section->teaser,
