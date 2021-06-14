@@ -17,10 +17,10 @@
 
                                         </th>
                                         <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                            {{ __('app/positions.table.position') }}
+                                            Position
                                         </th>
                                         <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
-                                            {{ __('app/positions.table.published_at') }}
+                                            Published at
                                         </th>
                                         <th class="px-6 py-3 bg-gray-50"></th>
                                     </tr>
@@ -62,7 +62,7 @@
                                             <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
                                                 <a href="{{ route('positions.show', $position) }}"
                                                    class="text-black-600 hover:text-black-900">
-                                                    {{ __('app/positions.table.button') }}
+                                                    Show
                                                 </a>
                                             </td>
                                         </tr>
