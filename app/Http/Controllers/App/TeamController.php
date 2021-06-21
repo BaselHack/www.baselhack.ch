@@ -15,7 +15,8 @@ class TeamController extends Controller
         $page = Page::whereIndex('team:index')->first();
         $section = Section::where('key', 'team')->firstOrFail();
 
-        $teams = User::whereProfilePublished(true)->orderBy('name')->get();
+        $teams = User::active()->orderBy('name')->get();
+        $alumni = User::alumni(true)->orderBy('name')->get();
 
         return view('app.team.index')->with([
             'page' => $page,
@@ -23,6 +24,7 @@ class TeamController extends Controller
             'teaser' => $section->teaser,
             'body' => Str::of($section->body)->markdown(),
             'teams' => $teams,
+            'alumni' => $alumni,
         ]);
     }
 }

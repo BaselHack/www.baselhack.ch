@@ -25,16 +25,25 @@ class User extends Authenticatable
 
     public function getProfileImage()
     {
-        if($this->profile_gravatar)
-        {
+        if ($this->profile_gravatar) {
             $hash = md5(strtolower(trim($this->profile_gravatar)));
-            return 'https://www.gravatar.com/avatar/'.$hash.'?s=500&d=mp';
+            return 'https://www.gravatar.com/avatar/' . $hash . '?s=500&d=mp';
         }
 
         return asset('images/placeholders/profile.png');
 
     }
 
+    public function scopeActive($query)
+    {
+        return $query->where('profile_published', true);
+    }
+
+
+    public function scopeAlumni($query)
+    {
+        return $query->withTrashed()->whereNotNull('deleted_at')->where('profile_published', true);
+    }
 
 
 }
