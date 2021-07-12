@@ -13,7 +13,7 @@ class StartController extends Controller
     public function index()
     {
         $page = Page::whereIndex('start:index')->first();
-        $posts = Post::whereNotNull('published_at')->orderBy('published_at','desc')->get();
-        return view('app.start.index', compact('page','posts'));
+        $post = Post::whereNotNull('published_at')->orderBy('published_at','desc')->first();
+        return view('app.start.index', compact('page','post'));
     }
 }
