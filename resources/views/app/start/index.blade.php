@@ -30,7 +30,7 @@
 
        @if(!empty($post))
             <div class="mt-12">
-                <div class="relative max-w-3xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16  rounded-lg bg-gray-400">
+                <div class="relative max-w-3xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16  rounded-lg bg-gray-400 text-center">
                     <div class="">
                         <h2 class="text-base font-semibold uppercase tracking-wider text-gray-50">
                             {{ $post->published_at?->diffForHumans() }}
