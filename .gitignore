@@ -21,3 +21,7 @@ docker-compose.override.yml
 /public/js
 /public/css
 /public/sitemap.xml
+/nova/
+/_docs/
+.DS_Store
+
