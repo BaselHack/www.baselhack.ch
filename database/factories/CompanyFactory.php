@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\CompanyTypeEnum;
 use App\Models\Company;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -53,7 +54,21 @@ class CompanyFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'type' => Company::COMPANY_TYPE_PARTNER,
+                'type' => CompanyTypeEnum::PARTNER()->value
+            ];
+        });
+    }
+
+    /**
+     * Indicate that the user is suspended.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function sponsorMain()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'type' => CompanyTypeEnum::SPONSOR_MAIN()->value
             ];
         });
     }
@@ -67,7 +82,7 @@ class CompanyFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'type' => Company::COMPANY_TYPE_SPONSOR,
+                'type' => CompanyTypeEnum::SPONSOR()->value
             ];
         });
     }
