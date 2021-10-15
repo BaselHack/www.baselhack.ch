@@ -9,6 +9,7 @@
     @include('app.layouts.partials._favicon')
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
 
     @yield('styles')
 </head>
