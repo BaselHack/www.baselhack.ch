@@ -5,8 +5,13 @@
     <main class="mx-auto max-w-7xl px-4">
         <div class="text-center">
 
-            <img class="w-1/4 mx-auto" src="{{ asset('images/app/logos/baselhack_color.svg') }}"
-                 alt="{{ config('app.name') }}">
+            <div class="flex justify-center my-12">
+                <div>
+                    <iframe src="https://player.vimeo.com/video/633003007?h=67fce8f4ff" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+
             <div class="max-w-2xl mx-auto">
                 <h1 class="text-xl tracking-tight text-gray-900 font-bold sm:text-2xl md:text-3xl">
                     BaselHack &mdash; 11. & 12. September 2021
