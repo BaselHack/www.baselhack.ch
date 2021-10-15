@@ -6,7 +6,7 @@
             <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
                 <div>
                     <a href="{{ route('start.index') }}" class="flex">
-                        <img class="h-12 w-auto sm:h-12" src="{{ asset('images/app/logos/baselhack_black.svg') }}"
+                        <img class="h-12 w-auto sm:h-12" src="{{ asset('images/app/logos/baselhack_color.svg') }}"
                              alt="{{ config('app.name') }}">
                     </a>
                 </div>

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\BrandSocialMediaTypeEnum;
+use App\Enums\CompanyTypeEnum;
 use App\Traits\IsPublishable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -10,12 +12,13 @@ use Illuminate\Support\Facades\Storage;
 
 class Company extends Model
 {
-    const COMPANY_TYPE_SPONSOR = 'sponsor';
-    const COMPANY_TYPE_PARTNER = 'partner';
-
     use HasFactory, IsPublishable, SoftDeletes;
 
     protected $guarded = [];
+
+    protected $casts = [
+        'type' => CompanyTypeEnum::class . ':nullable',
+    ];
 
     public function getRouteKeyName()
     {

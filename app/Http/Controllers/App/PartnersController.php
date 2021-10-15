@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\App;
 
+use App\Enums\CompanyTypeEnum;
 use App\Models\Company;
 use App\Models\Page;
 use App\Http\Controllers\Controller;
@@ -17,8 +18,8 @@ class PartnersController extends Controller
         $section = Section::where('key', 'partners')->firstOrFail();
 
         $partners = Company::published()
-            ->whereType(Company::COMPANY_TYPE_PARTNER)
-            ->orderBy('name', 'asc')->get();
+            ->whereIn('type', [CompanyTypeEnum::PARTNER()->value])
+            ->orderBy('name')->get();
 
         return view('app.partners.index')->with([
             'page' => $page,

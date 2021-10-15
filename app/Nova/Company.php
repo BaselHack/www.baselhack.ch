@@ -2,14 +2,17 @@
 
 namespace App\Nova;
 
+use App\Enums\CompanyTypeEnum;
+use App\Nova\Filters\CompanyTypeFilter;
+use App\Nova\Filters\PublishedFilter;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
+use Spatie\Enum\Laravel\Rules\EnumRule;
 
 class Company extends Resource
 {
@@ -33,7 +36,7 @@ class Company extends Resource
 
     public static function softDeletes()
     {
-        return false;
+        return true;
     }
 
     public static function indexQuery(NovaRequest $request, $query)
@@ -49,10 +52,10 @@ class Company extends Resource
             Boolean::make('Published', 'published')
                 ->hideWhenCreating(),
 
-            Select::make('Type','type')->options([
-                \App\Models\Company::COMPANY_TYPE_PARTNER => 'Partner',
-                \App\Models\Company::COMPANY_TYPE_SPONSOR => 'Sponsor',
-            ])->sortable()->rules('required', 'max:254'),
+            Select::make('Type', 'type')
+                ->options(CompanyTypeEnum::toArray())
+                ->sortable()
+                ->rules('required', 'string', 'max:254', new EnumRule(CompanyTypeEnum::class)),
 
             Text::make('Name','name')
                 ->sortable()
@@ -83,4 +86,17 @@ class Company extends Resource
         ];
     }
 
+    /**
+     * Get the filters available for the resource.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return array
+     */
+    public function filters(Request $request)
+    {
+        return [
+            new PublishedFilter(),
+            new CompanyTypeFilter(),
+        ];
+    }
 }
