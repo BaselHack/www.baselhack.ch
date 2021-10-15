@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\App;
 
+use App\Enums\CompanyTypeEnum;
 use App\Http\Controllers\Controller;
 use App\Models\Company;
 use App\Models\Page;
@@ -16,15 +17,20 @@ class SponsorsController extends Controller
 
         $section = Section::where('key', 'sponsors')->firstOrFail();
 
+        $mainSponsors = Company::published()
+            ->whereIn('type', [CompanyTypeEnum::SPONSOR_MAIN()->value])
+            ->orderBy('name')->get();
+
         $sponsors = Company::published()
-            ->whereType(Company::COMPANY_TYPE_SPONSOR)
-            ->orderBy('name', 'asc')->get();
+            ->whereIn('type', [CompanyTypeEnum::SPONSOR()->value])
+            ->orderBy('name')->get();
 
         return view('app.sponsors.index')->with([
             'page' => $page,
             'title' => $section->title,
             'teaser' => $section->teaser,
             'body' => Str::of($section->body)->markdown(),
+            'mainSponsors' => $mainSponsors,
             'sponsors' => $sponsors,
         ]);
 
