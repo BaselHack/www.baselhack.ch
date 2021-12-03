@@ -69,7 +69,7 @@ jobs:
 
       # Backend tests
       - name: Execute tests (Unit and Feature tests) via PHPUnit
-        run: php artisan test --coverage-clover=build/logs/clover.xml --coverage-html=reports
+        run: php artisan test
 
       # Store storage/logs
       - name: Store Storage Log Artifacts
