@@ -15,7 +15,7 @@ class PartnersController extends Controller
     {
         $page = Page::whereIndex('partners:index')->first();
 
-        $section = Section::where('key', 'partners')->firstOrFail();
+        $section = Section::where('key', 'partners')->first();
 
         $partners = Company::published()
             ->whereIn('type', [CompanyTypeEnum::PARTNER()->value])

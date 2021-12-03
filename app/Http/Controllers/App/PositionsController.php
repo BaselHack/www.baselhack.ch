@@ -14,7 +14,7 @@ class PositionsController extends Controller
     {
         $page = Page::whereIndex('positions:index')->first();
 
-        $section = Section::where('key', 'positions')->firstOrFail();
+        $section = Section::where('key', 'positions')->first();
 
         $positions = Position::whereNotNull('published_at')
             ->orderBy('published_at','desc')

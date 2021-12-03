@@ -13,7 +13,7 @@ class TeamController extends Controller
     public function index()
     {
         $page = Page::whereIndex('team:index')->first();
-        $section = Section::where('key', 'team')->firstOrFail();
+        $section = Section::where('key', 'team')->first();
 
         $teams = User::active()->orderBy('name')->get();
         $alumni = User::alumni(true)->orderBy('name')->get();

@@ -2,6 +2,9 @@
 
 namespace App\Jobs;
 
+use Illuminate\Support\Facades\Log;
+use Newsletter as Mailchimp;
+
 use App\Models\Newsletter;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
@@ -32,9 +35,17 @@ class StoreNewsletterRequestJob implements ShouldQueue
      */
     public function handle()
     {
-        Newsletter::updateOrCreate([
-           'email' => $this->request['email'],
+        $newsletter = Newsletter::updateOrCreate([
+            'email' => $this->request['email'],
         ]);
 
+        try {
+            if (!Mailchimp::isSubscribed($newsletter->email)) {
+                $response = Mailchimp::subscribe($newsletter->email);
+                ray($response);
+            }
+        } catch (\Exception $exception) {
+            Log::error($exception->getMessage());
+        }
     }
 }

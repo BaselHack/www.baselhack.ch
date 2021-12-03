@@ -33,14 +33,14 @@
                                             <td class="px-6 py-4 whitespace-no-wrap">
                                                 <div class="flex items-center">
                                                     @if($position->company->image)
-                                                        <div class="flex-shrink-0 h-10 w-10">
-                                                            <img class="h-10 w-10 rounded-full"
+                                                        <div class="flex-shrink-0 h-10">
+                                                            <img class="h-10 rounded-full"
                                                                  src="{{ $position->company->getImage() }}"
                                                                  alt="{{ $position->company->name }}">
                                                         </div>
                                                     @endif
 
-                                                    <div class="ml-4">
+                                                    <div class="ml-12">
                                                         <div class="text-sm leading-5 font-medium text-gray-900">
                                                             {{ $position->company->name }}
                                                         </div>

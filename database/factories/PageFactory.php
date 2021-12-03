@@ -21,16 +21,8 @@ class PageFactory extends Factory
      */
     public function definition()
     {
-        $keys = [
-          'start:index',
-          'contact:index',
-          'partners:index',
-          'sponsors:index',
-          'team:index',
-        ];
-
         return [
-            'index' => $this->faker->randomElement($keys),
+            'index' => 'start:index',
             'robots' => 'index,follow',
             'title' => $this->faker->text(20),
             'description' => $this->faker->paragraph(2),
