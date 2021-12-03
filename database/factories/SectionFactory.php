@@ -22,10 +22,10 @@ class SectionFactory extends Factory
     public function definition()
     {
         return [
-            'key' => $this->faker->unique()->text(15),
-            'title' => $this->faker->text(60),
-            'teaser' => $this->faker->text(160),
-            'body' => $this->faker->paragraph(3)
+            'key' => 'terms',
+            'title' => 'Lorem Ipsum',
+            'teaser' =>'Lorem Ipsum',
+            'body' => null,
         ];
     }
 }

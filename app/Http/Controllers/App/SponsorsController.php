@@ -15,7 +15,7 @@ class SponsorsController extends Controller
     {
         $page = Page::whereIndex('sponsors:index')->first();
 
-        $section = Section::where('key', 'sponsors')->firstOrFail();
+        $section = Section::where('key', 'sponsors')->first();
 
         $mainSponsors = Company::published()
             ->whereIn('type', [CompanyTypeEnum::SPONSOR_MAIN()->value])

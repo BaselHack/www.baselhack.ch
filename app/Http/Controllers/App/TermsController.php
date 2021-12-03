@@ -12,13 +12,13 @@ class TermsController extends Controller
     public function index()
     {
         $page = Page::whereIndex('terms:index')->first();
-        $section = Section::where('key', 'terms')->firstOrFail();
+        $section = Section::where('key', 'terms')->first();
 
         return view('app.section.index')->with([
             'page' => $page,
             'title' => $section->title,
             'teaser' => $section->teaser,
-            'body' => Str::of($section->body)->markdown(),
+            'body' => Str::of($section->body)?->markdown(),
         ]);
     }
 }

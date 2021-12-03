@@ -13,7 +13,7 @@ class PostsController extends Controller
     public function index()
     {
         $page = Page::whereIndex('posts:index')->first();
-        $section = Section::where('key', 'posts')->firstOrFail();
+        $section = Section::where('key', 'posts')->first();
         $posts = Post::published()->orderBy('published_at', 'desc')->get();
 
         return view('app.posts.index')->with([

@@ -12,7 +12,7 @@ class PrivacyController extends Controller
     public function index()
     {
         $page = Page::whereIndex('privacy:index')->first();
-        $section = Section::where('key', 'privacy')->firstOrFail();
+        $section = Section::where('key', 'privacy')->first();
 
         return view('app.section.index')->with([
             'page' => $page,

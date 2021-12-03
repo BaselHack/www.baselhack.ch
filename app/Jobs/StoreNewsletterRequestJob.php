@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use Illuminate\Support\Facades\Log;
 use Newsletter as Mailchimp;
 
 use App\Models\Newsletter;
@@ -38,7 +39,13 @@ class StoreNewsletterRequestJob implements ShouldQueue
             'email' => $this->request['email'],
         ]);
 
-        Mailchimp::subscribe($newsletter->email, [], 'subscribers');
-
+        try {
+            if (!Mailchimp::isSubscribed($newsletter->email)) {
+                $response = Mailchimp::subscribe($newsletter->email);
+                ray($response);
+            }
+        } catch (\Exception $exception) {
+            Log::error($exception->getMessage());
+        }
     }
 }

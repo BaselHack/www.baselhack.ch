@@ -12,7 +12,7 @@ class ContactController extends Controller
     public function index()
     {
         $page = Page::whereIndex('contact:index')->first();
-        $section = Section::where('key', 'contact')->firstOrFail();
+        $section = Section::where('key', 'contact')->first();
         return view('app.contact.index')->with([
             'page' => $page,
             'title' => $section->title,
