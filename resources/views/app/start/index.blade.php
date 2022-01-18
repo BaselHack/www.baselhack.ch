@@ -16,7 +16,7 @@
                 {{--            @include('app.archived.main_posts')--}}
 
                 <h2 class="text-xl tracking-tight text-gray-900 sm:text-xl md:text-2xl">
-                    <span class="block xl:inline">We are more than a Hackathon. We connect people, take fun seriously and grow open innovation.</span>
+                    <span class="hack-font-regular block xl:inline">We are more than a Hackathon. We connect people, take fun seriously and grow open innovation.</span>
                 </h2>
             </div>
 

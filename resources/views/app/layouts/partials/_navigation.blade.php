@@ -1,4 +1,4 @@
-<div class="pt-12 relative bg-white">
+<div class="pt-12 relative bg-black">
 
     <div class="relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -6,7 +6,7 @@
             <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
                 <div>
                     <a href="{{ route('start.index') }}" class="flex">
-                        <img class="h-12 w-auto sm:h-12" src="{{ asset('images/app/logos/baselhack_color.svg') }}"
+                        <img class="h-12 w-auto sm:h-12" src="{{ asset('images/app/logos/baselhack_white.png') }}"
                              alt="{{ config('app.name') }}">
                     </a>
                 </div>
@@ -27,37 +27,37 @@
                     <nav class="flex space-x-10">
 
                         <a href="{{ route('start.index')}}"
-                           class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-400 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
                             {{ __('app/layouts.start') }}
                         </a>
 
                         <a href="{{ route('posts.index')}}"
-                           class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-400 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
                             {{ __('app/layouts.posts') }}
                         </a>
 
                         <a href="{{ route('team.index')}}"
-                           class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-400 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
                             {{ __('app/layouts.team') }}
                         </a>
 
                         <a href="{{ route('sponsors.index')}}"
-                           class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-400 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
                             {{ __('app/layouts.sponsors') }}
                         </a>
 
                         <a href="{{ route('partners.index')}}"
-                           class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-400 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
                             {{ __('app/layouts.partners') }}
                         </a>
 
                         <a href="{{ route('positions.index')}}"
-                           class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-400 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
                             {{ __('app/layouts.positions') }}
                         </a>
 
                         <a href="{{ route('contact.index')}}"
-                           class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-400 hover:text-gray-100 focus:outline-none focus:text-gray-100 transition ease-in-out duration-150">
                             {{ __('app/layouts.contact') }}
                         </a>
 
