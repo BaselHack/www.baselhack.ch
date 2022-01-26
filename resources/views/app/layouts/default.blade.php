@@ -7,7 +7,8 @@
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
     @include('app.layouts.partials._meta')
     @include('app.layouts.partials._favicon')
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+{{--    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwindcssnd.min.css" rel="stylesheet">--}}
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
       * {
         font-family: hack, sans-serif;
