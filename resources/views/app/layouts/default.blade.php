@@ -8,30 +8,31 @@
     @include('app.layouts.partials._meta')
     @include('app.layouts.partials._favicon')
 {{--    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwindcssnd.min.css" rel="stylesheet">--}}
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
-      * {
-        font-family: hack, sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: white;
-        background-color: black;
-      }
-
-      .hack-font-bold {
-        font-family: hack, sans-serif;
-        font-weight: 700;
-        font-style: normal;
-      }
-
-      .hack-font-italic {
-        font-family: hack, sans-serif;
-        font-weight: 400;
-        font-style: italic;
-      }
-    </style>
-    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+{{--    <style>--}}
+{{--      * {--}}
+{{--        font-family: hack, sans-serif;--}}
+{{--        font-weight: 400;--}}
+{{--        font-style: normal;--}}
+{{--        color: white;--}}
+{{--        background-color: black;--}}
+{{--      }--}}
+
+{{--      .hack-font-bold {--}}
+{{--        font-family: hack, sans-serif;--}}
+{{--        font-weight: 700;--}}
+{{--        font-style: normal;--}}
+{{--      }--}}
+
+{{--      .hack-font-italic {--}}
+{{--        font-family: hack, sans-serif;--}}
+{{--        font-weight: 400;--}}
+{{--        font-style: italic;--}}
+{{--      }--}}
+{{--    </style>--}}
+{{--    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>--}}
+
 
     @yield('styles')
 </head>
