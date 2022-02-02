@@ -5,7 +5,7 @@
 
 
 
-    <div class="bg-white">
+    <div class="bg-black text-white">
         <div class="max-w-screen-xl mx-auto pt-8 px-4 sm:pt-12 sm:px-6 lg:px-8 lg:flex lg:justify-between">
             <div class="">
                 <a href="{{ route('positions.index') }}"
@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <div class="bg-white">
+    <div class="bg-black text-white">
         <div class="max-w-screen-xl mx-auto pt-4 px-4 sm:pt-6 sm:px-6 lg:px-8 lg:flex lg:justify-between">
             <div class="">
                 <h1 class="text-4xl leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <div class="bg-white ">
+    <div class="bg-black text-white ">
         <div class="max-w-screen-xl mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-8">
 
             <div class="prose lg:prose-xl">

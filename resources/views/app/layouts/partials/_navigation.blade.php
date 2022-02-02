@@ -86,7 +86,7 @@
 
 <div class="mb-12 md:hidden">
   <div class="rounded-lg shadow-md">
-    <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
+    <div class="rounded-lg bg-black text-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
 
       <div class="px-2 pt-2 pb-3">
         <a href="{{ route('start.index') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 bg-gray-50 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">

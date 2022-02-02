@@ -25,7 +25,7 @@
                                         <th class="px-6 py-3 bg-gray-50"></th>
                                     </tr>
                                     </thead>
-                                    <tbody class="bg-white divide-y divide-gray-200">
+                                    <tbody class="bg-black text-white divide-y divide-gray-200">
 
                                     @foreach($positions as $position)
 
