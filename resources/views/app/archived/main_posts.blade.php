@@ -1,7 +1,7 @@
-<h1 class="text-xl tracking-tight text-gray-900 font-bold sm:text-2xl md:text-3xl">
+<h1 class="text-xl tracking-tight text-white font-bold sm:text-2xl md:text-3xl">
     BaselHack &mdash; 11. & 12. September 2021
 </h1>
-<h2 class="text-xl tracking-tight text-gray-900 sm:text-xl md:text-2xl">
+<h2 class="text-xl tracking-tight text-white sm:text-xl md:text-2xl">
     Launchlabs (Gundeldingerfeld), Basel
 </h2>
 <div class="block">

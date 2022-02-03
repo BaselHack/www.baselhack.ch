@@ -15,7 +15,7 @@
 
                 </div>
 
-                <span class="block mt-1 text-xl leading-tight font-semibold text-gray-900">
+                <span class="block mt-1 text-xl leading-tight font-semibold text-white">
                         {{ $post->title }}
                     </span>
 

@@ -1,7 +1,7 @@
-<div>
+<div bg-black text-white>
     <div class="max-w-screen-xl mx-auto pt-8 px-4 sm:pt-12 sm:px-6 lg:px-8 lg:justify-between bg-black text-white">
         <div>
-            <h1 class="text-4xl text-gray-900 font-extrabold tracking-tight sm:text-5xl">
+            <h1 class="text-4xl text-white font-extrabold tracking-tight sm:text-5xl">
                 {{ $title }}
             </h1>
             @if(!empty($teaser))

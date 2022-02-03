@@ -1,7 +1,7 @@
 
 @if(!empty($mainSponsors) && $mainSponsors->count())
 
-    <h2 class="text-2xl text-gray-900 font-bold tracking-tight sm:text-3xl">
+    <h2 class="text-2xl text-white font-bold tracking-tight sm:text-3xl">
         Main Sponsors
     </h2>
 
@@ -12,7 +12,7 @@
 
 @if(!empty($sponsors) && $sponsors->count())
 
-    <h2 class="text-2xl text-gray-900 font-bold tracking-tight sm:text-3xl">
+    <h2 class="text-2xl text-white font-bold tracking-tight sm:text-3xl">
         Sponsors
     </h2>
 

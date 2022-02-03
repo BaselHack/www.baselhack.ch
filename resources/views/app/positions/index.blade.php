@@ -41,7 +41,7 @@
                                                     @endif
 
                                                     <div class="ml-12">
-                                                        <div class="text-sm leading-5 font-medium text-gray-900">
+                                                        <div class="text-sm leading-5 font-medium text-white">
                                                             {{ $position->company->name }}
                                                         </div>
                                                         <div class="text-sm leading-5 text-gray-500">

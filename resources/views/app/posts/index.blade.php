@@ -15,7 +15,7 @@
                                 datetime="{{ $post->created_at->format('Y-m-d') }}">{{ $post->created_at->diffForHumans() }}</time>
                         </p>
                         <a href="{{ route('posts.show',$post) }}" class="block">
-                            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                            <h3 class="mt-2 text-xl leading-7 font-semibold text-white">
                                 {{ $post->title }}
                             </h3>
                             <p class="mt-3 text-base leading-6 text-gray-500">

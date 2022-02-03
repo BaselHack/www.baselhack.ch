@@ -33,11 +33,11 @@
 
                 @if($event->getUrl())
                     <a target="_blank" href="{{ $event->getUrl() }}"
-                       class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">
+                       class="block mt-1 text-lg leading-tight font-semibold text-white hover:underline">
                         {{ $event->title }}
                     </a>
                 @else
-                    <span class="block mt-1 text-xl leading-tight font-semibold text-gray-900 hover:underline">
+                    <span class="block mt-1 text-xl leading-tight font-semibold text-white hover:underline">
                         {{ $event->title }}
                     </span>
                 @endif
