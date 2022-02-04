@@ -16,7 +16,7 @@
                     @honeypot
                     <input id="email" name="email" aria-label="{{ __('app/newsletter.form.input.email') }}" type="email" required class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-white bg-black text-white placeholder-gray-200 focus:outline-none focus:placeholder-gray-200 transition duration-150 ease-in-out" placeholder="{{ __('app/newsletter.form.input.email') }}">
                     <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                        <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-truegray-200 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 transition duration-150 ease-in-out">
+                        <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition duration-150 ease-in-out">
                             {{ __('app/newsletter.form.button') }}
                         </button>
                     </div>
