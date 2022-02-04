@@ -24,12 +24,12 @@
             <div class="mt-4 max-w-xl mx-auto sm:flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4 md:mt-8">
 
                 <div class="rounded-md shadow">
-                    <a href="{{ route('posts.index') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 md:py-4 md:text-lg md:px-10">
+                    <a href="{{ route('posts.index') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-200 hover:bg-gray-200 md:py-4 md:text-lg md:px-10">
                         Latest news
                     </a>
                 </div>
                 <div class="rounded-md shadow">
-                    <a href="{{ route('contact.index') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-gray-100 hover:bg-gray-200 md:py-4 md:text-lg md:px-10">
+                    <a href="{{ route('contact.index') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-300 bg-gray-200 hover:bg-gray-200 md:py-4 md:text-lg md:px-10">
                         Contact us
                     </a>
                 </div>

@@ -14,9 +14,9 @@
             @if(!empty($channels) and $channels->count())
                 <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
                     @foreach($channels as $channel)
-                        <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50 hover:bg-gray-100 duration-150 ease-in-out">
+                        <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50 hover:bg-gray-200 duration-150 ease-in-out">
                             <a href="{{ $channel->url }}" target="_blank"
-                               class="max-h-12 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out">
+                               class="max-h-12 text-gray-300 hover:text-white transition duration-150 ease-in-out">
                                 <i class="{{ $channel->icon }} fa-3x"></i>
                             </a>
                         </div>

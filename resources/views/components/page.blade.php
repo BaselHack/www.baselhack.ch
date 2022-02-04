@@ -5,7 +5,7 @@
                 {{ $title }}
             </h1>
             @if(!empty($teaser))
-                <div class="mt-6 text-gray-500 space-y-6">
+                <div class="mt-6 text-gray-300 space-y-6">
                     <p class="text-xl">
                         {{ $teaser }}
                     </p>

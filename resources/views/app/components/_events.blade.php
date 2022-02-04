@@ -22,10 +22,10 @@
 
                             @if($event->url_location)
                                 <a target="_blank" href="{{ $event->url_location }}">
-                                    <span class="text-xs text-gray-500 hover:text-gray-700 font-light">{{ $event->location }}</span>
+                                    <span class="text-xs text-gray-300 hover:text-white font-light">{{ $event->location }}</span>
                                 </a>
                             @else
-                                <span class="text-xs text-gray-500 font-light">{{ $event->location }}</span>
+                                <span class="text-xs text-gray-300 font-light">{{ $event->location }}</span>
                             @endif
                         @endif
                     </div>
@@ -42,17 +42,17 @@
                     </span>
                 @endif
 
-                <p class="mt-2 text-gray-600">{{ $event->description }}</p>
+                <p class="mt-2 text-gray-300">{{ $event->description }}</p>
 
                 <div class="mt-2">
                     @if($event->url_information)
                         <a target="_blank" href="{{ $event->url_information }}"
-                           class="inline-block text-sm font-bold px-4 py-2 leading-none border rounded bg-black text-white hover:bg-gray-800 mt-4 lg:mt-0">More
+                           class="inline-block text-sm font-bold px-4 py-2 leading-none border rounded bg-black text-white hover:bg-gray-200 mt-4 lg:mt-0">More
                             information</a>
                     @endif
                     @if($event->url_registration)
                         <a target="_blank" href="{{ $event->url_registration }}"
-                           class="inline-block text-sm font-bold px-4 py-2 leading-none border rounded bg-black text-white hover:bg-gray-800 mt-4 lg:mt-0">Registration</a>
+                           class="inline-block text-sm font-bold px-4 py-2 leading-none border rounded bg-black text-white hover:bg-gray-200 mt-4 lg:mt-0">Registration</a>
                     @endif
                 </div>
             </div>

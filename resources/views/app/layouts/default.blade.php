@@ -31,7 +31,7 @@
 {{--        font-style: italic;--}}
 {{--      }--}}
 {{--    </style>--}}
-{{--    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>--}}
+    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
 
 
     @yield('styles')

@@ -6,7 +6,7 @@
                 <h2 class="text-2xl leading-8 font-extrabold tracking-tight text-white sm:text-3xl sm:leading-9">
                     {{ __('app/newsletter.title') }}
                 </h2>
-                <p class="mt-3 max-w-3xl text-lg leading-6 text-gray-200" id="newsletter-headline">
+                <p class="mt-3 max-w-3xl text-lg leading-6 text-gray-300" id="newsletter-headline">
                     {{ __('app/newsletter.subtitle') }}
                 </p>
             </div>
@@ -14,9 +14,9 @@
                 <form class="sm:flex" aria-labelledby="newsletter-headline" method="POST" action="{{ route('newsletter.store') }}">
                     @csrf
                     @honeypot
-                    <input id="email" name="email" aria-label="{{ __('app/newsletter.form.input.email') }}" type="email" required class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-white bg-black text-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out" placeholder="{{ __('app/newsletter.form.input.email') }}">
+                    <input id="email" name="email" aria-label="{{ __('app/newsletter.form.input.email') }}" type="email" required class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-white bg-black text-white placeholder-gray-200 focus:outline-none focus:placeholder-gray-200 transition duration-150 ease-in-out" placeholder="{{ __('app/newsletter.form.input.email') }}">
                     <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                        <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-truegray-400 hover:bg-gray-400 focus:outline-none focus:bg-gray-400 transition duration-150 ease-in-out">
+                        <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-truegray-200 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 transition duration-150 ease-in-out">
                             {{ __('app/newsletter.form.button') }}
                         </button>
                     </div>
@@ -27,7 +27,7 @@
                     {{ $errors->first('email') }}
                 </p>
                 @enderror
-                <p class="mt-3 text-sm leading-5 text-gray-200">
+                <p class="mt-3 text-sm leading-5 text-gray-300">
                     {{ __('app/newsletter.form.privacy') }}
                 </p>
 
