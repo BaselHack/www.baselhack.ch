@@ -10,26 +10,26 @@
                     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                                <table class="min-w-full divide-y divide-gray-200">
+                                <table class="min-w-full divide-y divide-gray-200 border-white">
                                     <thead>
                                     <tr>
-                                        <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                        <th class="px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
 
                                         </th>
-                                        <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                        <th class="px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
                                             Position
                                         </th>
-                                        <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                        <th class="px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider">
                                             Published at
                                         </th>
-                                        <th class="px-6 py-3 bg-gray-50"></th>
+                                        <th class="px-6 py-3 bg-gray-500"></th>
                                     </tr>
                                     </thead>
-                                    <tbody class="bg-white divide-y divide-gray-200">
+                                    <tbody class="bg-black text-white divide-y divide-gray-200">
 
                                     @foreach($positions as $position)
 
-                                        <tr>
+                                        <tr class="bg-gray-500 text-white">
                                             <td class="px-6 py-4 whitespace-no-wrap">
                                                 <div class="flex items-center">
                                                     @if($position->company->image)
@@ -41,22 +41,22 @@
                                                     @endif
 
                                                     <div class="ml-12">
-                                                        <div class="text-sm leading-5 font-medium text-gray-900">
+                                                        <div class="text-sm leading-5 font-medium">
                                                             {{ $position->company->name }}
                                                         </div>
-                                                        <div class="text-sm leading-5 text-gray-500">
+                                                        <div class="text-sm leading-5">
                                                             {{ $position->company->type }}
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="px-6 py-4 whitespace-no-wrap">
-                                                <div class="text-sm leading-5 font-bold text-black">
+                                                <div class="text-sm leading-5 font-bold ">
                                                     {{ $position->title }}
                                                 </div>
                                             </td>
 
-                                            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
+                                            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-300">
                                                 {{ $position->published_at->diffForHumans() }}
                                             </td>
                                             <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">

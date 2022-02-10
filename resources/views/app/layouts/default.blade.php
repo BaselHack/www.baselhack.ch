@@ -7,19 +7,42 @@
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
     @include('app.layouts.partials._meta')
     @include('app.layouts.partials._favicon')
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
+{{--    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwindcssnd.min.css" rel="stylesheet">--}}
     <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+{{--    <style>--}}
+{{--      * {--}}
+{{--        font-family: hack, sans-serif;--}}
+{{--        font-weight: 400;--}}
+{{--        font-style: normal;--}}
+{{--        color: white;--}}
+{{--        background-color: black;--}}
+{{--      }--}}
+
+{{--      .hack-font-bold {--}}
+{{--        font-family: hack, sans-serif;--}}
+{{--        font-weight: 700;--}}
+{{--        font-style: normal;--}}
+{{--      }--}}
+
+{{--      .hack-font-italic {--}}
+{{--        font-family: hack, sans-serif;--}}
+{{--        font-weight: 400;--}}
+{{--        font-style: italic;--}}
+{{--      }--}}
+{{--    </style>--}}
+    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
+
 
     @yield('styles')
 </head>
 
-<body>
+<body class="bg-black text-white">
 
 <div>
     @include('app.layouts.partials._flash')
     @include('app.layouts.partials._navigation')
-    <div class="max-w-screen-xl mx-auto">
+    <div class="max-w-screen-xl mx-auto bg-black text-white">
         @yield('content')
     </div>
     @include('app.layouts.partials._newsletter')

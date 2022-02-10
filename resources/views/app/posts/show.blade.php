@@ -4,7 +4,7 @@
 @section('content')
 
     <x-page :title="$post->title" :teaser="$post->teaser">
-        <div class="prose prose-lg text-gray-500">
+        <div class="prose prose-lg text-gray-300">
             {!! $post->body !!}
         </div>
     </x-page>

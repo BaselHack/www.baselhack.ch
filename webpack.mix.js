@@ -24,3 +24,9 @@ mix.browserSync({
         cert: homedir + '/.config/valet/Certificates/' + domain + '.crt',
     },
 })
+
+mix
+    .js("resources/js/app.js", "public/js")
+    .postCss("resources/css/app.css", "public/css", [
+        require("tailwindcss"),
+    ]);

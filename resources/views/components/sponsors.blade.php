@@ -6,7 +6,7 @@
                 @foreach($sponsors as $sponsor)
                     <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
                         <a href="{{ $sponsor->url }}" target="_blank"
-                           class="max-h-12 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out">
+                           class="max-h-12 text-gray-300 hover:text-white transition duration-150 ease-in-out">
                             @if($sponsor->image)
                                 <img class="max-h-12" src="{{ $sponsor->getImage() }}" alt="{{ $sponsor->name }}">
                             @else

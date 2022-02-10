@@ -5,24 +5,24 @@
 
 
 
-    <div class="bg-white">
+    <div class="bg-black text-white">
         <div class="max-w-screen-xl mx-auto pt-8 px-4 sm:pt-12 sm:px-6 lg:px-8 lg:flex lg:justify-between">
             <div class="">
                 <a href="{{ route('positions.index') }}"
-                   class="text-lg leading-5 font-bold text-gray-500 hover:text-gray-800 sm:text-lg sm:leading-none sm:tracking-tight lg:text-xl">
+                   class="text-lg leading-5 font-bold text-gray-300 hover:text-white sm:text-lg sm:leading-none sm:tracking-tight lg:text-xl">
                      <i class="fad fa-angle-left mr-1"></i> {{ __('app/positions.show.back') }}
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="bg-white">
+    <div class="bg-black text-white">
         <div class="max-w-screen-xl mx-auto pt-4 px-4 sm:pt-6 sm:px-6 lg:px-8 lg:flex lg:justify-between">
             <div class="">
-                <h1 class="text-4xl leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
+                <h1 class="text-4xl leading-10 font-extrabold text-white sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl">
                     {{ $position->title }}
                 </h1>
-                <p class="mt-4 text-xl leading-7 text-gray-500">
+                <p class="mt-4 text-xl leading-7 text-gray-300">
                     Published {{ $position->published_at->diffForHumans() }}
                 </p>
 
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <div class="bg-white ">
+    <div class="bg-black text-white ">
         <div class="max-w-screen-xl mx-auto pt-12 px-4 sm:px-6 lg:pt-16 lg:px-8">
 
             <div class="prose lg:prose-xl">
