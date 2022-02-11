@@ -22,7 +22,7 @@
         "league/flysystem-cached-adapter": "^1.1",
         "livewire/livewire": "^2.4",
         "maatwebsite/laravel-nova-excel": "^1.2",
-        "sammyjo20/lasso": "^1.2",
+        "sammyjo20/lasso": "^2.0",
         "spatie/laravel-enum": "^2.5",
         "spatie/laravel-flash": "^1.8",
         "spatie/laravel-honeypot": "^3.0",
@@ -85,7 +85,10 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
