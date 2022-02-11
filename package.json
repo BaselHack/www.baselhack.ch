@@ -12,8 +12,8 @@
     "devDependencies": {
         "autoprefixer": "^10.4.2",
         "axios": "^0.21",
-        "browser-sync": "^2.26.14",
-        "browser-sync-webpack-plugin": "^2.3.0",
+        "browser-sync": "^0.9.1",
+        "browser-sync-webpack-plugin": "^0.1.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.4.5",
