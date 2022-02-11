@@ -19,8 +19,8 @@ auth.json
 docker-compose.override.yml
 !resources/views/vendor/
 .idea/
-/public/js
-/public/css
+/public/js/
+/public/css/
 /public/sitemap.xml
 /nova/
 /_docs/
