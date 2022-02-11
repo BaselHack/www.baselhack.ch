@@ -64,12 +64,10 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
             'visibility' => 'public',
-            'cdn' => env('AWS_CDN'),
             'options' => [
                 'CacheControl' => 'max-age=15552000, s-max-age=15552000',
             ],
         ],
-
     ],
 
     /*
