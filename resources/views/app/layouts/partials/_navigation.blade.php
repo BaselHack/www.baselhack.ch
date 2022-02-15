@@ -11,7 +11,7 @@
                     </a>
                 </div>
                 <div class="-mr-2 -my-2 md:hidden">
-                    <button type="button"
+                    <button id="hamburger" type="button"
                             class="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-200 focus:outline-none focus:bg-gray-200 focus:text-gray-300 transition duration-150 ease-in-out">
 
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -84,7 +84,7 @@
     </div>
 </div>
 
-<div class="mb-12 md:hidden">
+<div id="mobile-menu" class="mb-12 md:hidden">
   <div class="rounded-lg shadow-md">
     <div class="rounded-lg bg-black text-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
 
