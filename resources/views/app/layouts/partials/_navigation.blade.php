@@ -84,39 +84,39 @@
     </div>
 </div>
 
-<div id="mobile-menu" class="mb-12 md:hidden">
+<div id="mobile-menu" class="mb-12 md:hidden" style="display:none;">
   <div class="rounded-lg shadow-md">
-    <div class="rounded-lg bg-black text-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
+    <div class="rounded-lg bg-gray-500 text-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
 
       <div class="px-2 pt-2 pb-3">
-        <a href="{{ route('start.index') }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
+        <a href="{{ route('start.index') }}" class="block px-3 py-2 rounded-md text-base font-medium shadow ease-in-out" role="menuitem">
           {{ __('app/layouts.start') }}
         </a>
 
 
-          <a href="{{ route('posts.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
+          <a href="{{ route('posts.index') }}" class="block px-3 py-2 rounded-md text-base font-medium shadow ease-in-out" role="menuitem">
               {{ __('app/layouts.posts') }}
           </a>
 
-        <a href="{{ route('team.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
+        <a href="{{ route('team.index') }}" class="block px-3 py-2 rounded-md text-base font-medium shadow ease-in-out" role="menuitem">
           {{ __('app/layouts.team') }}
         </a>
 
 
-        <a href="{{ route('sponsors.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
+        <a href="{{ route('sponsors.index') }}" class="block px-3 py-2 rounded-md text-base font-medium shadow ease-in-out" role="menuitem">
           {{ __('app/layouts.sponsors') }}
         </a>
 
 
-        <a href="{{ route('partners.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
+        <a href="{{ route('partners.index') }}" class="block px-3 py-2 rounded-md text-base font-medium shadow ease-in-out" role="menuitem">
           {{ __('app/layouts.partners') }}
         </a>
 
-          <a href="{{ route('positions.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
+          <a href="{{ route('positions.index') }}" class="block px-3 py-2 rounded-md text-base font-medium shadow ease-in-out" role="menuitem">
               {{ __('app/layouts.positions') }}
           </a>
 
-        <a href="{{ route('contact.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
+        <a href="{{ route('contact.index') }}" class="block px-3 py-2 rounded-md text-base font-medium shadow ease-in-out" role="menuitem">
           {{ __('app/layouts.contact') }}
         </a>
       </div>
