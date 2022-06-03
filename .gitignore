@@ -25,5 +25,3 @@ docker-compose.override.yml
 /nova/
 /_docs/
 .DS_Store
-
-.DS_Store
