@@ -16,9 +16,9 @@ class PrivacyController extends Controller
 
         return view('app.section.index')->with([
             'page' => $page,
-            'title' => $section->title,
-            'teaser' => $section->teaser,
-            'body' => Str::of($section->body)->markdown(),
+            'title' => $section?->title ?? '',
+            'teaser' => $section?->teaser ?? '',
+            'body' => Str::of($section?->body ?? '')->markdown(),
         ]);
     }
 }

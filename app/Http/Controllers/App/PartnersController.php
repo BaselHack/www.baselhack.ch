@@ -23,9 +23,9 @@ class PartnersController extends Controller
 
         return view('app.partners.index')->with([
             'page' => $page,
-            'title' => $section->title,
-            'teaser' => $section->teaser,
-            'body' => Str::of($section->body)->markdown(),
+            'title' => $section?->title ?? '',
+            'teaser' => $section?->teaser ?? '',
+            'body' => Str::of($section?->body ?? '')->markdown(),
             'partners' => $partners,
         ]);
     }

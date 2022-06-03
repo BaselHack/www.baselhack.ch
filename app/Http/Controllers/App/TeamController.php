@@ -20,9 +20,9 @@ class TeamController extends Controller
 
         return view('app.team.index')->with([
             'page' => $page,
-            'title' => $section->title,
-            'teaser' => $section->teaser,
-            'body' => Str::of($section->body)->markdown(),
+            'title' => $section?->title ?? '',
+            'teaser' => $section?->teaser ?? '',
+            'body' => Str::of($section?->body ?? '')->markdown(),
             'teams' => $teams,
             'alumni' => $alumni,
         ]);

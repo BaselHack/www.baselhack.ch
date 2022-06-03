@@ -18,9 +18,9 @@ class PostsController extends Controller
 
         return view('app.posts.index')->with([
             'page' => $page,
-            'title' => $section->title,
-            'teaser' => $section->teaser,
-            'body' => Str::of($section->body)->markdown(),
+            'title' => $section?->title ?? '',
+            'teaser' => $section?->teaser ?? '',
+            'body' => Str::of($section?->body ?? '')->markdown(),
             'posts' => $posts,
         ]);
 

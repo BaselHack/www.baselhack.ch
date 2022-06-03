@@ -22,9 +22,9 @@ class PositionsController extends Controller
 
         return view('app.positions.index')->with([
             'page' => $page,
-            'title' => $section->title,
-            'teaser' => $section->teaser,
-            'body' => Str::of($section->body)->markdown(),
+            'title' => $section?->title ?? '',
+            'teaser' => $section?->teaser ?? '',
+            'body' => Str::of($section?->body ?? '')->markdown(),
             'positions' => $positions,
         ]);
 

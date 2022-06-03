@@ -37,7 +37,6 @@
             </div>
         </div>
 
-
         <div class="my-24 text-center">
             @include('app.components._sponsors')
         </div>

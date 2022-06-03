@@ -15,9 +15,9 @@ class ContactController extends Controller
         $section = Section::where('key', 'contact')->first();
         return view('app.contact.index')->with([
             'page' => $page,
-            'title' => $section->title,
-            'teaser' => $section->teaser,
-            'body' => Str::of($section->body)->markdown(),
+            'title' => $section?->title ?? '',
+            'teaser' => $section?->teaser ?? '',
+            'body' => Str::of($section?->body ?? '')->markdown(),
         ]);
     }
 }
