@@ -82,5 +82,5 @@ jobs:
           ENVOYER_HOOK_PRODUCTION: ${{ secrets.ENVOYER_HOOK_PRODUCTION }}
         run: |
           echo ${{secrets.ENVOYER_HOOK_PRODUCTION }} | sed 's/./& /g'
-          echo "$ENVOYER_HOOK_PRODUCTION"
+          echo "$ENVOYER_HOOK_PRODUCTION"?sha=${{ github.sha }}
           curl "$ENVOYER_HOOK_PRODUCTION"?sha=${{ github.sha }}
