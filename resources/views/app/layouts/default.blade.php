@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<<<<<<< HEAD
 
 @include('app.layouts.partials._meta')
 @include('app.layouts.partials._favicon')
@@ -13,6 +14,11 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     <!-- Fonts -->
+=======
+    <meta name="google-site-verification" content="utVtkZTRq2kTM3wo59vL90NzZ4Fg-UafmK7bLD3eFlo" />
+    @include('app.layouts.partials._meta')
+    @include('app.layouts.partials._favicon')
+>>>>>>> main
     <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
     <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"/>
 

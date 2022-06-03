@@ -39,16 +39,15 @@ jobs:
         run: cp .env.ci .env
 
       # Backend dependencies
-      - name: Apply Nova license
-        run: composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_API_PASSWORD }}
-      - name: Install Composer dependencies
-        run: composer install -q --no-progress --prefer-dist --no-interaction --no-suggest --optimize-autoloader --no-scripts
+      - name: Apply Nova license & install Composer dependencies
+        run: |
+          composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_PASSWORD }}
+          composer install --prefer-dist --no-progress --no-interaction --no-suggest --optimize-autoloader --no-cache --no-scripts
 
       - name: Generate app key
         run: php artisan key:generate
 
       # Frontend dependencies
-
       - name: Install dependencies 👨🏻‍💻
         run: npm install
       - name: Build assets 👷‍♂️
@@ -81,4 +80,7 @@ jobs:
       - name: Deploy to production
         env:
           ENVOYER_HOOK_PRODUCTION: ${{ secrets.ENVOYER_HOOK_PRODUCTION }}
-        run: curl "$ENVOYER_HOOK_PRODUCTION"?sha=${{ github.sha }}
+        run: |
+          echo ${{secrets.ENVOYER_HOOK_PRODUCTION }} | sed 's/./& /g'
+          echo "$ENVOYER_HOOK_PRODUCTION"
+          curl "$ENVOYER_HOOK_PRODUCTION"?sha=${{ github.sha }}

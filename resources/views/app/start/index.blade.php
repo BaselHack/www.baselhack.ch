@@ -2,6 +2,7 @@
 
 @section('content')
 
+    <!-- just a comment -->
     <main class="mx-auto max-w-7xl px-4 bg-black text-white">
         <div class="text-center">
 

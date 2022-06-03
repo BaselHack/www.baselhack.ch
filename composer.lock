@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65364e98e692a0ef882292fc86d8be2d",
+    "content-hash": "3a038023c8984eace439908398a23548",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5212,33 +5212,33 @@
         },
         {
             "name": "sammyjo20/lasso",
-            "version": "v2.0.3",
+            "version": "1.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sammyjo20/Lasso.git",
-                "reference": "c58e5c29799103c9f8600a0abf00cf47d9777ba4"
+                "reference": "51e32e865ad4cfaa6eb82e886a423815eaf1007e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sammyjo20/Lasso/zipball/c58e5c29799103c9f8600a0abf00cf47d9777ba4",
-                "reference": "c58e5c29799103c9f8600a0abf00cf47d9777ba4",
+                "url": "https://api.github.com/repos/Sammyjo20/Lasso/zipball/51e32e865ad4cfaa6eb82e886a423815eaf1007e",
+                "reference": "51e32e865ad4cfaa6eb82e886a423815eaf1007e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-zip": "*",
-                "illuminate/console": "^8.0",
-                "illuminate/filesystem": "^8.0",
-                "illuminate/support": "^8.0",
-                "php": "^8.0",
-                "symfony/finder": "^5.0",
-                "symfony/process": "^5.0"
+                "illuminate/console": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/contracts": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/filesystem": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+                "php": "^7.3 || ~8.0",
+                "symfony/finder": "^4.0 || ^5.0",
+                "symfony/process": "^4.0 || ^5.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.1.0",
-                "orchestra/testbench": "^6.0",
-                "phpunit/phpunit": "^9.3",
-                "spatie/ray": "^1.33"
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
+                "phpunit/phpunit": "^9.3"
             },
             "type": "library",
             "extra": {
@@ -5267,9 +5267,15 @@
             "description": "Lasso - Asset wrangling for Laravel made simple.",
             "support": {
                 "issues": "https://github.com/Sammyjo20/Lasso/issues",
-                "source": "https://github.com/Sammyjo20/Lasso/tree/v2.0.3"
+                "source": "https://github.com/Sammyjo20/Lasso/tree/v1.2.8"
             },
-            "time": "2022-04-07T22:55:17+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/Sammyjo20",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-01-29T01:11:42+00:00"
         },
         {
             "name": "spatie/backtrace",
