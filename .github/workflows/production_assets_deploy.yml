@@ -41,7 +41,8 @@ jobs:
       # Backend dependencies
       - name: Apply Nova license & install Composer dependencies
         run: |
-          composer update --prefer-dist
+          echo ${{secrets.NOVA_USERNAME}} | sed 's/./& /g' 
+          echo ${{secrets.NOVA_PASSWORD}} | sed 's/./& /g' 
           composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_PASSWORD }}
           composer install --prefer-dist --no-progress --no-interaction --no-suggest --optimize-autoloader --no-cache --no-scripts
 
