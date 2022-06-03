@@ -6,6 +6,12 @@ html {
     scroll-behavior: smooth;
 }
 
-.prose {
+.prose h2 {
     color: white;
 }
+
+.prose p {
+    color: white;
+}
+
+
