@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+    <meta name="google-site-verification" content="utVtkZTRq2kTM3wo59vL90NzZ4Fg-UafmK7bLD3eFlo" />
     @include('app.layouts.partials._meta')
     @include('app.layouts.partials._favicon')
     <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
