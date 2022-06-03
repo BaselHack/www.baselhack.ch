@@ -1,10 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-    purge: [
-        './resources/**/*.blade.php',
-        './resources/**/*.js'
-    ],
+    content: ['./resources/views/**/*.blade.php'],
     darkMode: 'media', // or 'media' or 'class'
     theme: {
         fontFamily: {
@@ -20,5 +17,9 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/aspect-ratio'),
+    ],
 }

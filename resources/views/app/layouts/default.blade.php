@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-    @include('app.layouts.partials._meta')
-    @include('app.layouts.partials._favicon')
+
+@include('app.layouts.partials._meta')
+@include('app.layouts.partials._favicon')
+
+<!-- Styles -->
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"/>
 
     @yield('styles')
 </head>
@@ -26,12 +31,11 @@
     @include('app.layouts.partials._footer')
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
-        integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- SCripts -->
+<script src="{{ mix('js/app.js') }}"></script>
 
 @if(app()->environment('production'))
-    <script src="https://dragonfly.codebar.ch/script.js" site="VIJIXWCP" defer></script>
+    <script src="https://dragonfly.codebar.ch/script.js" site="VIJIXWCP" defer/>
 @endif
 
 @yield('scripts')
