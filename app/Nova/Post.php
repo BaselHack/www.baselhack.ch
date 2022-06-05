@@ -41,20 +41,20 @@ class Post extends Resource
                 ->rules('nullable', 'date')
                 ->hideWhenCreating(),
 
-            Text:: make('Title', 'title')
+            Text::make('Title', 'title')
                 ->sortable()
                 ->rules('required', 'string', 'max:254')
                 ->creationRules('unique:posts,title')
                 ->updateRules('unique:posts,title,{{resourceId}}'),
 
-            Text:: make('Teaser', 'teaser')
+            Text::make('Teaser', 'teaser')
                 ->rules('required', 'string', 'max:254')
                 ->hideFromIndex(),
 
             Trix::make('Body', 'body')->withFiles('public')->alwaysShow(),
 
             BelongsTo::make('Author', 'author', 'App\Nova\User')
-                ->nullable()
+                ->nullable(),
 
         ];
     }

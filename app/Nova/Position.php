@@ -46,19 +46,18 @@ class Position extends Resource
 
             BelongsTo::make('Company'),
 
-            Text::make('Title','title')
+            Text::make('Title', 'title')
                 ->sortable()
                 ->rules('required', 'max:254'),
 
-            Trix::make('Body','body')->alwaysShow()
+            Trix::make('Body', 'body')->alwaysShow()
                 ->alwaysShow()
-                ->rules('required','max:4096'),
+                ->rules('required', 'max:4096'),
 
-            Text::make('Url','url')
+            Text::make('Url', 'url')
                 ->hideFromIndex()
-                ->rules('required','string','url','max:254'),
+                ->rules('required', 'string', 'url', 'max:254'),
 
         ];
     }
-
 }

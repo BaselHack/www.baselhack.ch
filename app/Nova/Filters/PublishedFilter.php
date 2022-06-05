@@ -18,7 +18,7 @@ class PublishedFilter extends Filter
     {
         return [
             'Published' => 1,
-            'Unpublished' => 0
+            'Unpublished' => 0,
         ];
     }
 }

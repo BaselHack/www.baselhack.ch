@@ -31,7 +31,6 @@ class Section extends Resource
         return false;
     }
 
-
     public function fields(Request $request)
     {
         return [
@@ -51,7 +50,5 @@ class Section extends Resource
                 ->sortable()
                 ->rules('nullable', 'string', 'max:4500'),
         ];
-
     }
-
 }

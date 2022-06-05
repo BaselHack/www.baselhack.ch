@@ -38,20 +38,19 @@ class Channel extends Resource
             Boolean::make('Published', 'published')
                 ->hideWhenCreating(),
 
-            Text::make('Name','name')
+            Text::make('Name', 'name')
                 ->sortable()
                 ->rules('required', 'max:254'),
 
-            Text::make('Icon','icon')
+            Text::make('Icon', 'icon')
                 ->sortable()
                 ->hideFromIndex()
                 ->rules('required', 'max:254'),
 
-            Text::make('URL','url')
+            Text::make('URL', 'url')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules('required','url','max:254'),
+                ->rules('required', 'url', 'max:254'),
         ];
     }
-
 }

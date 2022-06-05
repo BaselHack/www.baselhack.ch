@@ -37,7 +37,6 @@ class Newsletter extends Resource
     {
         return [
 
-
             Text::make('Company', 'company')
                 ->sortable()
                 ->readonly(),
@@ -58,15 +57,13 @@ class Newsletter extends Resource
                 ->sortable()
                 ->readonly(),
 
-
         ];
     }
 
     /**
      * Get the actions available for the resource.
      *
-     * @param \Illuminate\Http\Request $request
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return array
      */
     public function actions(Request $request)
@@ -75,5 +72,4 @@ class Newsletter extends Resource
             (new DownloadExcel)->withHeadings(),
         ];
     }
-
 }

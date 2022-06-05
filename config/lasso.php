@@ -29,7 +29,7 @@ return [
         'excluded_directories' => [
             'docs',
             'images',
-            'favicon'
+            'favicon',
         ],
 
     ],
@@ -88,7 +88,7 @@ return [
          */
         'pull' => [
             //
-        ]
+        ],
 
     ],
 

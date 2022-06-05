@@ -12,5 +12,4 @@ class Section extends Model
     use SoftDeletes;
 
     protected $guraded = [];
-
 }

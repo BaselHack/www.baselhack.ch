@@ -17,7 +17,7 @@ class PositionsController extends Controller
         $section = Section::where('key', 'positions')->first();
 
         $positions = Position::whereNotNull('published_at')
-            ->orderBy('published_at','desc')
+            ->orderBy('published_at', 'desc')
             ->get();
 
         return view('app.positions.index')->with([
@@ -27,7 +27,6 @@ class PositionsController extends Controller
             'body' => Str::of($section?->body ?? '')->markdown(),
             'positions' => $positions,
         ]);
-
     }
 
     public function show(Position $position)
@@ -35,4 +34,3 @@ class PositionsController extends Controller
         return view('app.positions.show', compact('position'));
     }
 }
-

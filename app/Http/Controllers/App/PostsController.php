@@ -23,12 +23,11 @@ class PostsController extends Controller
             'body' => Str::of($section?->body ?? '')->markdown(),
             'posts' => $posts,
         ]);
-
     }
 
     public function show(Post $post)
     {
-        $page = (object)[
+        $page = (object) [
             'robots' => 'index,follow',
             'title' => $post->title,
             'description' => $post->teaser,

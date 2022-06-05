@@ -29,7 +29,4 @@ class PageFactory extends Factory
             'image' => null,
         ];
     }
-
-
 }
-

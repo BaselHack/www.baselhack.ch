@@ -16,7 +16,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('*', function ($view) {
-            $view->with('channels', Channel::published()->orderBy('name','asc')->get());
+            $view->with('channels', Channel::published()->orderBy('name', 'asc')->get());
         });
     }
 

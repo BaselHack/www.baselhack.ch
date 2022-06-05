@@ -60,6 +60,5 @@ class GenerateSitemap extends Command
                 ->setPriority(0.8)
                 ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
             ->writeToFile(public_path('sitemap.xml'));
-
     }
 }

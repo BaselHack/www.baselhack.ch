@@ -18,6 +18,4 @@ class PageObserver
     {
         $page->uuid = Str::orderedUuid()->toString();
     }
-
-
 }

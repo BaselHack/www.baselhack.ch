@@ -15,7 +15,6 @@ class User extends Resource
 {
     public static $group = 'Administration';
 
-
     /**
      * The model the resource corresponds to.
      *
@@ -75,32 +74,33 @@ class User extends Resource
     {
         return [
 
-            Boolean::make('Profile Published','profile_published')
+            Boolean::make('Profile Published', 'profile_published')
                 ->sortable()
                 ->rules('required', 'boolean'),
 
-            Text::make('Gravatar','profile_gravatar')
+            Text::make('Gravatar', 'profile_gravatar')
                 ->hideFromIndex()
-                ->rules('nullable','string','email','max:254'),
+                ->rules('nullable', 'string', 'email', 'max:254'),
 
-            Text::make('Website','profile_website')
+            Text::make('Website', 'profile_website')
                 ->hideFromIndex()
-                ->rules('nullable','string','url','max:254'),
+                ->rules('nullable', 'string', 'url', 'max:254'),
 
-            Text::make('Github','profile_github')
+            Text::make('Github', 'profile_github')
                 ->hideFromIndex()
-                ->rules('nullable','string','url','max:254'),
+                ->rules('nullable', 'string', 'url', 'max:254'),
 
-            Text::make('Twitter','profile_twitter')
+            Text::make('Twitter', 'profile_twitter')
                 ->hideFromIndex()
-                ->rules('nullable','string','url','max:254'),
+                ->rules('nullable', 'string', 'url', 'max:254'),
 
-            Text::make('LinkedIn','profile_linkedin')
+            Text::make('LinkedIn', 'profile_linkedin')
                 ->hideFromIndex()
-                ->rules('nullable','string','url','max:254'),
+                ->rules('nullable', 'string', 'url', 'max:254'),
 
         ];
     }
+
     /**
      * Get the cards available for the request.
      *
