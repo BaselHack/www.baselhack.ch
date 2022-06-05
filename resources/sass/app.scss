@@ -1,9 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 html {
     scroll-behavior: smooth;
+}
+
+.prose {
+    color: white;
+}
+
+.prose :where(h2):not(:where([class~=not-prose] *)) {
+    color: white;
 }
 
 .hack-font-regular {
@@ -21,5 +29,5 @@ html {
 .hack-font-italic {
   font-family: hack, sans-serif;
   font-weight: 400;
-  font-style: italic; 
+  font-style: italic;
 }

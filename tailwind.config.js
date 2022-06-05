@@ -1,4 +1,4 @@
-const colors = require("tailwindcss/colors");
+const colors = require('tailwindcss/colors');
 
 module.exports = {
     content: ['./resources/views/**/*.blade.php'],
@@ -9,7 +9,7 @@ module.exports = {
         },
         extend: {},
         colors: {
-            gray: colors.trueGray,
+            gray: colors.neutral,
             black: colors.black,
             white: colors.white
         }
@@ -17,9 +17,6 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/aspect-ratio'),
-    ],
+    plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms'), require('@tailwindcss/aspect-ratio')],
+
 }
