@@ -33,19 +33,11 @@ jobs:
       - name: Prepare the environment
         run: cp .env.ci .env
 
-<<<<<<< HEAD
-      # Backend Dependencies
-      - name: Apply Nova license
-        run: composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_LICENSE_KEY }}
-      - name: Install Composer dependencies
-        run: composer update
-=======
       # Backend dependencies
       - name: Apply Nova license & install Composer dependencies
         run: |
           composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_LICENSE_KEY }}
           composer install --prefer-dist --no-progress --no-interaction --no-suggest --optimize-autoloader --no-cache --no-scripts
->>>>>>> feature-fix-deployment
 
       # Prepare backend
       - name: Create Database
