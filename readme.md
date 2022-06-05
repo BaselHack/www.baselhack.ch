@@ -1,5 +1,10 @@
-
 # BaselHack Website
+
+# Status
+
+[![StyleCI](https://github.styleci.io/repos/302909724/shield?branch=production)](https://github.styleci.io/repos/302909724?branch=production)
+
+# Setup
 
 ## Update .env 
 
