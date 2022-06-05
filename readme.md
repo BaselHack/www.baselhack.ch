@@ -1,3 +1,4 @@
+
 # BaselHack Website
 
 #### Composer Install
@@ -20,4 +21,4 @@ Then install the dependencies:
 
 #### Test Suite
 
-Run with ```./vendor/bin/pest``` instead of phpunit.
+Run with ```php artisan test```.
