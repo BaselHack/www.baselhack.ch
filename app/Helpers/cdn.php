@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
-if (!function_exists('cdn_path')) {
+if (! function_exists('cdn_path')) {
     function cdn_path($file_path)
     {
         try {
@@ -14,6 +14,7 @@ if (!function_exists('cdn_path')) {
           $protocol = 'https';
           $endpoint = config('filesystems.disks.s3.cdn');
           $root_path = config('filesystems.disks.s3.root');
+
           return "$protocol://$endpoint/$root_path/$file_path";
 
         default:
@@ -21,6 +22,7 @@ if (!function_exists('cdn_path')) {
       }
         } catch (Exception $exception) {
             Log::error($exception->getMessage());
+
             return 'empty';
         }
     }

@@ -17,7 +17,7 @@ class Company extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'type' => CompanyTypeEnum::class . ':nullable',
+        'type' => CompanyTypeEnum::class.':nullable',
     ];
 
     public function getRouteKeyName()
@@ -29,5 +29,4 @@ class Company extends Model
     {
         return $this->image ? Storage::url($this->image) : null;
     }
-
 }

@@ -35,24 +35,23 @@ class Password extends Resource
     {
         return [
 
-            Text::make('Name','name')
+            Text::make('Name', 'name')
                 ->sortable()
                 ->rules('required', 'max:254'),
 
-            Text::make('Username','username')
+            Text::make('Username', 'username')
                 ->sortable()
                 ->rules('required', 'max:254'),
 
-            Text::make('Password','password')
+            Text::make('Password', 'password')
                 ->sortable()
                 ->hideFromIndex()
                 ->rules('required', 'max:254'),
 
-            Text::make('URL','url')
+            Text::make('URL', 'url')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules('nullable','url','max:254'),
+                ->rules('nullable', 'url', 'max:254'),
         ];
     }
-
 }

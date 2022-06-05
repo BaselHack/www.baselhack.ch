@@ -23,16 +23,16 @@ class PostFactory extends Factory
      */
     public function definition()
     {
-        $title =  $this->faker->text(20);
+        $title = $this->faker->text(20);
+
         return [
             'title' => $title,
             'slug' => Str::slug($title),
             'teaser' => $this->faker->sentence(),
-            'body' => $this->faker->randomHtml(12,4),
-            'created_by' => User::factory()->create()->id
+            'body' => $this->faker->randomHtml(12, 4),
+            'created_by' => User::factory()->create()->id,
         ];
     }
-
 
     /**
      * Indicate that the user is suspended.
@@ -47,6 +47,4 @@ class PostFactory extends Factory
             ];
         });
     }
-
 }
-

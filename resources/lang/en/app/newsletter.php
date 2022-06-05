@@ -8,7 +8,7 @@ return [
     'form' => [
 
         'input' => [
-            'email' => 'Email address'
+            'email' => 'Email address',
         ],
         'button' => 'Notify me',
         'privacy' => 'We care about the protection of your data.',

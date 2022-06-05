@@ -18,7 +18,6 @@ class PostObserver
         $post->uuid = Str::orderedUuid()->toString();
     }
 
-
     /**
      * Handle the user "saving" event.
      *
@@ -29,5 +28,4 @@ class PostObserver
     {
         $post->slug = Str::slug($post->title);
     }
-
 }

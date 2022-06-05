@@ -3,7 +3,7 @@
 return [
 
     'news' => [
-      'title' => 'Latest posts',
-      'more' => 'Read full story',
+        'title' => 'Latest posts',
+        'more' => 'Read full story',
     ],
 ];

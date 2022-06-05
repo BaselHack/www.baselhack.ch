@@ -2,8 +2,8 @@
 
 namespace App\Observers;
 
-use Illuminate\Support\Str;
 use App\Models\Newsletter;
+use Illuminate\Support\Str;
 
 class NewsletterObserver
 {
@@ -17,6 +17,4 @@ class NewsletterObserver
     {
         $newsletter->uuid = Str::orderedUuid()->toString();
     }
-
-
 }

@@ -2,7 +2,6 @@
 
 namespace App\Nova\Filters;
 
-
 use App\Enums\CompanyTypeEnum;
 use Illuminate\Http\Request;
 use Laravel\Nova\Filters\Filter;

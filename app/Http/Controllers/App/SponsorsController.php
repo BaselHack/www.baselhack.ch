@@ -33,6 +33,5 @@ class SponsorsController extends Controller
             'mainSponsors' => $mainSponsors,
             'sponsors' => $sponsors,
         ]);
-
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
 use App\Models\Page;
-use App\Models\Section;
-use App\Models\Post;
 use App\Models\Position;
+use App\Models\Post;
+use App\Models\Section;
 
 test('start.index', function () {
     $route = route('start.index');
@@ -60,7 +60,6 @@ test('contact.index', function () {
     $response = $this->get($route);
     $response->assertOk();
 });
-
 
 test('privacy.index', function () {
     $route = route('privacy.index');

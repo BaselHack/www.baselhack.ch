@@ -31,8 +31,7 @@ class UserFactory extends Factory
         ];
     }
 
-
-        /**
+    /**
      * Indicate that the user is suspended.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
@@ -48,5 +47,4 @@ class UserFactory extends Factory
             ];
         });
     }
-
 }

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\App;
 
-use App\Models\Page;
 use App\Http\Controllers\Controller;
+use App\Models\Page;
 use App\Models\Section;
 use App\Models\User;
 use Illuminate\Support\Str;

@@ -33,7 +33,7 @@ class PositionFactory extends Factory
             'fab fa-youtube',
             'fab fa-linkedin-in',
             'fab fa-google-plus-g',
-            'fad fa-envelope-open'
+            'fad fa-envelope-open',
         ];
 
         return [
@@ -44,7 +44,7 @@ class PositionFactory extends Factory
         ];
     }
 
-        /**
+    /**
      * Indicate that the user is suspended.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
@@ -53,9 +53,8 @@ class PositionFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'published' => true
+                'published' => true,
             ];
         });
     }
-
 }
