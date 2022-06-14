@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Nova\Modals;
+namespace App\Nova\Models;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Text;
 
-class Channel extends Resource
+class Password extends Resource
 {
-    public static $group = 'Content';
+    public static $group = 'Administration';
 
-    public static $model = '\App\Models\Channel';
+    public static $model = '\App\Models\Password';
 
     public static $title = 'name';
 
@@ -18,12 +17,12 @@ class Channel extends Resource
 
     public static function label()
     {
-        return 'Channels';
+        return 'Passwords';
     }
 
     public static function singularLabel()
     {
-        return 'Channel';
+        return 'Password';
     }
 
     public static function softDeletes()
@@ -35,16 +34,15 @@ class Channel extends Resource
     {
         return [
 
-            Boolean::make('Published', 'published')
-                ->filterable()
-                ->sortable()
-                ->hideWhenCreating(),
-
             Text::make('Name', 'name')
                 ->sortable()
                 ->rules('required', 'max:254'),
 
-            Text::make('Icon', 'icon')
+            Text::make('Username', 'username')
+                ->sortable()
+                ->rules('required', 'max:254'),
+
+            Text::make('Password', 'password')
                 ->sortable()
                 ->hideFromIndex()
                 ->rules('required', 'max:254'),
@@ -52,7 +50,7 @@ class Channel extends Resource
             Text::make('URL', 'url')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules('required', 'url', 'max:254'),
+                ->rules('nullable', 'url', 'max:254'),
         ];
     }
 }

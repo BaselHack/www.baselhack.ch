@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Nova\Modals;
+namespace App\Nova\Models;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Text;

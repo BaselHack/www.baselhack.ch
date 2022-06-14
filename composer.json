@@ -31,6 +31,7 @@
         "laravel/framework": "^9.0",
         "laravel/nova": "^4.0",
         "laravel/tinker": "^2.7",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "livewire/livewire": "^2.4",
         "maatwebsite/laravel-nova-excel": "^1.2",
         "sammyjo20/lasso": "^3.0",
@@ -40,7 +41,9 @@
         "spatie/laravel-ignition": "^1.2",
         "spatie/laravel-newsletter": "^4.11",
         "spatie/laravel-ray": "^1.17",
-        "spatie/laravel-sitemap": "^6.2"
+        "spatie/laravel-sitemap": "^6.2",
+        "symfony/http-client": "^6.1",
+        "symfony/postmark-mailer": "^6.1"
     },
     "require-dev": {
         "mockery/mockery": "^1.4.4",

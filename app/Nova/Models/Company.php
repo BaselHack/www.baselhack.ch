@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Nova\Modals;
+namespace App\Nova\Models;
 
 use App\Enums\CompanyTypeEnum;
 use Laravel\Nova\Http\Requests\NovaRequest;
