@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Nova;
+namespace App\Nova\Modals;
 
-use Illuminate\Http\Request;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 
@@ -31,7 +31,7 @@ class Page extends Resource
         return false;
     }
 
-    public function fields(Request $request)
+    public function fields(NovaRequest $request)
     {
         return [
 

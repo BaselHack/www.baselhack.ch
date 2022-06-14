@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Nova;
+namespace App\Nova\Modals;
 
-use Illuminate\Http\Request;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
@@ -33,7 +33,7 @@ class Post extends Resource
         return false;
     }
 
-    public function fields(Request $request)
+    public function fields(NovaRequest $request)
     {
         return [
             Date::make('Published at', 'published_at')
@@ -53,7 +53,7 @@ class Post extends Resource
 
             Trix::make('Body', 'body')->withFiles('public')->alwaysShow(),
 
-            BelongsTo::make('Author', 'author', 'App\Nova\User')
+            BelongsTo::make('Author', 'author', 'App\Nova\Modals\User')
                 ->nullable(),
 
         ];

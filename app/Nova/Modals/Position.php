@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Nova;
+namespace App\Nova\Modals;
 
-use Illuminate\Http\Request;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Date;
-use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Trix;
 
 class Position extends Resource
@@ -35,7 +33,7 @@ class Position extends Resource
         return false;
     }
 
-    public function fields(Request $request)
+    public function fields(NovaRequest $request)
     {
         return [
 
@@ -44,7 +42,10 @@ class Position extends Resource
                 ->rules('nullable', 'date')
                 ->hideWhenCreating(),
 
-            BelongsTo::make('Company'),
+            BelongsTo::make('Company')
+                ->required()
+                ->sortable()
+                ->filterable(),
 
             Text::make('Title', 'title')
                 ->sortable()
