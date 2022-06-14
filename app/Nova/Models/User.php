@@ -14,35 +14,35 @@ class User extends Resource
 {
     public static $group = 'Administration';
 
-    /**
-     * The model the resource corresponds to.
-     *
-     * @var string
-     */
     public static $model = \App\Models\User::class;
 
-    /**
-     * The single value that should be used to represent the resource when being displayed.
-     *
-     * @var string
-     */
-    public static $title = 'name';
+    public static function label()
+    {
+        return 'Users';
+    }
 
-    /**
-     * The columns that should be searched.
-     *
-     * @var array
-     */
-    public static $search = [
-        'id', 'name', 'email',
-    ];
+    public static function singularLabel()
+    {
+        return 'User';
+    }
 
-    /**
-     * Get the fields displayed by the resource.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return array
-     */
+    public function title()
+    {
+        return "$this->name";
+    }
+
+    public function subtitle()
+    {
+        return parent::subtitle();
+    }
+
+    public static $displayInNavigation = true;
+    public static $perPageOptions = [50, 100, 250];
+    public static $perPageViaRelationship = 25;
+    public static $globallySearchable = true;
+    public static $search = ['name', 'email'];
+    public static $searchRelations = [];
+
     public function fields(NovaRequest $request)
     {
         return [

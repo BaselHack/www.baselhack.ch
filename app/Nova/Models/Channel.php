@@ -10,11 +10,7 @@ class Channel extends Resource
 {
     public static $group = 'Content';
 
-    public static $model = '\App\Models\Channel';
-
-    public static $title = 'name';
-
-    public static $search = ['name'];
+    public static $model = \App\Models\Channel::class;
 
     public static function label()
     {
@@ -25,6 +21,24 @@ class Channel extends Resource
     {
         return 'Channel';
     }
+
+    public function title()
+    {
+        return "$this->name";
+    }
+
+    public function subtitle()
+    {
+        return parent::subtitle();
+    }
+
+    public static $displayInNavigation = true;
+    public static $perPageOptions = [50, 100, 250];
+    public static $perPageViaRelationship = 25;
+    public static $globallySearchable = true;
+    public static $search = ['name'];
+    public static $searchRelations = [];
+
 
     public static function softDeletes()
     {

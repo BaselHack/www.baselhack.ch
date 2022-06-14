@@ -12,11 +12,8 @@ class Post extends Resource
 {
     public static $group = 'Content';
 
-    public static $model = '\App\Models\Post';
+    public static $model = \App\Models\Post::class;
 
-    public static $title = 'title';
-
-    public static $search = ['title', 'teaser', 'body'];
 
     public static function label()
     {
@@ -28,6 +25,23 @@ class Post extends Resource
         return 'Post';
     }
 
+    public function title()
+    {
+        return "$this->title";
+    }
+
+    public function subtitle()
+    {
+        return parent::subtitle();
+    }
+
+    public static $displayInNavigation = true;
+    public static $perPageOptions = [50, 100, 250];
+    public static $perPageViaRelationship = 25;
+    public static $globallySearchable = true;
+    public static $search = ['title', 'teaser', 'body'];
+    public static $searchRelations = [];
+
     public static function softDeletes()
     {
         return false;
@@ -38,6 +52,7 @@ class Post extends Resource
         return [
             Date::make('Published at', 'published_at')
                 ->sortable()
+                ->filterable()
                 ->rules('nullable', 'date')
                 ->hideWhenCreating(),
 
@@ -53,7 +68,7 @@ class Post extends Resource
 
             Trix::make('Body', 'body')->withFiles('public')->alwaysShow(),
 
-            BelongsTo::make('Author', 'author', 'App\Nova\Modals\User')
+            BelongsTo::make('Author', 'author', User::class)
                 ->nullable(),
 
         ];

@@ -15,11 +15,7 @@ class Company extends Resource
 {
     public static $group = 'Content';
 
-    public static $model = '\App\Models\Company';
-
-    public static $title = 'name';
-
-    public static $search = ['name'];
+    public static $model = \App\Models\Company::class;
 
     public static function label()
     {
@@ -30,6 +26,24 @@ class Company extends Resource
     {
         return 'Company';
     }
+
+    public function title()
+    {
+        return "$this->name";
+    }
+
+    public function subtitle()
+    {
+        return parent::subtitle();
+    }
+
+    public static $displayInNavigation = true;
+    public static $perPageOptions = [50, 100, 250];
+    public static $perPageViaRelationship = 25;
+    public static $globallySearchable = true;
+    public static $search = ['name'];
+    public static $searchRelations = [];
+
 
     public static function softDeletes()
     {

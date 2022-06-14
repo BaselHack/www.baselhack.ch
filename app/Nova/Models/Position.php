@@ -12,11 +12,7 @@ class Position extends Resource
 {
     public static $group = 'Content';
 
-    public static $model = '\App\Models\Position';
-
-    public static $title = 'title';
-
-    public static $search = ['title'];
+    public static $model = \App\Models\Position::class;
 
     public static function label()
     {
@@ -27,6 +23,24 @@ class Position extends Resource
     {
         return 'Position';
     }
+
+    public function title()
+    {
+        return "$this->title";
+    }
+
+    public function subtitle()
+    {
+        return parent::subtitle();
+    }
+
+    public static $displayInNavigation = true;
+    public static $perPageOptions = [50, 100, 250];
+    public static $perPageViaRelationship = 25;
+    public static $globallySearchable = true;
+    public static $search = ['title', 'body'];
+    public static $searchRelations = [];
+
 
     public static function softDeletes()
     {
@@ -39,10 +53,11 @@ class Position extends Resource
 
             Date::make('Published at', 'published_at')
                 ->sortable()
+                ->filterable()
                 ->rules('nullable', 'date')
                 ->hideWhenCreating(),
 
-            BelongsTo::make('Company')
+            BelongsTo::make('Company', 'class', Company::class)
                 ->required()
                 ->sortable()
                 ->filterable(),

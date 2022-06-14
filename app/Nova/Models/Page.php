@@ -10,11 +10,7 @@ class Page extends Resource
 {
     public static $group = 'Marketing';
 
-    public static $model = '\App\Models\Page';
-
-    public static $title = 'index';
-
-    public static $search = ['index', 'title'];
+    public static $model = \App\Models\Page::class;
 
     public static function label()
     {
@@ -25,6 +21,24 @@ class Page extends Resource
     {
         return 'Page';
     }
+
+    public function title()
+    {
+        return "$this->index";
+    }
+
+    public function subtitle()
+    {
+        return "$this->title";
+    }
+
+    public static $displayInNavigation = true;
+    public static $perPageOptions = [50, 100, 250];
+    public static $perPageViaRelationship = 25;
+    public static $globallySearchable = true;
+    public static $search = ['index', 'title'];
+    public static $searchRelations = [];
+
 
     public static function softDeletes()
     {

@@ -11,11 +11,7 @@ class Newsletter extends Resource
 {
     public static $group = 'Marketing';
 
-    public static $model = '\App\Models\Newsletter';
-
-    public static $title = 'email';
-
-    public static $search = ['company', 'firstname', 'lastname', 'email'];
+    public static $model = \App\Models\Newsletter::class;
 
     public static function label()
     {
@@ -26,6 +22,24 @@ class Newsletter extends Resource
     {
         return 'Newsletter';
     }
+
+    public function title()
+    {
+        return "$this->email";
+    }
+
+    public function subtitle()
+    {
+        return parent::subtitle();
+    }
+
+    public static $displayInNavigation = true;
+    public static $perPageOptions = [50, 100, 250];
+    public static $perPageViaRelationship = 25;
+    public static $globallySearchable = true;
+    public static $search = ['company', 'firstname', 'lastname', 'email'];
+    public static $searchRelations = [];
+
 
     public static function softDeletes()
     {

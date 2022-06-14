@@ -9,11 +9,7 @@ class Password extends Resource
 {
     public static $group = 'Administration';
 
-    public static $model = '\App\Models\Password';
-
-    public static $title = 'name';
-
-    public static $search = ['name'];
+    public static $model = \App\Models\Password::class;
 
     public static function label()
     {
@@ -24,6 +20,24 @@ class Password extends Resource
     {
         return 'Password';
     }
+
+    public function title()
+    {
+        return "$this->name";
+    }
+
+    public function subtitle()
+    {
+        return parent::subtitle();
+    }
+
+    public static $displayInNavigation = true;
+    public static $perPageOptions = [50, 100, 250];
+    public static $perPageViaRelationship = 25;
+    public static $globallySearchable = true;
+    public static $search = ['name','username'];
+    public static $searchRelations = [];
+
 
     public static function softDeletes()
     {
