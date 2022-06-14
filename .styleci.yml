@@ -1,7 +1,36 @@
-preset: laravel
+risky: false
+
+version: 8.1
+
+preset: recommended
+
+tab-width: 4
+
+use-tabs: false
+
+enabled:
+  - long_array_syntax
+  - strict
+  - unalign_double_arrow
 
 disabled:
-  - no_unused_imports
+  - align_double_arrow
+  - short_array_syntax
+
 finder:
+  exclude:
+    - "tests"
+  name:
+    - "*.php"
   not-name:
-    - index.php
+    - "*Stub.php"
+  contains:
+    - "Foo"
+  not-contains:
+    - "config"
+  path:
+    - "foo/Stuff"
+  not-path:
+    - "libraries"
+  depth:
+    - "< 3"
