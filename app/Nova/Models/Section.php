@@ -56,7 +56,7 @@ class Section extends Resource
                 ->rules('required', 'string', 'max:100'),
 
             Text::make('Teaser', 'teaser')
-                ->sortable()
+                ->hideFromIndex()
                 ->rules('nullable', 'string', 'max:160'),
 
             Markdown::make('Body', 'body')

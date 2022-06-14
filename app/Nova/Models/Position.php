@@ -12,7 +12,7 @@ class Position extends Resource
 {
     public static $group = 'Content';
 
-    public static $model = \App\Models\Position::class;
+    public static $model = 'App\Models\Position';
 
     public static function label()
     {
@@ -27,11 +27,6 @@ class Position extends Resource
     public function title()
     {
         return "$this->title";
-    }
-
-    public function subtitle()
-    {
-        return parent::subtitle();
     }
 
     public static $displayInNavigation = true;
