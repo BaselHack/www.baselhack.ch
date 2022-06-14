@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Middleware\Authenticate;
 use Laravel\Nova\Actions\ActionResource;
+use Laravel\Nova\Http\Middleware\Authenticate;
 use Laravel\Nova\Http\Middleware\Authorize;
 use Laravel\Nova\Http\Middleware\BootTools;
 use Laravel\Nova\Http\Middleware\DispatchServingNovaEvent;
@@ -162,15 +162,15 @@ return [
     |
     */
 
-    'brand' => [
-        'logo' => realpath(__DIR__.'/../public/img/empty.svg'),
+    // 'brand' => [
+    //     'logo' => realpath(__DIR__.'/../public/img/example-logo.svg'),
 
-        'colors' => [
-            '400' => '198, 99, 32, 0.5',
-            '500' => '198, 99, 32',
-            '600' => '198, 99, 32, 0.75',
-        ],
-    ],
+    //     'colors' => [
+    //         "400" => "24, 182, 155, 0.5",
+    //         "500" => "24, 182, 155",
+    //         "600" => "24, 182, 155, 0.75",
+    //     ]
+    // ],
 
     /*
     |--------------------------------------------------------------------------

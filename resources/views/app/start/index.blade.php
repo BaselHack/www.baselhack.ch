@@ -37,10 +37,6 @@
                 </div>
             </div>
 
-<<<<<<< HEAD
-        <div class="my-24 text-center">
-            @include('app.components._sponsors')
-=======
             <br>
             <br>
 
@@ -59,8 +55,6 @@
                     <iframe src="https://player.vimeo.com/video/633003007?h=67fce8f4ff" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-
->>>>>>> production
         </div>
 
 
