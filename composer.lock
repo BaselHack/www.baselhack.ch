@@ -114,16 +114,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.224.3",
+            "version": "3.225.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "52f45dfe0d1e5a77f33c050bde5134901fc54a57"
+                "reference": "ee717ffeb6d7c6bd0278b51b9f070b3571ac4eb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/52f45dfe0d1e5a77f33c050bde5134901fc54a57",
-                "reference": "52f45dfe0d1e5a77f33c050bde5134901fc54a57",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ee717ffeb6d7c6bd0278b51b9f070b3571ac4eb0",
+                "reference": "ee717ffeb6d7c6bd0278b51b9f070b3571ac4eb0",
                 "shasum": ""
             },
             "require": {
@@ -199,9 +199,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.224.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.225.3"
             },
-            "time": "2022-06-02T18:22:57+00:00"
+            "time": "2022-06-13T18:56:48+00:00"
         },
         {
             "name": "box/spout",
@@ -1606,16 +1606,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.4.3",
+            "version": "7.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "74a8602c6faec9ef74b7a9391ac82c5e65b1cdab"
+                "reference": "e3ff079b22820c2029d4c2a87796b6a0b8716ad8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/74a8602c6faec9ef74b7a9391ac82c5e65b1cdab",
-                "reference": "74a8602c6faec9ef74b7a9391ac82c5e65b1cdab",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/e3ff079b22820c2029d4c2a87796b6a0b8716ad8",
+                "reference": "e3ff079b22820c2029d4c2a87796b6a0b8716ad8",
                 "shasum": ""
             },
             "require": {
@@ -1710,7 +1710,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.4.3"
+                "source": "https://github.com/guzzle/guzzle/tree/7.4.4"
             },
             "funding": [
                 {
@@ -1726,7 +1726,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-25T13:24:33+00:00"
+            "time": "2022-06-09T21:39:15+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1814,16 +1814,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.2.1",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "c94a94f120803a18554c1805ef2e539f8285f9a2"
+                "reference": "83260bb50b8fc753c72d14dc1621a2dac31877ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/c94a94f120803a18554c1805ef2e539f8285f9a2",
-                "reference": "c94a94f120803a18554c1805ef2e539f8285f9a2",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/83260bb50b8fc753c72d14dc1621a2dac31877ee",
+                "reference": "83260bb50b8fc753c72d14dc1621a2dac31877ee",
                 "shasum": ""
             },
             "require": {
@@ -1847,7 +1847,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -1909,7 +1909,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.2.1"
+                "source": "https://github.com/guzzle/psr7/tree/2.3.0"
             },
             "funding": [
                 {
@@ -1925,7 +1925,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-20T21:55:58+00:00"
+            "time": "2022-06-09T08:26:02+00:00"
         },
         {
             "name": "inertiajs/inertia-laravel",
@@ -2082,16 +2082,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.83.15",
+            "version": "v8.83.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "bf8fbdd9061611b2c05562fa14f6987cc5145d78"
+                "reference": "6be5abd144faf517879af7298e9d79f06f250f75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/bf8fbdd9061611b2c05562fa14f6987cc5145d78",
-                "reference": "bf8fbdd9061611b2c05562fa14f6987cc5145d78",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/6be5abd144faf517879af7298e9d79f06f250f75",
+                "reference": "6be5abd144faf517879af7298e9d79f06f250f75",
                 "shasum": ""
             },
             "require": {
@@ -2251,21 +2251,21 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-05-31T14:57:02+00:00"
+            "time": "2022-06-07T15:09:06+00:00"
         },
         {
             "name": "laravel/nova",
-            "version": "4.7.0",
+            "version": "4.8.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "a07d9b466dca14810e7db14c4438312c075c5e7a"
+                "reference": "022293753437ce057804701db0896c2ed01c3782"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-a07d9b466dca14810e7db14c4438312c075c5e7a-zip-9e7c08.zip",
-                "reference": "a07d9b466dca14810e7db14c4438312c075c5e7a",
-                "shasum": "244d7f8634b4160032bd8666ed402dbe2f198be5"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-022293753437ce057804701db0896c2ed01c3782-zip-b7e828.zip",
+                "reference": "022293753437ce057804701db0896c2ed01c3782",
+                "shasum": "f1a18dea34879001a6a520b6d3f8fce216b75dd6"
             },
             "require": {
                 "brick/money": "^0.5.0",
@@ -2358,9 +2358,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/laravel/nova/tree/v4.7.0"
+                "source": "https://github.com/laravel/nova/tree/v4.8.1"
             },
-            "time": "2022-05-25T17:03:24+00:00"
+            "time": "2022-06-08T18:40:31+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2616,16 +2616,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "6eddb90a9e4a1a8c5773226068fcfb48cb36812a"
+                "reference": "0da1dca5781dd3cfddbe328224d9a7a62571addc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/6eddb90a9e4a1a8c5773226068fcfb48cb36812a",
-                "reference": "6eddb90a9e4a1a8c5773226068fcfb48cb36812a",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/0da1dca5781dd3cfddbe328224d9a7a62571addc",
+                "reference": "0da1dca5781dd3cfddbe328224d9a7a62571addc",
                 "shasum": ""
             },
             "require": {
@@ -2718,7 +2718,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-03T14:07:39+00:00"
+            "time": "2022-06-07T21:28:26+00:00"
         },
         {
             "name": "league/config",
@@ -3584,16 +3584,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.6.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "247918972acd74356b0a91dfaa5adcaec069b6c0"
+                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/247918972acd74356b0a91dfaa5adcaec069b6c0",
-                "reference": "247918972acd74356b0a91dfaa5adcaec069b6c0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/5579edf28aee1190a798bfa5be8bc16c563bd524",
+                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524",
                 "shasum": ""
             },
             "require": {
@@ -3672,7 +3672,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.6.0"
+                "source": "https://github.com/Seldaek/monolog/tree/2.7.0"
             },
             "funding": [
                 {
@@ -3684,7 +3684,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-10T09:36:00+00:00"
+            "time": "2022-06-09T08:59:12+00:00"
         },
         {
             "name": "mtdowling/jmespath.php",
@@ -5341,16 +5341,16 @@
         },
         {
             "name": "spatie/browsershot",
-            "version": "3.54.0",
+            "version": "3.55.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/browsershot.git",
-                "reference": "038cfecb095c74b80a64c8daa9d2194f680c99c1"
+                "reference": "305adf5860427b206509366bdebcd1b4307cac9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/browsershot/zipball/038cfecb095c74b80a64c8daa9d2194f680c99c1",
-                "reference": "038cfecb095c74b80a64c8daa9d2194f680c99c1",
+                "url": "https://api.github.com/repos/spatie/browsershot/zipball/305adf5860427b206509366bdebcd1b4307cac9f",
+                "reference": "305adf5860427b206509366bdebcd1b4307cac9f",
                 "shasum": ""
             },
             "require": {
@@ -5395,7 +5395,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/browsershot/issues",
-                "source": "https://github.com/spatie/browsershot/tree/3.54.0"
+                "source": "https://github.com/spatie/browsershot/tree/3.55.0"
             },
             "funding": [
                 {
@@ -5403,7 +5403,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-19T13:37:26+00:00"
+            "time": "2022-06-13T08:38:15+00:00"
         },
         {
             "name": "spatie/crawler",
@@ -6112,16 +6112,16 @@
         },
         {
             "name": "spatie/laravel-sitemap",
-            "version": "6.1.0",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-sitemap.git",
-                "reference": "e51c68f9e51f476f3d6d92beb2cac0afa2de6d0d"
+                "reference": "0da6e85eda6e044ed67132d3232c9bbf2f2eb73d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-sitemap/zipball/e51c68f9e51f476f3d6d92beb2cac0afa2de6d0d",
-                "reference": "e51c68f9e51f476f3d6d92beb2cac0afa2de6d0d",
+                "url": "https://api.github.com/repos/spatie/laravel-sitemap/zipball/0da6e85eda6e044ed67132d3232c9bbf2f2eb73d",
+                "reference": "0da6e85eda6e044ed67132d3232c9bbf2f2eb73d",
                 "shasum": ""
             },
             "require": {
@@ -6173,7 +6173,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-sitemap/issues",
-                "source": "https://github.com/spatie/laravel-sitemap/tree/6.1.0"
+                "source": "https://github.com/spatie/laravel-sitemap/tree/6.2.0"
             },
             "funding": [
                 {
@@ -6181,7 +6181,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-01-14T07:45:46+00:00"
+            "time": "2022-06-13T09:54:14+00:00"
         },
         {
             "name": "spatie/laravel-translatable",
@@ -6318,16 +6318,16 @@
         },
         {
             "name": "spatie/nova-translatable",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/nova-translatable.git",
-                "reference": "361db2209c71bf33defef5f5d0b002518ff1c72f"
+                "reference": "28f8479125063a6fa23054481ccb2d02fe46a707"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/nova-translatable/zipball/361db2209c71bf33defef5f5d0b002518ff1c72f",
-                "reference": "361db2209c71bf33defef5f5d0b002518ff1c72f",
+                "url": "https://api.github.com/repos/spatie/nova-translatable/zipball/28f8479125063a6fa23054481ccb2d02fe46a707",
+                "reference": "28f8479125063a6fa23054481ccb2d02fe46a707",
                 "shasum": ""
             },
             "require": {
@@ -6365,7 +6365,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/nova-translatable/issues",
-                "source": "https://github.com/spatie/nova-translatable/tree/3.1.1"
+                "source": "https://github.com/spatie/nova-translatable/tree/3.1.2"
             },
             "funding": [
                 {
@@ -6373,7 +6373,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-05-23T06:50:33+00:00"
+            "time": "2022-06-13T20:57:25+00:00"
         },
         {
             "name": "spatie/once",
@@ -12539,6 +12539,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/error-handler",
             "time": "2022-04-12T15:19:55+00:00"
         },
         {
