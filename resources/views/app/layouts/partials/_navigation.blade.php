@@ -51,10 +51,10 @@
                             {{ __('app/layouts.partners') }}
                         </a>
 
-                        <a href="{{ route('positions.index')}}"
+                        {{-<a href="{{ route('positions.index')}}"
                            class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
                             {{ __('app/layouts.positions') }}
-                        </a>
+                        </a>-}}
 
                         <a href="{{ route('contact.index')}}"
                            class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
@@ -112,9 +112,9 @@
           {{ __('app/layouts.partners') }}
         </a>
 
-          <a href="{{ route('positions.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
+         {{- <a href="{{ route('positions.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
               {{ __('app/layouts.positions') }}
-          </a>
+          </a> -}}
 
         <a href="{{ route('contact.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
           {{ __('app/layouts.contact') }}
