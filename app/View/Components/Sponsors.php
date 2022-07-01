@@ -8,15 +8,17 @@ use Illuminate\View\Component;
 class Sponsors extends Component
 {
     public $gridClass;
+    public $height;
     public $sponsors;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($gridClass,Collection $sponsors)
+    public function __construct($gridClass, $height, Collection $sponsors)
     {
         $this->gridClass = $gridClass;
+        $this->height = $height;
         $this->sponsors = $sponsors;
     }
 
