@@ -7,6 +7,7 @@
         <div class="text-center">
 
             <br>
+            <br>
 
             <div class="flex justify-center">
                 <h1 class="text-4xl max-w-screen-xl">BaselHack 2022</h1>
@@ -16,20 +17,28 @@
             </div>
 
             <br>
+            <br>
+            <br>
 
             <div class="flex justify-center">
                 <div>
-                    <iframe src="https://player.vimeo.com/video/633003007?h=67fce8f4ff" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://player.vimeo.com/video/633003007?h=67fce8f4ff" style="max-width: 100vw;" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <p>Impressions from BaselHack 2021, Launchlabs, Basel</p>
                 </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="flex justify-center">
+                <h1 class="text-4xl max-w-screen-xl">BaselHack in a nutshell</h1>
             </div>
 
             <div class="flex justify-center">
                 <img class="w-auto" src="{{ asset('images/app/baselhack-in-a-nutshell.png') }}"
                      alt="Baselhack in a nutshell (infographic)">
             </div>
-
-
 
             <div class="mt-4 max-w-xl mx-auto sm:flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4 md:mt-8">
 
