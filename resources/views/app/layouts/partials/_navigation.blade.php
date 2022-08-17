@@ -47,8 +47,8 @@
                         </a>
                     </nav>
                     <a href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html" target="_blank"
-                       class="px-4 py-1 text-base font-medium rounded-md text-black bg-yellow-200 hover:bg-yellow-300">
-                        Register
+                       class="px-8 py-2 text-base font-bold rounded-md text-black bg-white" style="background-color:#f2e94d;">
+                        Register Ticket
                     </a>
                 </div>
             </div>
