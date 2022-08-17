@@ -20,14 +20,14 @@
                 <div class="mt-12 text-center">
                     <a target="_blank"
                        href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html#ticket-container"
-                       class="px-6 py-2 mr-2 border text-sm md:text-base font-bold rounded-md text-black bg-gray-600"
+                       class="inline-block px-6 py-2 m-2 border text-sm md:text-base font-bold rounded-md text-black bg-gray-600"
                        style="background-color:#f2e94d; border-color:#f2e94d;">
                         Register Ticket</a>
                     <a href="{{ asset('files/baselhack-2022.ics') }}"
-                       class="px-6 py-2 mr-2 ml-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
+                       class="inline-block px-6 py-2 m-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
                         Add to Calendar</a>
                     <a href="#more"
-                       class="px-6 py-2 mr-2 ml-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400 md:inline">
+                       class="hidden md:inline-block px-6 py-2 m-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
                         Learn More</a>
                 </div>
             </div>
