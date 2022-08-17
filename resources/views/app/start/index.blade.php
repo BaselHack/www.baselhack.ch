@@ -5,57 +5,49 @@
     <!-- just a comment -->
     <main class="mx-auto max-w-7xl px-4 bg-black text-white">
         <div class="text-center">
-
-            <br>
-            <br>
-
-            <div class="flex justify-center">
-                <h1 class="text-4xl max-w-screen-xl">BaselHack 2022</h1>
-            </div>
-            <div class="flex justify-center">
-                <p class="block">22. & 23. October at Haus der Wirtschaft, Pratteln</p>
-            </div>
-
-            <br>
-            <br>
-            <br>
-
-            <div class="flex justify-center">
-                <div>
-                    <iframe src="https://player.vimeo.com/video/633003007?h=67fce8f4ff" style="max-width: 100vw;" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                    <p>Impressions from BaselHack 2021, Launchlabs, Basel</p>
+            <div class="mt-24">
+                <h1 class="mt-12 text-4xl max-w-screen-xl">BaselHack 2022</h1>
+                <h2 class="mt-4 text-base">22. & 23. October 2022</h2>
+                <p class="mt-1 text-base">Haus der Wirtschaft, Hardstrasse 1, 4133 Pratteln</p>
+                <div class="mt-12 flex justify-center">
+                    <p class="text-left max-w-2xl">
+                        BaselHack 2022 is the only hackathon for the Basel region. The event lasts for a weekend and different
+                        teams will be coding on various challenges to attempt winning a prize money. Join us for a weekend full
+                        of fun, coding challenges, for meeting new friends and to enjoy free drinks & foods. We are back, bigger
+                        than ever!
+                    </p>
+                </div>
+                <div class="mt-12 text-center">
+                    <a target="_blank"
+                       href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html#ticket-container"
+                       class="px-6 py-2 mr-2 border text-sm md:text-base font-bold rounded-md text-black bg-gray-600"
+                       style="background-color:#f2e94d; border-color:#f2e94d;">
+                        Register Ticket</a>
+                    <a href="{{ asset('files/baselhack-2022.ics') }}"
+                       class="px-6 py-2 mr-2 ml-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
+                        Add to Calendar</a>
+                    <a href="#more"
+                       class="px-6 py-2 mr-2 ml-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400 md:inline">
+                        Learn More</a>
                 </div>
             </div>
 
-            <br>
-            <br>
-            <br>
+            <div class="mt-24">
+                <div class="flex items-center justify-center">
+                    <iframe src="https://player.vimeo.com/video/633003007?h=67fce8f4ff" style="max-width: 100vw;" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="mt-1">Impressions from BaselHack 2021, Launchlabs, Basel</p>
+            </div>
 
-            <div class="flex justify-center">
-                <h1 class="text-4xl max-w-screen-xl">BaselHack in a nutshell</h1>
+            <div class="mt-40 flex justify-center">
+                <a id="more" name="more" class="mb-4"></a>
+                <h2 class="mt-4 text-4xl max-w-screen-xl">The BaselHack in a Nutshell</h2>
             </div>
 
             <div class="flex justify-center">
                 <img class="w-auto" src="{{ asset('images/app/baselhack-in-a-nutshell.png') }}"
                      alt="Baselhack in a nutshell (infographic)">
             </div>
-
-            <div class="mt-4 max-w-xl mx-auto sm:flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4 md:mt-8">
-
-                <div class="rounded-md shadow">
-                    <a href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html#ticket-container" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400 md:py-4 md:text-lg md:px-10">
-                        Register now
-                    </a>
-                </div>
-                <div class="rounded-md shadow">
-                    <a href="{{ route('sponsors.index') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400 md:py-4 md:text-lg md:px-10">
-                        Sponsor
-                    </a>
-                </div>
-            </div>
-
-            <br>
-            <br>
 
 {{--            <div class="max-w-2xl mx-auto">--}}
 
