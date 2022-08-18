@@ -11,10 +11,10 @@
                 <p class="mt-1 text-base">Haus der Wirtschaft, Hardstrasse 1, 4133 Pratteln</p>
                 <div class="mt-12 flex justify-center">
                     <p class="text-left max-w-2xl">
-                        BaselHack 2022 is the only hackathon for the Basel region. The event lasts for a weekend and different
-                        teams will be coding on various challenges to attempt winning a prize money. Join us for a weekend full
-                        of fun, coding challenges, for meeting new friends and to enjoy free drinks & foods. We are back, bigger
-                        than ever!
+                        BaselHack is the hackathon for Basel, Northwestern Switzerland and bordering Alsace and Südbaden.
+                        Young and young-at-heart developers, technology fanatics, designers and others meet for a weekend
+                        tinkering and developing various ideas. Join us for a weekend full of fun, challenges, for meeting
+                        new friends and to enjoy free drinks & foods.
                     </p>
                 </div>
                 <div class="mt-12 text-center">
