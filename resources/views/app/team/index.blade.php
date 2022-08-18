@@ -21,7 +21,7 @@
                                     @if($team->profile_website)
                                         <li>
                                             <a target="_blank" href="{{ $team->profile_website }}"
-                                               class="text-gray-300 hover:text-white transition ease-in-out duration-150">
+                                               class="text-gray-300 hover:text-white">
                                                 <span class="sr-only">Website</span>
                                                 <span class="w-5 h-5">
                                     <i class="far fa-link"></i>
@@ -33,7 +33,7 @@
                                     @if($team->profile_github)
                                         <li>
                                             <a target="_blank" href="{{ $team->profile_github  }}"
-                                               class="text-gray-300 hover:text-white transition ease-in-out duration-150">
+                                               class="text-gray-300 hover:text-white">
                                                 <span class="sr-only">Github</span>
                                                 <span class="w-5 h-5">
                                      <i class="fab fa-github"></i>
@@ -45,7 +45,7 @@
                                     @if($team->profile_twitter)
                                         <li>
                                             <a target="_blank" href="{{ $team->profile_twitter  }}"
-                                               class="text-gray-300 hover:text-white transition ease-in-out duration-150">
+                                               class="text-gray-300 hover:text-white">
                                                 <span class="sr-only">Twitter</span>
                                                 <span class="w-5 h-5">
                                      <i class="fab fa-twitter"></i>
@@ -57,7 +57,7 @@
                                     @if($team->profile_linkedin)
                                         <li>
                                             <a target="_blank" href="{{ $team->profile_linkedin  }}"
-                                               class="text-gray-300 hover:text-white transition ease-in-out duration-150">
+                                               class="text-gray-300 hover:text-white">
                                                 <span class="sr-only">LinkedIn</span>
                                                 <span class="w-5 h-5">
                                      <i class="fab fa-linkedin-in"></i>
@@ -93,7 +93,7 @@
                                     @if($team->profile_website)
                                         <li>
                                             <a target="_blank" href="{{ $team->profile_website }}"
-                                               class="text-gray-300 hover:text-white transition ease-in-out duration-150">
+                                               class="text-gray-300 hover:text-white">
                                                 <span class="sr-only">Website</span>
                                                 <span class="w-5 h-5">
                                     <i class="far fa-link"></i>
@@ -105,7 +105,7 @@
                                     @if($team->profile_github)
                                         <li>
                                             <a target="_blank" href="{{ $team->profile_github  }}"
-                                               class="text-gray-300 hover:text-white transition ease-in-out duration-150">
+                                               class="text-gray-300 hover:text-white">
                                                 <span class="sr-only">Github</span>
                                                 <span class="w-5 h-5">
                                      <i class="fab fa-github"></i>
@@ -117,7 +117,7 @@
                                     @if($team->profile_twitter)
                                         <li>
                                             <a target="_blank" href="{{ $team->profile_twitter  }}"
-                                               class="text-gray-300 hover:text-white transition ease-in-out duration-150">
+                                               class="text-gray-300 hover:text-white">
                                                 <span class="sr-only">Twitter</span>
                                                 <span class="w-5 h-5">
                                      <i class="fab fa-twitter"></i>
@@ -129,7 +129,7 @@
                                     @if($team->profile_linkedin)
                                         <li>
                                             <a target="_blank" href="{{ $team->profile_linkedin  }}"
-                                               class="text-gray-300 hover:text-white transition ease-in-out duration-150">
+                                               class="text-gray-300 hover:text-white">
                                                 <span class="sr-only">LinkedIn</span>
                                                 <span class="w-5 h-5">
                                      <i class="fab fa-linkedin-in"></i>

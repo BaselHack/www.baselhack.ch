@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hack-font-regular {
+    font-family: hack, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hack-font-bold {
+    font-family: hack, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.hack-font-italic {
+    font-family: hack, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+a {
+    @apply transition ease-in-out duration-300;
+    @apply text-teal;
+
+    &:hover {
+         @apply transition ease-in-out duration-300;
+         @apply text-teal-accent;
+    }
+}
+
+p {
+    @apply mt-4;
+}

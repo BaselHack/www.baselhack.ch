@@ -15,7 +15,14 @@ module.exports = {
             gray: colors.trueGray,
             black: colors.black,
             white: colors.white,
-            yellow: colors.yellow
+            yellow: {
+                DEFAULT: '#f2e94d',
+                'accent': '#d4ca17',
+            },
+            teal: {
+                DEFAULT: '#5ebdc9',
+                'accent': '#3298a6',
+            }
         }
     },
     variants: {
