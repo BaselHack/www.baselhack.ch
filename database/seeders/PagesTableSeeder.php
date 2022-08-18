@@ -22,6 +22,10 @@ class PagesTableSeeder extends Seeder
             'description' => 'We connect people, take fun seriously and grow open innovation',
         ]);
         Page::create([
+            'index' => 'about:index',
+            'title' => 'About the BaselHack'
+        ]);
+        Page::create([
             'index' => 'posts:index',
             'robots' => 'index,follow',
             'title' => 'BaselHack | Blog',
