@@ -26,13 +26,17 @@ class PositionsController extends Controller
             'teaser' => $section->teaser,
             'body' => Str::of($section->body)->markdown(),
             'positions' => $positions,
+            ...$this->sponsors->toArray()
         ]);
 
     }
 
     public function show(Position $position)
     {
-        return view('app.positions.show', compact('position'));
+        return view('app.positions.show')->with([
+            'position' => $position,
+            ...$this->sponsors->toArray()
+        ]);
     }
 }
 

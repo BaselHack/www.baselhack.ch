@@ -18,6 +18,7 @@ class ContactController extends Controller
             'title' => $section->title,
             'teaser' => $section->teaser,
             'body' => Str::of($section->body)->markdown(),
+            ...$this->sponsors->toArray()
         ]);
     }
 }

@@ -19,13 +19,13 @@
 
 @endif
 
-@if(!empty($sponsors) && $sponsors->count())
+@if(!empty($silverSponsors) && $silverSponsors->count())
 
     <h3 class="text-2xl text-white font-bold tracking-tight sm:text-3xl">
         Silver Sponsors
     </h3>
 
-    <x-sponsors height=24 gridClass="grid grid-cols-2 gap-0.5 md:grid-cols-4 mt-4 lg:mt-8" :sponsors="$sponsors" />
+    <x-sponsors height=24 gridClass="grid grid-cols-2 gap-0.5 md:grid-cols-4 mt-4 lg:mt-8" :sponsors="$silverSponsors" />
 
 @endif
 

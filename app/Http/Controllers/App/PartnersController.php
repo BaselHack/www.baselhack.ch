@@ -27,6 +27,7 @@ class PartnersController extends Controller
             'teaser' => $section->teaser,
             'body' => Str::of($section->body)->markdown(),
             'partners' => $partners,
+            ...$this->sponsors->toArray()
         ]);
     }
 }
