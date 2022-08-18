@@ -86,5 +86,13 @@ class SectionsTableSeeder extends Seeder
                 'body' => null,
             ]
         );
+
+        Section::create(
+            [
+                'key' => 'about',
+                'title' => 'About',
+                'teaser' => 'About the BaselHack'
+            ]
+        );
     }
 }

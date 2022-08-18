@@ -12,10 +12,13 @@ use App\Http\Controllers\App\NewsletterController;
 use App\Http\Controllers\App\PositionsController;
 use App\Http\Controllers\App\PrivacyController;
 use App\Http\Controllers\App\TermsController;
+use App\Http\Controllers\App\AboutController;
 
 use Spatie\Honeypot\ProtectAgainstSpam;
 
 Route::get('/', [StartController::class, 'index'])->name('start.index');
+
+Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 
 Route::get('/blog', [PostsController::class, 'index'])->name('posts.index');
 Route::get('/blog/{post}', [PostsController::class, 'show'])->name('posts.show');
