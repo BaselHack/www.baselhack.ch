@@ -31,7 +31,11 @@
     "fruitcake/laravel-cors": "^2.0",
     "guzzlehttp/guzzle": "^7.0.1",
     "laravel/framework": "^8.41",
+<<<<<<< HEAD
     "laravel/nova": "^4.0",
+=======
+    "laravel/nova": "^3.0",
+>>>>>>> 248575992522ab4d56de900dd73d0b57ff1f5a3a
     "laravel/tinker": "^2.5",
     "league/flysystem-aws-s3-v3": "~1.0",
     "league/flysystem-cached-adapter": "^1.1",
