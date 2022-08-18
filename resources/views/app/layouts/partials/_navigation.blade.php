@@ -1,4 +1,4 @@
-<div class="relative bg-black">
+<div class="header relative bg-black">
     <div class="relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
@@ -22,39 +22,38 @@
                 <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
                     <nav class="flex space-x-10">
                         <a href="{{ route('start.index')}}"
-                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.start') }}
                         </a>
 
                         <a href="{{ route('about.index')}}"
-                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.about') }}
                         </a>
 
                         <a href="{{ route('posts.index')}}"
-                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.posts') }}
                         </a>
 
                         <a href="{{ route('team.index')}}"
-                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.team') }}
                         </a>
 
                         <a href="{{ route('sponsors.index')}}"
-                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.sponsors') }}
                         </a>
 
                         <a href="{{ route('contact.index')}}"
-                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.contact') }}
                         </a>
                     </nav>
                     <a href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html"
                        target="_blank"
-                       class="px-8 py-2 text-base font-bold rounded-md text-black bg-white"
-                       style="background-color:#f2e94d;">
+                       class="px-8 py-2 text-base font-bold rounded-md text-black bg-yellow hover:bg-yellow-accent">
                         Register Ticket</a>
                 </div>
             </div>
@@ -68,35 +67,35 @@
              aria-labelledby="main-menu">
             <div class="px-2 pt-2 pb-3">
                 <a href="{{ route('start.index') }}"
-                   class="block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   class="block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.start') }}
                 </a>
                 <a href="{{ route('about.index') }}"
-                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.about') }}
                 </a>
                 <a href="{{ route('posts.index') }}"
-                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.posts') }}
                 </a>
 
                 <a href="{{ route('team.index') }}"
-                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.team') }}
                 </a>
 
                 <a href="{{ route('sponsors.index') }}"
-                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.sponsors') }}
                 </a>
 
                 <a href="{{ route('contact.index') }}"
-                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.contact') }}
                 </a>

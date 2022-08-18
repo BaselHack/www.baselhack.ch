@@ -29,13 +29,13 @@
 
                 <div class="mt-6">
                     @if($position->company->url)
-                        <a target="_blank" href="{{ $position->company->url }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-50 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-blue-200 transition ease-in-out duration-150">
+                        <a target="_blank" href="{{ $position->company->url }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-50 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-blue-200">
                             More Information about {{ $position->company->name }}
                         </a>
                     @endif
 
                     @if($position->url)
-                        <a target="_blank" href="{{ $position->url }}" class="ml-2 inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-50 focus:outline-none focus:border-green-300 focus:shadow-outline-green active:bg-green-200 transition ease-in-out duration-150">
+                        <a target="_blank" href="{{ $position->url }}" class="ml-2 inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-green-700 bg-green-100 hover:bg-green-50 focus:outline-none focus:border-green-300 focus:shadow-outline-green active:bg-green-200">
                             Apply now!
                         </a>
                     @endif

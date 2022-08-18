@@ -2,15 +2,15 @@
 
 return [
 
-    'title' => 'Would you like to stay tuned?',
-    'subtitle' => 'Sign up for our newsletter to stay up to date.',
+    'title' => 'Newsletter Subscription',
+    'subtitle' => 'Get the latest news about the BaselHack to your inbox. You can unsubscribe anytime.',
 
     'form' => [
 
         'input' => [
             'email' => 'Email address'
         ],
-        'button' => 'Notify me',
+        'button' => 'Subscribe',
         'privacy' => 'We care about the protection of your data.',
 
     ],

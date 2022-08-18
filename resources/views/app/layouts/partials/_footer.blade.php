@@ -1,4 +1,4 @@
-<footer class="bg-black mt-24">
+<footer class="footer bg-black mt-24">
     <div class="max-w-screen-xl mx-auto py-8 px-4 overflow-hidden space-y-8 sm:px-6 lg:px-8">
         <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
             <div class="px-5 py-2">
@@ -72,11 +72,8 @@
             @endif
         </div>
 
-        <p class="mt-8 text-center text-base leading-6 text-gray-300 hover:text-white">
-            <a rel="nofollow" href="{{ \Laravel\Nova\Nova::path() }}">
-                &copy; {{ date('Y')}} BaselHack. All rights reserved.
-            </a>
+        <p class="mt-8 text-center text-base leading-6 text-gray-400 hover:text-white">
+            &copy; {{ date('Y')}} BaselHack. All rights reserved.
         </p>
-
     </div>
 </footer>
