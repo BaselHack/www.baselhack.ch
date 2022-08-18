@@ -22,7 +22,6 @@ class PostsController extends Controller
             'teaser' => $section->teaser,
             'body' => Str::of($section->body)->markdown(),
             'posts' => $posts,
-            ...$this->sponsors->toArray()
         ]);
 
     }
@@ -39,7 +38,6 @@ class PostsController extends Controller
         return view('app.posts.show')->with([
             'page' => $page,
             'post' => $post,
-            ...$this->sponsors->toArray()
         ]);
     }
 }

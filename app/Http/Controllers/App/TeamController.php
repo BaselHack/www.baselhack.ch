@@ -25,7 +25,6 @@ class TeamController extends Controller
             'body' => Str::of($section->body)->markdown(),
             'teams' => $teams,
             'alumni' => $alumni,
-            ...$this->sponsors->toArray()
         ]);
     }
 }

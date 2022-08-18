@@ -21,7 +21,6 @@ class StartController extends Controller
         return view('app.start.index')->with([
             'page' => $page,
             'post' => $post,
-            ...$this->sponsors->toArray()
         ]);
     }
 }

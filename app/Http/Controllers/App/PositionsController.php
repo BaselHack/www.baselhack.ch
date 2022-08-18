@@ -26,7 +26,6 @@ class PositionsController extends Controller
             'teaser' => $section->teaser,
             'body' => Str::of($section->body)->markdown(),
             'positions' => $positions,
-            ...$this->sponsors->toArray()
         ]);
 
     }
@@ -35,7 +34,6 @@ class PositionsController extends Controller
     {
         return view('app.positions.show')->with([
             'position' => $position,
-            ...$this->sponsors->toArray()
         ]);
     }
 }
