@@ -35,6 +35,9 @@ class PostsController extends Controller
             'image' => null,
         ];
 
-        return view('app.posts.show', compact('page', 'post'));
+        return view('app.posts.show')->with([
+            'page' => $page,
+            'post' => $post,
+        ]);
     }
 }

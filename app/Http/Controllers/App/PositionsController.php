@@ -32,7 +32,9 @@ class PositionsController extends Controller
 
     public function show(Position $position)
     {
-        return view('app.positions.show', compact('position'));
+        return view('app.positions.show')->with([
+            'position' => $position,
+        ]);
     }
 }
 
