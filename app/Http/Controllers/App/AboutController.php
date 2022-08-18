@@ -14,7 +14,7 @@ class AboutController extends Controller
         $page = Page::whereIndex('about:index')->first();
         $section = Section::where('key', 'about')->first();
 
-        return view('app.section.index')->with([
+        return view('app.about.index')->with([
             'page' => $page,
             'title' => $section->title,
             'teaser' => $section->teaser,
