@@ -37,14 +37,21 @@ class Page extends Resource
 
             Text::make('Index', 'index')
                 ->sortable()
-                ->readonly(),
+                ->rules('required', 'string', 'max:254')
+                ->creationRules('unique:pages,index')
+                ->updateRules('unique:pages,index,{{resourceId}}'),
+
+            Text::make('Robots', 'robots')
+                ->sortable()
+                ->rules('nullable', 'string', 'max:100'),
 
             Text::make('Title', 'title')
                 ->sortable()
                 ->rules('required', 'string', 'max:100'),
 
-            Textarea::make('Description', 'description')->alwaysShow()
-                ->rules('required', 'max:180'),
+            Textarea::make('Description', 'description')
+                ->alwaysShow()
+                ->rules('required', 'max:200'),
 
         ];
     }

@@ -26,6 +26,11 @@
                             {{ __('app/layouts.start') }}
                         </a>
 
+                        <a href="{{ route('about.index')}}"
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
+                            {{ __('app/layouts.about') }}
+                        </a>
+
                         <a href="{{ route('posts.index')}}"
                            class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300 transition ease-in-out duration-150">
                             {{ __('app/layouts.posts') }}
@@ -46,8 +51,10 @@
                             {{ __('app/layouts.contact') }}
                         </a>
                     </nav>
-                    <a href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html" target="_blank"
-                       class="px-8 py-2 text-base font-bold rounded-md text-black bg-white" style="background-color:#f2e94d;">
+                    <a href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html"
+                       target="_blank"
+                       class="px-8 py-2 text-base font-bold rounded-md text-black bg-white"
+                       style="background-color:#f2e94d;">
                         Register Ticket</a>
                 </div>
             </div>
@@ -56,31 +63,46 @@
 </div>
 
 <div id="mobile-menu" class="mb-12 md:hidden hidden">
-  <div class="rounded-lg shadow-md">
-    <div class="rounded-lg bg-black text-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
-      <div class="px-2 pt-2 pb-3">
-        <a href="{{ route('start.index') }}" class="block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
-          {{ __('app/layouts.start') }}
-        </a>
+    <div class="rounded-lg shadow-md">
+        <div class="rounded-lg bg-black text-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical"
+             aria-labelledby="main-menu">
+            <div class="px-2 pt-2 pb-3">
+                <a href="{{ route('start.index') }}"
+                   class="block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   role="menuitem">
+                    {{ __('app/layouts.start') }}
+                </a>
+                <a href="{{ route('about.index') }}"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   role="menuitem">
+                    {{ __('app/layouts.about') }}
+                </a>
+                <a href="{{ route('posts.index') }}"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   role="menuitem">
+                    {{ __('app/layouts.posts') }}
+                </a>
 
-        <a href="{{ route('posts.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
-          {{ __('app/layouts.posts') }}
-        </a>
+                <a href="{{ route('team.index') }}"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   role="menuitem">
+                    {{ __('app/layouts.team') }}
+                </a>
 
-        <a href="{{ route('team.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
-          {{ __('app/layouts.team') }}
-        </a>
+                <a href="{{ route('sponsors.index') }}"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   role="menuitem">
+                    {{ __('app/layouts.sponsors') }}
+                </a>
 
-        <a href="{{ route('sponsors.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
-          {{ __('app/layouts.sponsors') }}
-        </a>
-
-        <a href="{{ route('contact.index') }}" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">
-          {{ __('app/layouts.contact') }}
-        </a>
-      </div>
+                <a href="{{ route('contact.index') }}"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50 transition duration-150 ease-in-out"
+                   role="menuitem">
+                    {{ __('app/layouts.contact') }}
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <script>
     const mobileMenuButton = document.getElementById("hamburger");
@@ -88,4 +110,5 @@
     mobileMenuButton.onclick = function() {
         mobileMenu.classList.toggle("hidden")
     }
+
 </script>
