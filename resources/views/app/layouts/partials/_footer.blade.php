@@ -1,5 +1,5 @@
-<footer class="bg-black">
-    <div class="max-w-screen-xl mx-auto py-16 px-4 overflow-hidden space-y-8 sm:px-6 lg:px-8">
+<footer class="bg-black mt-24">
+    <div class="max-w-screen-xl mx-auto py-8 px-4 overflow-hidden space-y-8 sm:px-6 lg:px-8">
         <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
             <div class="px-5 py-2">
                 <a href="{{ route('start.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">

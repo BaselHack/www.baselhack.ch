@@ -24,6 +24,7 @@
         @yield('content')
     </div>
     @include('app.layouts.partials._newsletter')
+    @include('app.layouts.partials._sponsors')
     @include('app.layouts.partials._footer')
 </div>
 
