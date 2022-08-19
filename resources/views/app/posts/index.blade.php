@@ -21,7 +21,7 @@
                         </p>
                         <div class="mt-3">
                             <a href="{{ route('posts.show',$post) }}"
-                               class="text-base leading-6 text-teal hover:text-teal-accent underline">
+                               class="text-base leading-6 text-teal hover:text-teal-accent">
                                 {{ __('app/start.news.more') }}
                             </a>
                         </div>
