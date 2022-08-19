@@ -27,11 +27,11 @@ html {
 a {
     @apply transition ease-in-out duration-300;
     @apply text-teal;
+}
 
-    &:hover {
-         @apply transition ease-in-out duration-300;
-         @apply text-teal-accent;
-    }
+a:hover {
+    @apply transition ease-in-out duration-300;
+    @apply text-teal-accent;
 }
 
 p {
