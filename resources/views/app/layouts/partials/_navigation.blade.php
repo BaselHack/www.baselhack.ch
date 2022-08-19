@@ -31,6 +31,11 @@
                             {{ __('app/layouts.about') }}
                         </a>
 
+{{--                        <a href="{{ route('challenges.index')}}"--}}
+{{--                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">--}}
+{{--                            Challenges--}}
+{{--                        </a>--}}
+
                         <a href="{{ route('posts.index')}}"
                            class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.posts') }}
