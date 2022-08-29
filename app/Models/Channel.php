@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Channel extends Model
 {
-    use HasFactory, IsPublishable,SoftDeletes;
+    use HasFactory, IsPublishable, SoftDeletes;
 
     protected $guarded = [];
 

@@ -22,7 +22,7 @@ class SectionPolicy
 
     public function create(User $user)
     {
-        return false;
+        return true;
     }
 
     public function update(User $user, Section $section)
