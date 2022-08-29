@@ -79,6 +79,10 @@ class User extends Resource
                 ->sortable()
                 ->rules('required', 'boolean'),
 
+            Boolean::make('Alumni','alumni')
+                ->sortable()
+                ->rules('required', 'boolean'),
+
             Text::make('Gravatar','profile_gravatar')
                 ->hideFromIndex()
                 ->rules('nullable','string','email','max:254'),
