@@ -11,6 +11,7 @@ class ChallengesController extends Controller
 {
     public function index()
     {
+        /**
         $markdown = <<<MARKDOWN
 
 <b>Challenges for BaselHack participants</b>
@@ -45,15 +46,16 @@ Anybody can submit a freestyle challenge, even until team building phase at the 
 <i>Stay tuned for upcoming challenges on our channels.</i>
 
 MARKDOWN;
-
+         **/
 
         $page = Page::whereIndex('challenges:index')->first();
-        //$section = Section::where('key', 'contact')->first();
-        return view('app.contact.index')->with([
+        $section = Section::where('key', 'challenges')->first();
+
+        return view('app.challenges.index')->with([
             'page' => $page,
-            'title' => 'Challenges',
-            'teaser' => 'At the start of Baselhack, every participant chooses a challenge to work on in a team. There will be sponsored challenges (to be announced soon), and freestyle challenges.',
-            'body' => Str::of($markdown)->markdown(),
+            'title' => $section->title,
+            'teaser' => $section->teaser,
+            'body' => Str::of($section->body)->markdown(),
         ]);
     }
 }
