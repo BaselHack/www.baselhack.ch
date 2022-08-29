@@ -1,4 +1,7 @@
-<h2 class="text-xl text-white font-medium mb-12 mt-24 text-center">Sponsors 2022</h2>
+@if(request()->route()->getName() != 'sponsors.index')
+    <h2 class="text-xl text-white font-medium mb-12 mt-24 text-center">Sponsors 2022</h2>
+@endif
+
 @if(!empty($mainSponsors) && $mainSponsors->count())
     <h3 class="text-base text-white font-medium mb-4 mt-8 text-center">
         @if($mainSponsors->count() > 1)
@@ -43,7 +46,7 @@
     <x-sponsors height=52 gridClass="grid-cols-1 md:grid-cols-2" :sponsors="$locationSponsors" />
 @endif
 
-@if(!empty($partnerships) && $partnerships->count())
+@if(request()->route()->getName() != 'sponsors.index' && !empty($partnerships) && $partnerships->count())
     <h3 class="text-base text-white font-medium mb-4 mt-8 pt-24 text-center">
         @if($partnerships->count() > 1)
             Partners
