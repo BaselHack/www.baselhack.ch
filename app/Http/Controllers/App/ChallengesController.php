@@ -13,10 +13,10 @@ class ChallengesController extends Controller
     {
         $markdown = <<<MARKDOWN
 
-<b>Challenges for baselhack participants</b>
+<b>Challenges for BaselHack participants</b>
 
-As in the name 'challenge', you will be challenged at baselhack, and have a weekend full of creativity, new perspectives, and also solutions to problems.
-Most challenges will be introduced online before baselhack starts, but you will see and hear a 3 minute pitch for every at the start of the hackathon.
+As in the name 'challenge', you will be challenged at BaselHack, and have a weekend full of creativity, new perspectives, and also solutions to problems.
+Most challenges will be introduced online before BaselHack starts, but you will see and hear a 3 minute pitch for each at the start of the hackathon.
 That is the final call for choosing your challenge.
 Then, with your team, after two days of prototyping, coding, business engineering and technical engineering, you submit your results on github and present it to a Jury.
 You can win prize money, as well as two topical awards (to be announced soon).
@@ -42,7 +42,7 @@ Anybody can submit a freestyle challenge, even until team building phase at the 
 <br>
 -><a href="https://github.com/BaselHack/BaselHack-2022/issues/new/choose">Freestyle Challenges on github</a>
 
-<i>Stay tuned for upcoming channels on our channels.</i>
+<i>Stay tuned for upcoming challenges on our channels.</i>
 
 MARKDOWN;
 
