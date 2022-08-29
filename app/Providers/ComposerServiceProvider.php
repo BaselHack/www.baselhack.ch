@@ -31,6 +31,9 @@ class ComposerServiceProvider extends ServiceProvider
                     ->orderBy('name')->get(),
                 'locationSponsors' => Company::published()
                     ->whereIn('type', [CompanyTypeEnum::SPONSOR_LOCATION()->value])
+                    ->orderBy('name')->get(),
+                'partnerships' => Company::published()
+                    ->whereIn('type', [CompanyTypeEnum::PARTNER()->value])
                     ->orderBy('name')->get()
             ]);
         });

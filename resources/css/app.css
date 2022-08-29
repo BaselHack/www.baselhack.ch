@@ -31,9 +31,18 @@ a {
 
 a:hover {
     @apply transition ease-in-out duration-300;
-    @apply text-teal-accent;
 }
 
 p {
     @apply mt-4;
+}
+
+.partnerships img {
+    @apply transition ease-in-out duration-300;
+    @apply filter grayscale;
+}
+
+.partnerships img:hover {
+    @apply transition ease-in-out duration-300;
+    @apply filter-none;
 }
