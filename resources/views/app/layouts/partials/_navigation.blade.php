@@ -21,20 +21,20 @@
                 </div>
                 <div class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
                     <nav class="flex space-x-10">
-                        <a href="{{ route('start.index')}}"
-                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
-                            {{ __('app/layouts.start') }}
-                        </a>
-
                         <a href="{{ route('about.index')}}"
                            class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.about') }}
                         </a>
 
-{{--                        <a href="{{ route('challenges.index')}}"--}}
-{{--                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">--}}
-{{--                            Challenges--}}
-{{--                        </a>--}}
+                        <a href="{{ route('challenges.index')}}"
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
+                            {{ __('app/layouts.challenges') }}
+                        </a>
+
+                        <a href="{{ route('sponsors.index')}}"
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
+                            {{ __('app/layouts.sponsors') }}
+                        </a>
 
                         <a href="{{ route('posts.index')}}"
                            class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
@@ -44,11 +44,6 @@
                         <a href="{{ route('team.index')}}"
                            class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.team') }}
-                        </a>
-
-                        <a href="{{ route('sponsors.index')}}"
-                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
-                            {{ __('app/layouts.sponsors') }}
                         </a>
 
                         <a href="{{ route('contact.index')}}"
@@ -66,21 +61,29 @@
     </div>
 </div>
 
-<div id="mobile-menu" class="mb-12 md:hidden hidden">
+<div id="mobile-menu" class="mb-12 px-2 md:hidden hidden">
     <div class="rounded-lg shadow-md">
         <div class="rounded-lg bg-black text-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical"
              aria-labelledby="main-menu">
             <div class="px-2 pt-2 pb-3">
-                <a href="{{ route('start.index') }}"
-                   class="block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
-                   role="menuitem">
-                    {{ __('app/layouts.start') }}
-                </a>
                 <a href="{{ route('about.index') }}"
                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.about') }}
                 </a>
+
+                <a href="{{ route('challenges.index') }}"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
+                   role="menuitem">
+                    {{ __('app/layouts.challenges') }}
+                </a>
+
+                <a href="{{ route('sponsors.index') }}"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
+                   role="menuitem">
+                    {{ __('app/layouts.sponsors') }}
+                </a>
+
                 <a href="{{ route('posts.index') }}"
                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
@@ -91,12 +94,6 @@
                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.team') }}
-                </a>
-
-                <a href="{{ route('sponsors.index') }}"
-                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
-                   role="menuitem">
-                    {{ __('app/layouts.sponsors') }}
                 </a>
 
                 <a href="{{ route('contact.index') }}"
