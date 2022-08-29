@@ -11,7 +11,7 @@ class Page extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $guraded = [];
+    protected $guarded = [];
 
     public function getImage()
     {
