@@ -7,7 +7,7 @@
 
         @include('app.components._sponsors')
 
-        <div class="prose prose-lg">
+        <div class="mt-24 prose prose-lg">
             {!! $body !!}
         </div>
     </x-page>

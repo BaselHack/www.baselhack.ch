@@ -23,8 +23,13 @@
     <div class="max-w-screen-xl mx-auto bg-black text-white">
         @yield('content')
     </div>
+
+    @if(request()->route()->getName() != 'sponsors.index')
+        @include('app.layouts.partials._sponsors')
+    @endif
+
     @include('app.layouts.partials._newsletter')
-    @include('app.layouts.partials._sponsors')
+
     @include('app.layouts.partials._footer')
 </div>
 
