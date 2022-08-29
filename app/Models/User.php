@@ -36,13 +36,13 @@ class User extends Authenticatable
 
     public function scopeActive($query)
     {
-        return $query->where('profile_published', true);
+        return $query->where(['profile_published' => true, 'alumni' => false]);
     }
 
 
     public function scopeAlumni($query)
     {
-        return $query->withTrashed()->whereNotNull('deleted_at')->where('profile_published', true);
+        return $query->where(['profile_published' => true, 'alumni' => true]);
     }
 
 
