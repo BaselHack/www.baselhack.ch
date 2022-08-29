@@ -42,3 +42,14 @@
     </h3>
     <x-sponsors height=52 gridClass="grid-cols-1 md:grid-cols-2" :sponsors="$locationSponsors" />
 @endif
+
+@if(!empty($partnerships) && $partnerships->count())
+    <h3 class="text-base text-white font-medium mb-4 mt-8 pt-24 text-center">
+        @if($partnerships->count() > 1)
+            Partners
+        @else
+            Partner
+        @endif
+    </h3>
+    <x-sponsors height=52 gridClass="partnerships grid-cols-4 md:grid-cols-6" :sponsors="$partnerships" />
+@endif
