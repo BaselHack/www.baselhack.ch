@@ -14,7 +14,7 @@ class Post extends Model implements Sitemapable
 {
     use HasFactory, SoftDeletes;
 
-    protected $guraded = [];
+    protected $guarded = [];
 
     protected $casts = [
         'published_at' => 'date',

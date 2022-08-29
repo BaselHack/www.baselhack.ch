@@ -37,7 +37,8 @@ class Section extends Resource
         return [
 
             Text::make('Key', 'key')
-                ->readonly(),
+                ->sortable()
+                ->rules('required', 'string', 'max:100'),
 
             Text::make('Title', 'title')
                 ->sortable()

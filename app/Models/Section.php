@@ -11,6 +11,6 @@ class Section extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $guraded = [];
+    protected $guarded = [];
 
 }

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'start' => 'Start',
+    'start' => 'Home',
     'about' => 'About',
     'team' => 'Team',
     'posts' => 'Blog',
@@ -10,6 +10,7 @@ return [
     'partners' => 'Partners',
     'positions' => 'Positions',
     'sponsors' => 'Sponsors',
+    'challenges' => 'Challenges',
     'privacy' => 'Privacy',
     'terms' => 'Terms',
 ];

@@ -14,6 +14,18 @@
             </div>
 
             <div class="px-5 py-2">
+                <a href="{{ route('challenges.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
+                    {{ __('app/layouts.challenges') }}
+                </a>
+            </div>
+
+            <div class="px-5 py-2">
+                <a href="{{ route('sponsors.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
+                    {{ __('app/layouts.sponsors') }}
+                </a>
+            </div>
+
+            <div class="px-5 py-2">
                 <a href="{{ route('posts.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
                     {{ __('app/layouts.posts') }}
                 </a>
@@ -24,28 +36,6 @@
                     {{ __('app/layouts.team') }}
                 </a>
             </div>
-
-            <div class="px-5 py-2">
-                <a href="{{ route('sponsors.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
-                    {{ __('app/layouts.sponsors') }}
-                </a>
-            </div>
-
-            <!--
-            <div class="px-5 py-2">
-                <a href="{{ route('partners.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
-                    {{ __('app/layouts.partners') }}
-                </a>
-            </div>
-            -->
-
-            <!--
-            <div class="px-5 py-2">
-                <a href="{{ route('positions.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
-                    {{ __('app/layouts.positions') }}
-                </a>
-            </div>
-            -->
 
             <div class="px-5 py-2">
                 <a href="{{ route('contact.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
