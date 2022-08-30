@@ -5,7 +5,7 @@
     Launchlabs (Gundeldingerfeld), Basel
 </h2>
 <div class="block">
-    <a href="https://eventfrog.ch/de/events.html?searchTerm=baselhack" target="_blank" class="inline-block mb-2 underline">
+    <a href="https://eventfrog.ch/en/events.html?searchTerm=baselhack" target="_blank" class="inline-block mb-2 underline">
         Register your ticket
     </a> |
     <a href="/blog/registrations-open-for-baselhack-2021" class="inline-block mb-2 underline">

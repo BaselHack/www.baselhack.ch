@@ -51,7 +51,7 @@
                             {{ __('app/layouts.contact') }}
                         </a>
                     </nav>
-                    <a href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html"
+                    <a href="https://eventfrog.ch/en/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html"
                        target="_blank"
                        class="px-8 py-2 text-base font-bold rounded-md text-black bg-yellow hover:bg-yellow-accent">
                         Register Ticket</a>
