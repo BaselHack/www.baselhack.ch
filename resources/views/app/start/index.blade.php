@@ -19,7 +19,7 @@
                 </div>
                 <div class="mt-12 text-center">
                     <a target="_blank"
-                       href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html#ticket-container"
+                       href="https://eventfrog.ch/en/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html#ticket-container"
                        class="inline-block px-6 py-2 m-2 border border-yellow text-sm md:text-base font-bold rounded-md text-black bg-yellow hover:bg-yellow-accent">
                         Register Ticket</a>
                     <a href="{{ asset('files/baselhack-2022.ics') }}"
