@@ -37,12 +37,26 @@ p {
     @apply mt-4;
 }
 
-.partnerships img {
-    @apply transition ease-in-out duration-300;
-    @apply filter grayscale;
+.channel:hover .icon {
+    @apply text-gray-900;
 }
 
-.partnerships img:hover {
-    @apply transition ease-in-out duration-300;
-    @apply filter-none;
+.channel:hover .twitter {
+    color: #1DA1F2;
+}
+
+.channel:hover .youtube {
+    color: #FF0000;
+}
+
+.channel:hover .facebook {
+    color: #4267B2;
+}
+
+.channel:hover .instagram {
+    color: #E1306C;
+}
+
+.channel:hover .linkedin {
+    color: #0072b1;
 }

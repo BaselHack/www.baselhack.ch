@@ -1,4 +1,4 @@
-<footer class="footer bg-black mt-24">
+<footer class="footer bg-gray-800 mt-12 py-12">
     <div class="max-w-screen-xl mx-auto py-8 px-4 overflow-hidden space-y-8 sm:px-6 lg:px-8">
         <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
             <div class="px-5 py-2">
@@ -44,36 +44,36 @@
             </div>
         </nav>
 
-        <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
-            <div class="px-5 py-2">
-                <a href="{{ route('privacy.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
-                    {{ __('app/layouts.privacy') }}
-                </a>
-            </div>
-            <div class="px-5 py-2">
-                <a href="{{ route('terms.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
-                    {{ __('app/layouts.terms') }}
-                </a>
-            </div>
-        </nav>
-
-        <div class="mt-8 flex justify-center space-x-6">
+        <div class="my-8 flex justify-center space-x-8">
             @if(!empty($channels) and $channels->count())
                 @foreach($channels as $channel)
-                    <a href="{{ $channel->url }}" target="_blank" class="text-gray-300 hover:text-white">
+                    <a href="{{ $channel->url }}" title="{{ $channel->name }}" target="_blank" class="channel h-12 w-12 py-4 bg-gray-700 text-gray-400 rounded-full overflow-hidden hover:bg-white">
                         <span class="sr-only">
                           {{ $channel->name }}
                         </span>
-                        <span class="h-12 w-auto">
-                          <i class="{{ $channel->icon }} fa-lg"></i>
+                        <span class="flex justify-center">
+                          <i class="icon inline-block {{ $channel->icon }} fa-lg"></i>
                         </span>
                     </a>
                 @endforeach
             @endif
         </div>
 
-        <p class="mt-8 text-center text-base leading-6 text-gray-400 hover:text-white">
+        <p class="mt-12 pt-8 text-center text-sm text-gray-500">
             &copy; {{ date('Y')}} BaselHack. All rights reserved.
         </p>
+
+        <div class="-mx-4 flex flex-wrap justify-center">
+            <div class="px-5">
+                <a href="{{ route('privacy.index') }}" class="text-sm leading-6 text-gray-500 hover:text-white">
+                    {{ __('app/layouts.privacy') }}
+                </a>
+            </div>
+            <div class="px-5">
+                <a href="{{ route('terms.index') }}" class="text-sm leading-6 text-gray-500 hover:text-white">
+                    {{ __('app/layouts.terms') }}
+                </a>
+            </div>
+        </div>
     </div>
 </footer>
