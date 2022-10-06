@@ -14,6 +14,12 @@
             </div>
 
             <div class="px-5 py-2">
+                <a href="{{ route('schedule.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
+                    {{ __('app/layouts.schedule') }}
+                </a>
+            </div>
+
+            <div class="px-5 py-2">
                 <a href="{{ route('challenges.index') }}" class="text-base leading-6 text-gray-300 hover:text-white">
                     {{ __('app/layouts.challenges') }}
                 </a>

@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\App\ChallengesController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\App\StartController;
@@ -14,6 +13,8 @@ use App\Http\Controllers\App\PositionsController;
 use App\Http\Controllers\App\PrivacyController;
 use App\Http\Controllers\App\TermsController;
 use App\Http\Controllers\App\AboutController;
+use App\Http\Controllers\App\ChallengesController;
+use App\Http\Controllers\App\ScheduleController;
 
 use Spatie\Honeypot\ProtectAgainstSpam;
 
@@ -34,6 +35,8 @@ Route::get('/positions', [PositionsController::class, 'index'])->name('positions
 Route::get('/positions/{position}', [PositionsController::class, 'show'])->name('positions.show');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+
+Route::get('/schedule', [ScheduleController::class, 'index'])->name('schedule.index');
 
 Route::get('/challenges', [ChallengesController::class, 'index'])->name('challenges.index');
 
