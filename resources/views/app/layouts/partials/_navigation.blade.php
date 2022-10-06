@@ -26,6 +26,12 @@
                             {{ __('app/layouts.about') }}
                         </a>
 
+                        <a href="{{ route('schedule.index')}}"
+                           class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
+                            {{ __('app/layouts.schedule') }}
+                        </a>
+
+
                         <a href="{{ route('challenges.index')}}"
                            class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.challenges') }}
@@ -70,6 +76,12 @@
                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.about') }}
+                </a>
+
+                <a href="{{ route('schedule.index') }}"
+                   class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
+                   role="menuitem">
+                    {{ __('app/layouts.schedule') }}
                 </a>
 
                 <a href="{{ route('challenges.index') }}"

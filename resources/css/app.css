@@ -60,3 +60,16 @@ p {
 .channel:hover .linkedin {
     color: #0072b1;
 }
+
+.prose ul {
+    list-style: circle !important;
+    display: block;
+    color: #ffffff;
+    margin: 1rem 0;
+}
+
+.prose ul li {
+    color: #ffffff;
+    display: block;
+    margin-left: 2rem;
+}

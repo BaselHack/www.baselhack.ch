@@ -11,6 +11,7 @@ return [
     'positions' => 'Positions',
     'sponsors' => 'Sponsors',
     'challenges' => 'Challenges',
+    'schedule' => 'Schedule',
     'privacy' => 'Privacy',
     'terms' => 'Terms',
 ];
