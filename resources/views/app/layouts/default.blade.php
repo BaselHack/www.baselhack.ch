@@ -8,7 +8,12 @@
     <meta name="google-site-verification" content="utVtkZTRq2kTM3wo59vL90NzZ4Fg-UafmK7bLD3eFlo" />
     @include('app.layouts.partials._meta')
     @include('app.layouts.partials._favicon')
+    <!--
     <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
 

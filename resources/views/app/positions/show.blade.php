@@ -3,8 +3,6 @@
 
 @section('content')
 
-
-
     <div class="bg-black text-white">
         <div class="max-w-screen-xl mx-auto pt-8 px-4 sm:pt-12 sm:px-6 lg:px-8 lg:flex lg:justify-between">
             <div class="">

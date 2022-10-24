@@ -13,7 +13,7 @@
                         <p class="text-sm leading-5 text-gray-300">
                             <time datetime="{{ $post->created_at->format('Y-m-d') }}">{{ $post->created_at->diffForHumans() }}</time>
                         </p>
-                        <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-200">
+                        <h3 class="mt-2 leading-7 text-gray-200">
                             {{ $post->title }}
                         </h3>
                         <p class="mt-3 text-base leading-6 text-gray-400">

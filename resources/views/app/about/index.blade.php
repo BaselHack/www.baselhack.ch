@@ -12,7 +12,7 @@
             </div>
 
             <div class="mt-24 mb-8">
-                <h2 class="text-xl font-bold mb-8">Annual Reports</h2>
+                <h2 class="mb-8">Annual Reports</h2>
                 <ul>
                     <li>
                         <a href="/pdfs/baselhack-jahresbericht-2021.pdf">

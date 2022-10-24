@@ -1,7 +1,7 @@
 @if(!empty($posts) && $posts->count())
-    <div class="text-black font-bold text-xl tracking-tight mb-4">
-        <span>Posts</span>
-    </div>
+    <h2 class="tracking-tight mb-4">
+        Posts
+    </h2>
 
     @foreach($posts as $post)
         <div class="md:flex mb-4">
@@ -11,9 +11,9 @@
                     <span class="text-xs text-gray-300 font-light">{{ 'by ' . $post->author->name }}</span>
                 </div>
 
-                <span class="block mt-1 text-xl leading-tight font-semibold text-white">
+                <h3 class="block mt-1 leading-tight">
                     {{ $post->title }}
-                </span>
+                </h3>
 
                 <p class="mt-2 text-gray-300">{{ $post->teaser }}</p>
 

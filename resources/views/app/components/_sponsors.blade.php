@@ -1,5 +1,5 @@
 @if(request()->route()->getName() != 'sponsors.index')
-    <h2 class="text-xl text-white font-medium mb-12 mt-24 text-center">Sponsors 2022</h2>
+    <h2 class="mb-12 mt-24 text-center">Sponsors 2022</h2>
 @endif
 
 @if(!empty($mainSponsors) && $mainSponsors->count())

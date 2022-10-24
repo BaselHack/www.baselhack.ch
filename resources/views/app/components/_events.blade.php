@@ -1,7 +1,7 @@
 @if(!empty($events) && $events->count())
-    <div class="text-black font-bold text-xl tracking-tight mb-4">
-        <span>Upcoming Events</span>
-    </div>
+    <h2 class="tracking-tight mb-4">
+        Upcoming Events
+    </h2>
 
     @foreach($events as $event)
         <div class="md:flex mb-4">
