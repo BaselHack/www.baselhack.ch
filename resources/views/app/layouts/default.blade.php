@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}?{{ filemtime(public_path('css/app.css')) }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
 
     @yield('styles')

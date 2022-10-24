@@ -4,7 +4,7 @@
 
     <main class="mx-auto max-w-7xl px-4 bg-black text-white">
         <div class="text-center">
-            <div class="mt-24">
+            <div class="mt-12 ld:mt-16 lg:mt-24">
                 <h1 class="mt-12 text-4xl max-w-screen-xl">BaselHack 2022</h1>
                 <h2 class="mt-4 text-base">22. & 23. October 2022</h2>
                 <p class="mt-1 text-base">Haus der Wirtschaft, Hardstrasse 1, 4133 Pratteln</p>
@@ -25,7 +25,7 @@
                        class="inline-block px-6 py-2 m-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
                         Add to Calendar</a>-->
                     <a href="#more"
-                       class="px-6 py-2 m-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
+                       class="inline-block px-6 py-2 m-2 border border-gray-600 text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
                         Learn More</a>
                     <a href="{{ route('posts.index') }}"
                        class="inline-block px-6 py-2 m-2 border border-yellow text-sm md:text-base font-bold rounded-md text-black bg-yellow hover:bg-yellow-accent">
