@@ -28,7 +28,6 @@
                     </div>
 
                 @endforeach
-
             </div>
         </div>
     </x-page>

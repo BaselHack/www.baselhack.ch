@@ -26,10 +26,10 @@
                             {{ __('app/layouts.about') }}
                         </a>
 
-                        <a href="{{ route('schedule.index')}}"
+                        <!--<a href="{{ route('schedule.index')}}"
                            class="text-base leading-6 font-medium text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.schedule') }}
-                        </a>
+                        </a>-->
 
 
                         <a href="{{ route('challenges.index')}}"
@@ -57,10 +57,10 @@
                             {{ __('app/layouts.contact') }}
                         </a>
                     </nav>
-                    <a href="https://eventfrog.ch/en/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html"
+                    <!--<a href="https://eventfrog.ch/en/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html"
                        target="_blank"
                        class="px-8 py-2 text-base font-bold rounded-md text-black bg-yellow hover:bg-yellow-accent">
-                        Register Ticket</a>
+                        Register Ticket</a>-->
                 </div>
             </div>
         </div>
@@ -78,11 +78,11 @@
                     {{ __('app/layouts.about') }}
                 </a>
 
-                <a href="{{ route('schedule.index') }}"
+                <!--<a href="{{ route('schedule.index') }}"
                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.schedule') }}
-                </a>
+                </a>-->
 
                 <a href="{{ route('challenges.index') }}"
                    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-black bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"

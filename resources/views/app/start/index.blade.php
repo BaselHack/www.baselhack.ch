@@ -2,7 +2,6 @@
 
 @section('content')
 
-    <!-- just a comment -->
     <main class="mx-auto max-w-7xl px-4 bg-black text-white">
         <div class="text-center">
             <div class="mt-24">
@@ -18,16 +17,20 @@
                     </p>
                 </div>
                 <div class="mt-12 text-center">
-                    <a target="_blank"
+                    <!--<a target="_blank"
                        href="https://eventfrog.ch/en/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html#ticket-container"
                        class="inline-block px-6 py-2 m-2 border border-yellow text-sm md:text-base font-bold rounded-md text-black bg-yellow hover:bg-yellow-accent">
-                        Register Ticket</a>
-                    <a href="{{ asset('files/baselhack-2022.ics') }}"
+                        Register Ticket</a>-->
+                    <!--<a href="{{ asset('files/baselhack-2022.ics') }}"
                        class="inline-block px-6 py-2 m-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
-                        Add to Calendar</a>
+                        Add to Calendar</a>-->
                     <a href="#more"
-                       class="hidden md:inline-block px-6 py-2 m-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
+                       class="px-6 py-2 m-2 border border-transparent text-sm md:text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-400">
                         Learn More</a>
+                    <a href="{{ route('posts.index') }}"
+                       class="inline-block px-6 py-2 m-2 border border-yellow text-sm md:text-base font-bold rounded-md text-black bg-yellow hover:bg-yellow-accent">
+                        Latest News
+                    </a>
                 </div>
             </div>
 
@@ -47,23 +50,7 @@
                 <img class="w-auto" src="{{ asset('images/app/baselhack-in-a-nutshell.png') }}"
                      alt="Baselhack in a nutshell (infographic)">
             </div>
-
-{{--            <div class="max-w-2xl mx-auto">--}}
-
-{{--                @include('app.archived.main_posts')--}}
-
-{{--                --}}{{--                <h2 class="text-xl tracking-tight text-white sm:text-xl md:text-2xl">--}}
-{{--                --}}{{--                    <span class="hack-font-regular block xl:inline">We are more than a Hackathon. We connect people, take fun seriously and grow open innovation.</span>--}}
-{{--                --}}{{--                </h2>--}}
-{{--            </div>--}}
-
-
         </div>
-
-
-{{--        <div class="my-24 text-center">--}}
-{{--            @include('app.components._sponsors')--}}
-{{--        </div>--}}
 
     </main>
 
