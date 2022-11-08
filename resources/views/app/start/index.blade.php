@@ -6,9 +6,21 @@
         <div class="text-center">
             <div class="mt-12 ld:mt-16 lg:mt-24">
                 <h1 class="mt-12 text-4xl max-w-screen-xl">BaselHack 2022</h1>
-                <h2 class="mt-4 text-base">22. & 23. October 2022</h2>
-                <p class="mt-1 text-base">Haus der Wirtschaft, Hardstrasse 1, 4133 Pratteln</p>
-                <div class="mt-12 flex justify-center">
+                <p class="mt-4 text-base">BaselHack 2022 took place on 22. & 23. October 2022 at Haus der Wirtschaft, Pratteln</p>
+
+                <!--<h2 class="mt-4 text-base">22. & 23. October 2022</h2>-->
+                <!--<p class="mt-1 text-base">Haus der Wirtschaft, Hardstrasse 1, 4133 Pratteln</p>-->
+
+                <div class="mt-6">
+                    <div class="flex items-center justify-center">
+                        <iframe src="https://www.youtube.com/embed/THE--6AYbEY" style="max-width: 100vw;" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+
+                <h2 class="mt-24 text-4xl max-w-screen-xl">About BaselHack</h2>
+                <div class="mt-6 flex justify-center">
                     <p class="text-left max-w-2xl">
                         BaselHack is the hackathon for Basel, Northwestern Switzerland and bordering Alsace and Südbaden.
                         Young and young-at-heart developers, technology fanatics, designers and others meet for a weekend
@@ -32,13 +44,6 @@
                         Latest News
                     </a>
                 </div>
-            </div>
-
-            <div class="mt-24">
-                <div class="flex items-center justify-center">
-                    <iframe src="https://player.vimeo.com/video/633003007?h=67fce8f4ff" style="max-width: 100vw;" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <p class="mt-1">Impressions from BaselHack 2021, Launchlabs, Basel</p>
             </div>
 
             <div class="mt-40 flex justify-center">
