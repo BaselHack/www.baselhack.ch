@@ -15,6 +15,11 @@
                 <h2 class="mb-8">Annual Reports</h2>
                 <ul>
                     <li>
+                        <a href="/pdfs/baselhack-jahresbericht-2022.pdf">
+                            Annual Report 2022 (in German, PDF)
+                        </a>
+                    </li>
+                    <li>
                         <a href="/pdfs/baselhack-jahresbericht-2021.pdf">
                             Annual Report 2021 (in German, PDF)
                         </a>
