@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Enums\BrandSocialMediaTypeEnum;
 use App\Enums\CompanyTypeEnum;
 use App\Traits\IsPublishable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -27,7 +26,7 @@ class Company extends Model
 
     public function getImage()
     {
-        return $this->image ? Storage::url($this->image) : null;
+        return $this->image ? Storage::disk(config('filesystems.default'))->url($this->image) : null;
     }
 
 }

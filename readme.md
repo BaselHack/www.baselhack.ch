@@ -1,5 +1,9 @@
 # BaselHack Website
 
+## Setup
+
+## PHP Laravel
+
 #### Composer Install
 
 To install dependencies use ```composer```. The BaselHack website uses Laravel Nova CMS, which requires a license

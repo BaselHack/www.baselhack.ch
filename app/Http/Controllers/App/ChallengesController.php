@@ -13,6 +13,7 @@ class ChallengesController extends Controller
     {
         $page = Page::whereIndex('challenges:index')->first();
         $section = Section::where('key', 'challenges')->first();
+
         return view('app.challenges.index')->with([
             'page' => $page,
             'title' => $section->title,
