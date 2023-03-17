@@ -1,8 +1,5 @@
 @extends('app.layouts.default')
 
-@section('styles')
-
-@endsection
 @section('content')
 
     <x-page :title="$title" :teaser="$teaser">
