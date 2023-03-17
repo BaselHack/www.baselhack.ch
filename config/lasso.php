@@ -9,7 +9,7 @@ return [
          * phase. This will most likely be "npm run production" but
          * you may choose what you would like to execute.
          */
-        'script' => 'npm run prod',
+        'script' => 'npm run production',
 
         /*
          * Configure the amount of time (in seconds) the compiler
@@ -29,7 +29,7 @@ return [
         'excluded_directories' => [
             'docs',
             'images',
-            'favicon'
+            'favicon',
         ],
 
     ],
@@ -88,7 +88,7 @@ return [
          */
         'pull' => [
             //
-        ]
+        ],
 
     ],
 

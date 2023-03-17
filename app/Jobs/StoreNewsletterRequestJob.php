@@ -2,15 +2,14 @@
 
 namespace App\Jobs;
 
-use Illuminate\Support\Facades\Log;
-use Newsletter as Mailchimp;
-
 use App\Models\Newsletter;
 use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
+use Newsletter as Mailchimp;
 
 class StoreNewsletterRequestJob implements ShouldQueue
 {
@@ -40,7 +39,7 @@ class StoreNewsletterRequestJob implements ShouldQueue
         ]);
 
         try {
-            if (!Mailchimp::isSubscribed($newsletter->email)) {
+            if (! Mailchimp::isSubscribed($newsletter->email)) {
                 $response = Mailchimp::subscribe($newsletter->email);
                 ray($response);
             }

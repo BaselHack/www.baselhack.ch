@@ -1,0 +1,9 @@
+{
+    "http-basic":
+    {
+        "nova.laravel.com": {
+            "username": "info@baselhack.ch",
+            "password": "TBD"
+        }
+    }
+}

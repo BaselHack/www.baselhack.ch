@@ -17,6 +17,4 @@ class ChannelObserver
     {
         $channel->uuid = Str::orderedUuid();
     }
-
-
 }

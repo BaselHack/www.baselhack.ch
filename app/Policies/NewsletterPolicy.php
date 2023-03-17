@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\Models\User;
 use App\Models\Newsletter;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class NewsletterPolicy
@@ -12,7 +12,7 @@ class NewsletterPolicy
 
     public function viewAny(User $user)
     {
-        return true ;
+        return true;
     }
 
     public function view(User $user, Newsletter $newsletter)

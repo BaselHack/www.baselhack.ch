@@ -17,6 +17,4 @@ class CompanyObserver
     {
         $company->uuid = Str::orderedUuid()->toString();
     }
-
-
 }

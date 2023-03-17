@@ -10,11 +10,13 @@ class Sponsors extends Component
     public $gridClass;
     public $height;
     public $sponsors;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
+
     public function __construct($gridClass, $height, Collection $sponsors)
     {
         $this->gridClass = $gridClass;

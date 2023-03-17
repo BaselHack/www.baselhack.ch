@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use App\Models\User;
-use Laravel\Nova\Nova;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
@@ -26,7 +26,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function routes()
     {
-        Nova::routes()->withAuthenticationRoutes();
+        Nova::routes()
+            ->withAuthenticationRoutes()
+            ->withPasswordResetRoutes();
     }
 
     /**
@@ -39,7 +41,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function gate()
     {
         Gate::define('viewNova', function ($user) {
-            return in_array($user->email, User::all()->pluck('email')->toArray());
+            return in_array($user->email,
+                User::all()->pluck('email')->toArray()
+            );
         });
     }
 
@@ -74,6 +78,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function register()
     {
-        //
+        Nova::resourcesIn(app_path('Nova/Models'));
+        Nova::initialPath('/resources/users');
     }
 }

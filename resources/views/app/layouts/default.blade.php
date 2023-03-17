@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-    <meta name="google-site-verification" content="utVtkZTRq2kTM3wo59vL90NzZ4Fg-UafmK7bLD3eFlo" />
+    <meta name="google-site-verification" content="utVtkZTRq2kTM3wo59vL90NzZ4Fg-UafmK7bLD3eFlo"/>
+
+    <!-- Styles -->
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    <!-- Fonts -->
+
     @include('app.layouts.partials._meta')
     @include('app.layouts.partials._favicon')
+<<<<<<< HEAD
     <!--
     <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
     -->
@@ -16,6 +23,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}?{{ filemtime(public_path('css/app.css')) }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"></script>
+=======
+
+    <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
+    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"/>
+>>>>>>> e491aa409326fb84ae86831213b958b6266bdb6a
 
     @yield('styles')
 </head>
@@ -38,10 +50,10 @@
     @include('app.layouts.partials._footer')
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"
-        integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Scripts -->
+<script src="{{ mix('js/app.js') }}"></script>
 
+<<<<<<< HEAD
 @if(app()->environment('production'))
     <!-- Codebar tracker -->
     <script src="https://dragonfly.codebar.ch/script.js" site="VIJIXWCP" defer></script>
@@ -54,6 +66,11 @@
         gtag('config', 'G-QGVQJQ0T9J');
     </script>
 @endif
+=======
+@production
+    <script src="https://dragonfly.codebar.ch/script.js" site="VIJIXWCP" defer/>
+@endproduction
+>>>>>>> e491aa409326fb84ae86831213b958b6266bdb6a
 
 @yield('scripts')
 </body>

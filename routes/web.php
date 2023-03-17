@@ -1,21 +1,19 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\App\StartController;
-use App\Http\Controllers\App\PostsController;
-use App\Http\Controllers\App\TeamController;
-use App\Http\Controllers\App\PartnersController;
-use App\Http\Controllers\App\SponsorsController;
 use App\Http\Controllers\App\ContactController;
 use App\Http\Controllers\App\NewsletterController;
+use App\Http\Controllers\App\PartnersController;
 use App\Http\Controllers\App\PositionsController;
+use App\Http\Controllers\App\PostsController;
 use App\Http\Controllers\App\PrivacyController;
+use App\Http\Controllers\App\SponsorsController;
+use App\Http\Controllers\App\StartController;
+use App\Http\Controllers\App\TeamController;
 use App\Http\Controllers\App\TermsController;
 use App\Http\Controllers\App\AboutController;
 use App\Http\Controllers\App\ChallengesController;
 use App\Http\Controllers\App\ScheduleController;
-
+use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
 
 Route::get('/', [StartController::class, 'index'])->name('start.index');

@@ -11,7 +11,7 @@ class Page extends Component
      *
      * @return void
      */
-    public function __construct(public string $title, public string | null $teaser = null)
+    public function __construct(public string $title, public string|null $teaser = null)
     {
         //
     }

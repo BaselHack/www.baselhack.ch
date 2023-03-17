@@ -2,8 +2,8 @@
 
 namespace App\Policies;
 
-use App\Models\User;
 use App\Models\Section;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class SectionPolicy
@@ -12,7 +12,7 @@ class SectionPolicy
 
     public function viewAny(User $user)
     {
-        return true ;
+        return true;
     }
 
     public function view(User $user, Section $section)

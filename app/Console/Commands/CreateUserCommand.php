@@ -43,53 +43,49 @@ class CreateUserCommand extends Command
             $email = $this->ask('E-Mail?');
             $email_validator = Validator::make(
                 ['email' => $email],
-              ['email' =>
-                  [
-                      'required', 'string', 'email','max:254', 'unique:users,email'
-                  ]
+              ['email' => [
+                  'required', 'string', 'email', 'max:254', 'unique:users,email',
+              ],
               ],
             );
             $this->outputErrors($email_validator);
-          } while ($email_validator->fails());
+        } while ($email_validator->fails());
 
         do {
             $name = $this->ask('Name?');
             $name_validator = Validator::make(
                 ['name' => $name],
                 [
-                    'name' => ['required', 'string','max:254']
+                    'name' => ['required', 'string', 'max:254'],
                 ],
             );
             $this->outputErrors($name_validator);
         } while ($name_validator->fails());
-
 
         do {
             $password = $this->ask('Password');
             $password_validator = Validator::make(
                 ['name' => $name],
                 [
-                    'name' => ['required','string','min:6']
+                    'name' => ['required', 'string', 'min:6'],
                 ],
             );
             $this->outputErrors($password_validator);
         } while ($password_validator->fails());
 
-
         User::create([
-              'name' => $name,
-              'email' => $email,
-              'password' => bcrypt($password)
-          ]);
+            'name' => $name,
+            'email' => $email,
+            'password' => bcrypt($password),
+        ]);
 
-          $this->info("The user $name with the email: $email, was successfully created.");
-        }
+        $this->info("The user $name with the email: $email, was successfully created.");
+    }
 
-        protected function outputErrors($validator)
-        {
-          foreach ($validator->errors()->all() as $error) {
+    protected function outputErrors($validator)
+    {
+        foreach ($validator->errors()->all() as $error) {
             $this->info("$error");
-          }
         }
-
+    }
 }

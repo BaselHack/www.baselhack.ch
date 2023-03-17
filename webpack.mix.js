@@ -1,18 +1,9 @@
 const mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss')
+const path = require('path')
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel applications. By default, we are compiling the CSS
- | file for the application as well as bundling up all the JS files.
- |
- */
-
-const domain =  process.env.SESSION_DOMAIN
-const homedir = require('os').homedir();
+const domain = process.env.SESSION_DOMAIN
+const homedir = require('os').homedir()
 
 // The mix script:
 mix.browserSync({
@@ -25,8 +16,13 @@ mix.browserSync({
     },
 })
 
+mix.js('resources/js/app.js', 'public/js')
+
 mix
-    .js("resources/js/app.js", "public/js")
-    .postCss("resources/css/app.css", "public/css", [
-        require("tailwindcss"),
-    ]);
+    .sass('resources/sass/app.scss', 'public/css')
+    .options({
+        processCssUrls: false,
+        postCss: [tailwindcss('./tailwind.config.js')],
+    })
+
+mix.version();

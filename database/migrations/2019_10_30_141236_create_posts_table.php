@@ -13,8 +13,7 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table)
-        {
+        Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->uuid('uuid')->unique();
             $table->date('published_at')->nullable();
@@ -22,7 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('slug')->unique();
             $table->string('teaser');
             $table->longText('body');
-       
+
             $table->unsignedBigInteger('created_by')->nullable();
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade')->onDelete('set null');
 

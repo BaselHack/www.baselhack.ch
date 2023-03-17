@@ -82,4 +82,4 @@ jobs:
           ENVOYER_HOOK_PRODUCTION: ${{ secrets.ENVOYER_HOOK_PRODUCTION }}
           ENVOYER_HOOK_SHA: ${{ github.sha }}
         run: |
-          curl "$ENVOYER_HOOK_PRODUCTION?sha=$ENVOYER_HOOK_SHA"
+          curl "$ENVOYER_HOOK_PRODUCTION"?sha=${{ github.sha }}

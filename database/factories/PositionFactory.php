@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Channel;
+use App\Models\Company;
 use App\Models\Position;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -32,17 +33,18 @@ class PositionFactory extends Factory
             'fab fa-youtube',
             'fab fa-linkedin-in',
             'fab fa-google-plus-g',
-            'fad fa-envelope-open'
+            'fad fa-envelope-open',
         ];
 
         return [
-            'name' => $this->faker->name,
-            'icon' => $this->faker->unique()->randomElement($channels),
-            'url' => $this->faker->url,
+            'company_id' => Company::factory(),
+            'title' => $this->faker->text(20),
+            'body' => $this->faker->text(),
+            'published_at' => $this->faker->date(),
         ];
     }
-    
-        /**
+
+    /**
      * Indicate that the user is suspended.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
@@ -51,9 +53,8 @@ class PositionFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'published' => true
+                'published' => true,
             ];
         });
     }
-  
 }
