@@ -4,6 +4,7 @@ import laravel, {refreshPaths} from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
+          //valetTls: 'web.baselhack.test',
             input: [
                 "resources/css/app.css",
                 "resources/js/app.js"

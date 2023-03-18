@@ -3,6 +3,7 @@
 /public/js/*
 /public/css/*
 /public/vendor/*
+/public/build/*
 public/vendor/*
 /public/storage
 /storage/*.key
