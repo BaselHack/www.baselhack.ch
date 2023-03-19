@@ -9,7 +9,6 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class SectionResource extends Resource
 {
-
     public static $model = Section::class;
 
     public static function label()

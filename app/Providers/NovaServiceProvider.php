@@ -61,7 +61,6 @@ class NovaServiceProvider extends CustomNovaServiceProvider
                         MenuItem::resource(PositionResource::class),
                     ])->collapsable(),
 
-
                 ])->icon('heart')->collapsable(),
 
             ];

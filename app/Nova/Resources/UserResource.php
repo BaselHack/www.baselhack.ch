@@ -13,7 +13,6 @@ use Laravel\Nova\Panel;
 
 class UserResource extends Resource
 {
-
     public static $model = User::class;
 
     public static function label()
