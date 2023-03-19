@@ -8,7 +8,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Log ChannelResource
+    | Default Log Channel
     |--------------------------------------------------------------------------
     |
     | This option defines the default log channel that gets used when writing
@@ -21,7 +21,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Deprecations Log ChannelResource
+    | Deprecations Log Channel
     |--------------------------------------------------------------------------
     |
     | This option controls the log channel that should be used to log warnings
@@ -30,7 +30,10 @@ return [
     |
     */
 
-    'deprecations' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
+    'deprecations' => [
+        'channel' => env('LOG_DEPRECATIONS_CHANNEL', 'null'),
+        'trace' => false,
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -50,7 +53,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['daily', 'flare'],
             'ignore_exceptions' => false,
         ],
 
@@ -99,6 +102,7 @@ return [
         'syslog' => [
             'driver' => 'syslog',
             'level' => env('LOG_LEVEL', 'debug'),
+            'facility' => LOG_USER,
         ],
 
         'errorlog' => [
@@ -114,6 +118,11 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'flare' => [
+            'driver' => 'flare',
+        ],
+
     ],
 
 ];
