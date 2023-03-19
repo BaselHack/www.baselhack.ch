@@ -1,26 +1,32 @@
-name: Pull Request  | CI
+name: Pull Request  | CI | PEST
 
 on: pull_request
 
 jobs:
-  ci:
+  ci_pest:
     runs-on: ${{ matrix.os }}
+    name: pull-request | ci | pest
 
     strategy:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest ]
-        php: [ 8.1 ]
-        node: [ 14 ]
+        php: [ 8.2 ]
+        node: [ 16 ]
 
     steps:
+      - name: set timezone
+        uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: "Europe/Zurich"
+
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: '0'
 
       - name: Setup node env 🏗
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: ${{ matrix.node }}
 
@@ -33,39 +39,42 @@ jobs:
       - name: Prepare the environment
         run: cp .env.ci .env
 
-      # Backend dependencies
-      - name: Apply Nova license & install Composer dependencies
-        run: |
-          composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_LICENSE_KEY }}
-          composer install --prefer-dist --no-progress --no-interaction --no-suggest --optimize-autoloader --no-cache --no-scripts
+      # Frontend dependencies
+      - name: Install assets
+        run: cp vite.config.js.example vite.config.js
 
-      # Prepare backend
+      # Backend Dependencies
+      - name: Apply Nova license
+        run: composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_LICENSE_KEY }}
+      - name: Install Composer dependencies
+        run: composer install -q --no-progress --prefer-dist --no-interaction --no-suggest --optimize-autoloader --no-scripts
+
+      # Frontend dependencies
+      - name: Install dependencies & build assets
+        run: npm install && npm run build
+
+      # Prepare Backend
       - name: Create Database
         run: |
           sudo systemctl start mysql
-          mysql --user="root" --password="root" -e "CREATE DATABASE cypress character set UTF8mb4 collate utf8mb4_bin;"
-      - name: Generate app key
-        run: php artisan key:generate
-      - name: Publish Nova Assets
-        run: php artisan nova:publish
-      - name: Clear Config
-        run: php artisan config:clear
+          mysql --user="root" --password="root" -e "CREATE DATABASE laravel character set UTF8mb4 collate utf8mb4_bin;"
 
-      # Frontend dependencies
-
-      - name: Install dependencies 👨🏻‍💻
-        run: npm install
-      - name: Build assets 👷‍♂️
-        run: npm run prod
+        # Artisan commands
+      - name: Publish Laravel Nova Assets
+        run: php artisan vendor:publish --tag=nova-assets --ansi --force
+      - name: Publish Laravel Horizon Assets
+        run: php artisan vendor:publish --tag=horizon-assets --force
+      - name: Run Migration
+        run: php artisan migrate:fresh
 
       # Backend tests
-      - name: Execute tests (Unit and Feature tests) via PHPUnit
+      - name: Execute PHPUnit Test
         run: php artisan test
 
-      # Store storage/logs
-      - name: Store Storage Log Artifacts
-        uses: actions/upload-artifact@v1
+      # Store logs
+      - name: Store Log Artifacts
+        uses: actions/upload-artifact@v2
         if: failure()
         with:
-          name: Logs
+          name: Store report artifacts
           path: ./storage/logs

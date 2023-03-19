@@ -18,27 +18,27 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 
 Route::get('/', [StartController::class, 'index'])->name('start.index');
 
-Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+Route::get('about', [AboutController::class, 'index'])->name('about.index');
 
-Route::get('/blog', [PostsController::class, 'index'])->name('posts.index');
-Route::get('/blog/{post}', [PostsController::class, 'show'])->name('posts.show');
+Route::get('blog', [PostsController::class, 'index'])->name('posts.index');
+Route::get('blog/{post}', [PostsController::class, 'show'])->name('posts.show');
 
-Route::get('/team', [TeamController::class, 'index'])->name('team.index');
+Route::get('team', [TeamController::class, 'index'])->name('team.index');
 
-Route::get('/partners', [PartnersController::class, 'index'])->name('partners.index');
+Route::get('partners', [PartnersController::class, 'index'])->name('partners.index');
 
-Route::get('/sponsors', [SponsorsController::class, 'index'])->name('sponsors.index');
+Route::get('sponsors', [SponsorsController::class, 'index'])->name('sponsors.index');
 
-Route::get('/positions', [PositionsController::class, 'index'])->name('positions.index');
-Route::get('/positions/{position}', [PositionsController::class, 'show'])->name('positions.show');
+Route::get('positions', [PositionsController::class, 'index'])->name('positions.index');
+Route::get('positions/{position}', [PositionsController::class, 'show'])->name('positions.show');
 
-Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 
-Route::get('/schedule', [ScheduleController::class, 'index'])->name('schedule.index');
+Route::get('schedule', [ScheduleController::class, 'index'])->name('schedule.index');
 
-Route::get('/challenges', [ChallengesController::class, 'index'])->name('challenges.index');
+Route::get('challenges', [ChallengesController::class, 'index'])->name('challenges.index');
 
-Route::get('/privacy', [PrivacyController::class, 'index'])->name('privacy.index');
-Route::get('/terms', [TermsController::class, 'index'])->name('terms.index');
+Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy.index');
+Route::get('terms', [TermsController::class, 'index'])->name('terms.index');
 
-Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store')->middleware(ProtectAgainstSpam::class);
+Route::post('newsletter', [NewsletterController::class, 'store'])->name('newsletter.store')->middleware(ProtectAgainstSpam::class);
