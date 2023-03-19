@@ -11,7 +11,7 @@ class ChallengesController extends Controller
     {
         $content = ContentDTO::fromModel('challenges:index');
 
-        return view('app.challenges.index')->with([
+        return view('app.section.index')->with([
             'page' => $content->page,
             'title' => $content->title,
             'teaser' => $content->teaser,

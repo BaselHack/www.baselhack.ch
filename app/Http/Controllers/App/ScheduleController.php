@@ -11,7 +11,7 @@ class ScheduleController extends Controller
     {
         $content = ContentDTO::fromModel('schedule:index');
 
-        return view('app.schedule.index')->with([
+        return view('app.section.index')->with([
             'page' => $content->page,
             'title' => $content->title,
             'teaser' => $content->teaser,

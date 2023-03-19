@@ -40,4 +40,17 @@ class Post extends Model implements Sitemapable
     {
         return route('posts.show', $this);
     }
+
+    public function isPublished()
+    {
+        if (! $this->published_at) {
+            return false;
+        }
+
+        if ($this->published_at?->toDateString() >= now()->toDateString()) {
+            return false;
+        }
+
+        return true;
+    }
 }

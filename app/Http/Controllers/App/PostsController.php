@@ -25,6 +25,10 @@ class PostsController extends Controller
 
     public function show(Post $post)
     {
+        if (! $post->isPublished()) {
+            return redirect()->route('posts.index');
+        }
+
         $page = (object) [
             'robots' => 'index,follow',
             'title' => $post->title,

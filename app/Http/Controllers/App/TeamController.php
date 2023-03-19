@@ -10,7 +10,7 @@ class TeamController extends Controller
 {
     public function index()
     {
-        $content = ContentDTO::fromModel('team::index');
+        $content = ContentDTO::fromModel('team:index');
 
         $teams = User::active()->orderBy('name')->get();
         $alumni = User::alumni()->orderBy('name')->get();

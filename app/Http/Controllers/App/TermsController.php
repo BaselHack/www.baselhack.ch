@@ -9,7 +9,7 @@ class TermsController extends Controller
 {
     public function index()
     {
-        $content = ContentDTO::fromModel('terms::index');
+        $content = ContentDTO::fromModel('terms:index');
 
         return view('app.section.index')->with([
             'page' => $content->page,

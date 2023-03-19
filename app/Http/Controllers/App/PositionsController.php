@@ -27,6 +27,10 @@ class PositionsController extends Controller
 
     public function show(Position $position)
     {
+        if (! $position->isPublished()) {
+            return redirect()->route('positions.index');
+        }
+
         return view('app.positions.show')->with([
             'position' => $position,
         ]);
