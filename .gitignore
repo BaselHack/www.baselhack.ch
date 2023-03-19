@@ -21,6 +21,5 @@ yarn-error.log
 /.vscode
 /public/mix-manifest.json
 auth.json
-/package-lock.json
 reports/*
 vite.config.js
