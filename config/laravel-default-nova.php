@@ -8,7 +8,7 @@ return [
     'resource_in' => 'Nova/Resources',
     'initial_path' => '/resources/user-resources',
 
-    'assets' => ['assets/nova.js'],
+    'assets' => [],
 
     'policies' => [
         'namespace' => 'App\\Policies\\Nova\\',
