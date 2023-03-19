@@ -12,8 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
-    <script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"/>
 
     <!-- Styles & Scripts-->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -45,7 +45,10 @@
 
 @production
     @include('app.layouts.partials._analytics')
+
 @endproduction
+
+<script src="https://kit.fontawesome.com/c51e7d3c3d.js" crossorigin="anonymous"/>
 
 </body>
 </html>
