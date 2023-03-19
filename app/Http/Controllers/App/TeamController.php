@@ -3,26 +3,23 @@
 namespace App\Http\Controllers\App;
 
 use App\Http\Controllers\Controller;
-use App\Models\Page;
-use App\Models\Section;
 use App\Models\User;
-use Illuminate\Support\Str;
+use App\Views\Models\ContentDTO;
 
 class TeamController extends Controller
 {
     public function index()
     {
-        $page = Page::whereIndex('team:index')->first();
-        $section = Section::where('key', 'team')->first();
+        $content = ContentDTO::fromModel('team::index');
 
         $teams = User::active()->orderBy('name')->get();
-        $alumni = User::alumni(true)->orderBy('name')->get();
+        $alumni = User::alumni()->orderBy('name')->get();
 
         return view('app.team.index')->with([
-            'page' => $page,
-            'title' => $section?->title ?? '',
-            'teaser' => $section?->teaser ?? '',
-            'body' => Str::of($section?->body ?? '')->markdown(),
+            'page' => $content->page,
+            'title' => $content->title,
+            'teaser' => $content->teaser,
+            'body' => $content->body,
             'teams' => $teams,
             'alumni' => $alumni,
         ]);

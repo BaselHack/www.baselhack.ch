@@ -52,9 +52,11 @@ class SectionResource extends Resource
     {
         return [
 
-            Text::make('Key', 'key')
+            Text::make('index', 'index')
                 ->sortable()
-                ->rules('required', 'string', 'max:100'),
+                ->rules('required', 'string', 'max:254')
+                ->creationRules('unique:sections,index')
+                ->updateRules('unique:sections,index,{{resourceId}}'),
 
             Text::make('Title', 'title')
                 ->sortable()

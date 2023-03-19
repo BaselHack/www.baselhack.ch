@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use CodebarAg\LaravelDefault\Traits\HasUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -9,18 +10,16 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, SoftDeletes;
+    use HasFactory;
+    use HasUuid;
+    use Notifiable;
+    use SoftDeletes;
 
     protected $guarded = [];
 
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function getRouteKeyName()
-    {
-        return 'uuid';
-    }
 
     public function getProfileImage()
     {

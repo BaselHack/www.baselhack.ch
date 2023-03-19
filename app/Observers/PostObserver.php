@@ -8,16 +8,6 @@ use Illuminate\Support\Str;
 class PostObserver
 {
     /**
-     * Handle the user "creating" event.
-     *
-     * @return void
-     */
-    public function creating(Post $post)
-    {
-        $post->uuid = Str::orderedUuid()->toString();
-    }
-
-    /**
      * Handle the user "saving" event.
      *
      * @return void

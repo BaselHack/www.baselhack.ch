@@ -20,10 +20,13 @@ class PagesTableSeeder extends Seeder
             'title' => 'BaselHack | We\'re More than a Hack',
             'description' => 'We connect people, take fun seriously and grow open innovation',
         ]);
+
         Page::create([
             'index' => 'about:index',
             'title' => 'About the BaselHack',
+            'description' => 'Learn more about the BaselHack, it\'s unique spirit and history.',
         ]);
+
         Page::create([
             'index' => 'posts:index',
             'robots' => 'index,follow',
@@ -54,6 +57,13 @@ class PagesTableSeeder extends Seeder
             'title' => 'BaselHack | Positions',
             'description' => 'We proudly present open positions from our partners!',
         ]);
+        Page::create([
+            'index' => 'challenges:index',
+            'robots' => 'index,follow',
+            'title' => 'BaselHack | Challenges',
+            'description' => 'A hackathon is all about challenges! Learn about the freestyle and sponsored challenges at the BaselHack.',
+        ]);
+
         Page::create([
             'index' => 'contact:index',
             'robots' => 'index,follow',
