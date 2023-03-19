@@ -13,16 +13,11 @@ class PartnersController extends Controller
     {
         $content = ContentDTO::fromModel('partners:index');
 
-        $partners = Company::published()
-            ->whereIn('type', [CompanyTypeEnum::PARTNER()->value])
-            ->orderBy('name')->get();
-
         return view('app.partners.index')->with([
             'page' => $content->page,
             'title' => $content->title,
             'teaser' => $content->teaser,
             'body' => $content->body,
-            'partners' => $partners,
         ]);
     }
 }
