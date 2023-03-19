@@ -9,7 +9,7 @@ return [
          * phase. This will most likely be "npm run production" but
          * you may choose what you would like to execute.
          */
-        'script' => 'npm run production',
+        'script' => 'npm run build',
 
         /*
          * Configure the amount of time (in seconds) the compiler
