@@ -10,7 +10,6 @@ class NewsletterObserver
     /**
      * Handle the user "creating" event.
      *
-     * @param  \App\Models\Newsletter  $newsletter
      * @return void
      */
     public function creating(Newsletter $newsletter)

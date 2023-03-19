@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Policies;
+namespace App\Policies\Nova;
 
-use App\Models\Password;
+use App\Models\Page;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class PasswordPolicy
+class PagePolicy
 {
     use HandlesAuthorization;
 
@@ -15,7 +15,7 @@ class PasswordPolicy
         return true;
     }
 
-    public function view(User $user, Password $password)
+    public function view(User $user, Page $page)
     {
         return true;
     }
@@ -25,22 +25,22 @@ class PasswordPolicy
         return true;
     }
 
-    public function update(User $user, Password $password)
+    public function update(User $user, Page $page)
     {
         return true;
     }
 
-    public function delete(User $user, Password $password)
-    {
-        return true;
-    }
-
-    public function restore(User $user, Password $password)
+    public function delete(User $user, Page $page)
     {
         return false;
     }
 
-    public function forceDelete(User $user, Password $password)
+    public function restore(User $user, Page $page)
+    {
+        return false;
+    }
+
+    public function forceDelete(User $user, Page $page)
     {
         return false;
     }

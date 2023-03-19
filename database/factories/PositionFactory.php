@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Channel;
 use App\Models\Company;
 use App\Models\Position;
 use Illuminate\Database\Eloquent\Factories\Factory;

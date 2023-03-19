@@ -76,7 +76,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Nova Password Reset Broker
+    | Nova PasswordResource Reset Broker
     |--------------------------------------------------------------------------
     |
     | This configuration option defines the password broker that will be
@@ -135,7 +135,7 @@ return [
     |
      */
 
-    'storage_disk' => env('NOVA_STORAGE_DISK', 'public'),
+    'storage_disk' => env('NOVA_STORAGE_DISK', 's3'),
 
     /*
     |--------------------------------------------------------------------------
@@ -162,15 +162,15 @@ return [
     |
     */
 
-     'brand' => [
-         'logo' => null,
+    'brand' => [
+        'logo' => public_path('images/logo.svg'),
 
-         'colors' => [
-             "400" => "148, 163, 184",
-             "500" => "100, 116, 139",
-             "600" => "71, 85, 105",
-         ]
-     ],
+        'colors' => [
+            '400' => '21, 92, 212, 0.5',
+            '500' => '21, 92, 212',
+            '600' => '21, 92, 212, 0.75',
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -186,4 +186,21 @@ return [
     'actions' => [
         'resource' => ActionResource::class,
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Nova Impersonation Redirection URLs
+    |--------------------------------------------------------------------------
+    |
+    | This configuration option allows you to specify a URL where Nova should
+    | redirect an administrator after impersonating another user and a URL
+    | to redirect the administrator after stopping impersonating a user.
+    |
+    */
+
+    'impersonation' => [
+        'started' => '/',
+        'stopped' => '/',
+    ],
+
 ];

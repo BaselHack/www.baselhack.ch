@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Policies;
+namespace App\Policies\Nova;
 
-use App\Models\Section;
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class SectionPolicy
+class PostPolicy
 {
     use HandlesAuthorization;
 
@@ -15,7 +15,7 @@ class SectionPolicy
         return true;
     }
 
-    public function view(User $user, Section $section)
+    public function view(User $user, Post $post)
     {
         return true;
     }
@@ -25,22 +25,22 @@ class SectionPolicy
         return true;
     }
 
-    public function update(User $user, Section $section)
+    public function update(User $user, Post $post)
     {
         return true;
     }
 
-    public function delete(User $user, Section $section)
+    public function delete(User $user, Post $post)
+    {
+        return true;
+    }
+
+    public function restore(User $user, Post $post)
     {
         return false;
     }
 
-    public function restore(User $user, Section $section)
-    {
-        return false;
-    }
-
-    public function forceDelete(User $user, Section $section)
+    public function forceDelete(User $user, Post $post)
     {
         return false;
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Policies;
+namespace App\Policies\Nova;
 
 use App\Models\Newsletter;
 use App\Models\User;

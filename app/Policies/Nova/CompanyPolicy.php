@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Policies;
+namespace App\Policies\Nova;
 
+use App\Models\Company;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class UserPolicy
+class CompanyPolicy
 {
     use HandlesAuthorization;
 
@@ -14,7 +15,7 @@ class UserPolicy
         return true;
     }
 
-    public function view(User $user, User $model)
+    public function view(User $user, Company $company)
     {
         return true;
     }
@@ -24,22 +25,22 @@ class UserPolicy
         return true;
     }
 
-    public function update(User $user, User $model)
+    public function update(User $user, Company $company)
     {
         return true;
     }
 
-    public function delete(User $user, User $model)
+    public function delete(User $user, Company $company)
     {
         return true;
     }
 
-    public function restore(User $user, User $model)
+    public function restore(User $user, Company $company)
     {
-        return true;
+        return false;
     }
 
-    public function forceDelete(User $user, User $model)
+    public function forceDelete(User $user, Company $company)
     {
         return false;
     }

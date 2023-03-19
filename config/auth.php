@@ -44,7 +44,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | User Providers
+    | UserResource Providers
     |--------------------------------------------------------------------------
     |
     | All authentication drivers have a user provider. This defines how the
@@ -97,7 +97,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Password Confirmation Timeout
+    | PasswordResource Confirmation Timeout
     |--------------------------------------------------------------------------
     |
     | Here you may define the amount of seconds before a password confirmation

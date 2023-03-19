@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Nova\Models;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\User;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 
-class User extends Resource
+class UserResource extends Resource
 {
-    public static $group = 'Administration';
 
-    public static $model = \App\Models\User::class;
+    public static $model = User::class;
 
     public static function label()
     {
@@ -37,10 +37,15 @@ class User extends Resource
     }
 
     public static $displayInNavigation = true;
+
     public static $perPageOptions = [50, 100, 250];
+
     public static $perPageViaRelationship = 25;
+
     public static $globallySearchable = true;
+
     public static $search = ['name', 'email'];
+
     public static $searchRelations = [];
 
     public function fields(NovaRequest $request)
@@ -60,7 +65,7 @@ class User extends Resource
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
 
-            Password::make('Password')
+            Password::make('PasswordResource')
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')
                 ->updateRules('nullable', 'string', 'min:8'),

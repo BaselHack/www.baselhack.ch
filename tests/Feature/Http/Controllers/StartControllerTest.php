@@ -1,9 +1,7 @@
 <?php
 
-use App\Models\Page;
 use App\Models\Position;
 use App\Models\Post;
-use App\Models\Section;
 
 test('start.index', function () {
     $route = route('start.index');

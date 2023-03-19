@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Policies;
+namespace App\Policies\Nova;
 
-use App\Models\Company;
+use App\Models\Channel;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class CompanyPolicy
+class ChannelPolicy
 {
     use HandlesAuthorization;
 
@@ -15,7 +15,7 @@ class CompanyPolicy
         return true;
     }
 
-    public function view(User $user, Company $company)
+    public function view(User $user, Channel $channel)
     {
         return true;
     }
@@ -25,22 +25,22 @@ class CompanyPolicy
         return true;
     }
 
-    public function update(User $user, Company $company)
+    public function update(User $user, Channel $channel)
     {
         return true;
     }
 
-    public function delete(User $user, Company $company)
+    public function delete(User $user, Channel $channel)
     {
         return true;
     }
 
-    public function restore(User $user, Company $company)
+    public function restore(User $user, Channel $channel)
     {
         return false;
     }
 
-    public function forceDelete(User $user, Company $company)
+    public function forceDelete(User $user, Channel $channel)
     {
         return false;
     }

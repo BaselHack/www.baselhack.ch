@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Nova\Models;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\Section;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Section extends Resource
+class SectionResource extends Resource
 {
-    public static $group = 'Content';
 
-    public static $model = \App\Models\Section::class;
+    public static $model = Section::class;
 
     public static function label()
     {
@@ -33,10 +33,15 @@ class Section extends Resource
     }
 
     public static $displayInNavigation = true;
+
     public static $perPageOptions = [50, 100, 250];
+
     public static $perPageViaRelationship = 25;
+
     public static $globallySearchable = true;
+
     public static $search = ['title', 'teaser', 'body'];
+
     public static $searchRelations = [];
 
     public static function softDeletes()

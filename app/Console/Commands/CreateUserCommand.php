@@ -43,10 +43,10 @@ class CreateUserCommand extends Command
             $email = $this->ask('E-Mail?');
             $email_validator = Validator::make(
                 ['email' => $email],
-              ['email' => [
-                  'required', 'string', 'email', 'max:254', 'unique:users,email',
-              ],
-              ],
+                ['email' => [
+                    'required', 'string', 'email', 'max:254', 'unique:users,email',
+                ],
+                ],
             );
             $this->outputErrors($email_validator);
         } while ($email_validator->fails());
@@ -63,7 +63,7 @@ class CreateUserCommand extends Command
         } while ($name_validator->fails());
 
         do {
-            $password = $this->ask('Password');
+            $password = $this->ask('PasswordResource');
             $password_validator = Validator::make(
                 ['name' => $name],
                 [

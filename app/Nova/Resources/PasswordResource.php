@@ -1,25 +1,23 @@
 <?php
 
-namespace App\Nova\Models;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Fields\Boolean;
+use App\Models\Password;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Channel extends Resource
+class PasswordResource extends Resource
 {
-    public static $group = 'Content';
-
-    public static $model = \App\Models\Channel::class;
+    public static $model = Password::class;
 
     public static function label()
     {
-        return 'Channels';
+        return 'Passwords';
     }
 
     public static function singularLabel()
     {
-        return 'Channel';
+        return 'Password';
     }
 
     public function title()
@@ -33,12 +31,16 @@ class Channel extends Resource
     }
 
     public static $displayInNavigation = true;
-    public static $perPageOptions = [50, 100, 250];
-    public static $perPageViaRelationship = 25;
-    public static $globallySearchable = true;
-    public static $search = ['name'];
-    public static $searchRelations = [];
 
+    public static $perPageOptions = [50, 100, 250];
+
+    public static $perPageViaRelationship = 25;
+
+    public static $globallySearchable = true;
+
+    public static $search = ['name', 'username'];
+
+    public static $searchRelations = [];
 
     public static function softDeletes()
     {
@@ -49,16 +51,15 @@ class Channel extends Resource
     {
         return [
 
-            Boolean::make('Published', 'published')
-                ->filterable()
-                ->sortable()
-                ->hideWhenCreating(),
-
             Text::make('Name', 'name')
                 ->sortable()
                 ->rules('required', 'max:254'),
 
-            Text::make('Icon', 'icon')
+            Text::make('Username', 'username')
+                ->sortable()
+                ->rules('required', 'max:254'),
+
+            Text::make('PasswordResource', 'password')
                 ->sortable()
                 ->hideFromIndex()
                 ->rules('required', 'max:254'),
@@ -66,7 +67,7 @@ class Channel extends Resource
             Text::make('URL', 'url')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules('required', 'url', 'max:254'),
+                ->rules('nullable', 'url', 'max:254'),
         ];
     }
 }

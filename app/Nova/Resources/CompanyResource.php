@@ -1,21 +1,20 @@
 <?php
 
-namespace App\Nova\Models;
+namespace App\Nova\Resources;
 
 use App\Enums\CompanyTypeEnum;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\Company;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 use Spatie\Enum\Laravel\Rules\EnumRule;
 
-class Company extends Resource
+class CompanyResource extends Resource
 {
-    public static $group = 'Content';
-
-    public static $model = \App\Models\Company::class;
+    public static $model = Company::class;
 
     public static function label()
     {
@@ -38,12 +37,16 @@ class Company extends Resource
     }
 
     public static $displayInNavigation = true;
-    public static $perPageOptions = [50, 100, 250];
-    public static $perPageViaRelationship = 25;
-    public static $globallySearchable = true;
-    public static $search = ['name'];
-    public static $searchRelations = [];
 
+    public static $perPageOptions = [50, 100, 250];
+
+    public static $perPageViaRelationship = 25;
+
+    public static $globallySearchable = true;
+
+    public static $search = ['name'];
+
+    public static $searchRelations = [];
 
     public static function softDeletes()
     {
@@ -94,5 +97,4 @@ class Company extends Resource
                 ->updateRules('nullable', 'image', 'max:254'),
         ];
     }
-
 }

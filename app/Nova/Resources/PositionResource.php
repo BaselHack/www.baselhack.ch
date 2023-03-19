@@ -1,18 +1,17 @@
 <?php
 
-namespace App\Nova\Models;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\Position;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Position extends Resource
+class PositionResource extends Resource
 {
-    public static $group = 'Content';
-
-    public static $model = 'App\Models\Position';
+    public static $model = Position::class;
 
     public static function label()
     {
@@ -30,12 +29,16 @@ class Position extends Resource
     }
 
     public static $displayInNavigation = true;
-    public static $perPageOptions = [50, 100, 250];
-    public static $perPageViaRelationship = 25;
-    public static $globallySearchable = true;
-    public static $search = ['title', 'body'];
-    public static $searchRelations = [];
 
+    public static $perPageOptions = [50, 100, 250];
+
+    public static $perPageViaRelationship = 25;
+
+    public static $globallySearchable = true;
+
+    public static $search = ['title', 'body'];
+
+    public static $searchRelations = [];
 
     public static function softDeletes()
     {
@@ -52,7 +55,7 @@ class Position extends Resource
                 ->rules('nullable', 'date')
                 ->hideWhenCreating(),
 
-            BelongsTo::make('Company', 'class', Company::class)
+            BelongsTo::make('Company', 'company', CompanyResource::class)
                 ->required()
                 ->sortable()
                 ->filterable(),

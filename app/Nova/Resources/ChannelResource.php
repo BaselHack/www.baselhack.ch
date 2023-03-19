@@ -1,24 +1,24 @@
 <?php
 
-namespace App\Nova\Models;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\Channel;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Password extends Resource
+class ChannelResource extends Resource
 {
-    public static $group = 'Administration';
-
-    public static $model = \App\Models\Password::class;
+    public static $model = Channel::class;
 
     public static function label()
     {
-        return 'Passwords';
+        return 'Channels';
     }
 
     public static function singularLabel()
     {
-        return 'Password';
+        return 'Channel';
     }
 
     public function title()
@@ -32,12 +32,16 @@ class Password extends Resource
     }
 
     public static $displayInNavigation = true;
-    public static $perPageOptions = [50, 100, 250];
-    public static $perPageViaRelationship = 25;
-    public static $globallySearchable = true;
-    public static $search = ['name','username'];
-    public static $searchRelations = [];
 
+    public static $perPageOptions = [50, 100, 250];
+
+    public static $perPageViaRelationship = 25;
+
+    public static $globallySearchable = true;
+
+    public static $search = ['name'];
+
+    public static $searchRelations = [];
 
     public static function softDeletes()
     {
@@ -48,15 +52,16 @@ class Password extends Resource
     {
         return [
 
+            Boolean::make('Published', 'published')
+                ->filterable()
+                ->sortable()
+                ->hideWhenCreating(),
+
             Text::make('Name', 'name')
                 ->sortable()
                 ->rules('required', 'max:254'),
 
-            Text::make('Username', 'username')
-                ->sortable()
-                ->rules('required', 'max:254'),
-
-            Text::make('Password', 'password')
+            Text::make('Icon', 'icon')
                 ->sortable()
                 ->hideFromIndex()
                 ->rules('required', 'max:254'),
@@ -64,7 +69,7 @@ class Password extends Resource
             Text::make('URL', 'url')
                 ->sortable()
                 ->hideFromIndex()
-                ->rules('nullable', 'url', 'max:254'),
+                ->rules('required', 'url', 'max:254'),
         ];
     }
 }

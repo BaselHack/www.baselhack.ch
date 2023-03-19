@@ -10,7 +10,6 @@ class PostObserver
     /**
      * Handle the user "creating" event.
      *
-     * @param  \App\Models\Post  $post
      * @return void
      */
     public function creating(Post $post)
@@ -21,7 +20,6 @@ class PostObserver
     /**
      * Handle the user "saving" event.
      *
-     * @param  \App\Models\Post  $post
      * @return void
      */
     public function saving(Post $post)

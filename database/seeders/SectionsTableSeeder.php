@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Section;
-use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class SectionsTableSeeder extends Seeder
@@ -91,7 +90,7 @@ class SectionsTableSeeder extends Seeder
             [
                 'key' => 'about',
                 'title' => 'About',
-                'teaser' => 'About the BaselHack'
+                'teaser' => 'About the BaselHack',
             ]
         );
     }

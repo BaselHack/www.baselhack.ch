@@ -24,7 +24,7 @@ class SectionFactory extends Factory
         return [
             'key' => 'terms',
             'title' => 'Lorem Ipsum',
-            'teaser' =>'Lorem Ipsum',
+            'teaser' => 'Lorem Ipsum',
             'body' => null,
         ];
     }

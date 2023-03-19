@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Channel;
 use App\Models\Page;
 use Illuminate\Database\Seeder;
 
@@ -23,7 +22,7 @@ class PagesTableSeeder extends Seeder
         ]);
         Page::create([
             'index' => 'about:index',
-            'title' => 'About the BaselHack'
+            'title' => 'About the BaselHack',
         ]);
         Page::create([
             'index' => 'posts:index',

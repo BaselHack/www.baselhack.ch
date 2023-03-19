@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\App;
 
-use App\Models\Page;
 use App\Http\Controllers\Controller;
+use App\Models\Page;
 use App\Models\Section;
 use Illuminate\Support\Str;
 
@@ -13,6 +13,7 @@ class ScheduleController extends Controller
     {
         $page = Page::whereIndex('schedule:index')->first();
         $section = Section::where('key', 'schedule')->first();
+
         return view('app.schedule.index')->with([
             'page' => $page,
             'title' => $section->title,

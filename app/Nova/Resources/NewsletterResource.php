@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Nova\Models;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\Newsletter;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Maatwebsite\LaravelNovaExcel\Actions\DownloadExcel;
 
-class Newsletter extends Resource
+class NewsletterResource extends Resource
 {
-    public static $group = 'Marketing';
-
-    public static $model = \App\Models\Newsletter::class;
+    public static $model = Newsletter::class;
 
     public static function label()
     {
@@ -34,12 +33,16 @@ class Newsletter extends Resource
     }
 
     public static $displayInNavigation = true;
-    public static $perPageOptions = [50, 100, 250];
-    public static $perPageViaRelationship = 25;
-    public static $globallySearchable = true;
-    public static $search = ['company', 'firstname', 'lastname', 'email'];
-    public static $searchRelations = [];
 
+    public static $perPageOptions = [50, 100, 250];
+
+    public static $perPageViaRelationship = 25;
+
+    public static $globallySearchable = true;
+
+    public static $search = ['company', 'firstname', 'lastname', 'email'];
+
+    public static $searchRelations = [];
 
     public static function softDeletes()
     {
@@ -50,7 +53,7 @@ class Newsletter extends Resource
     {
         return [
 
-            Text::make('Company', 'company')
+            Text::make('CompanyResource', 'company')
                 ->sortable()
                 ->readonly(),
 

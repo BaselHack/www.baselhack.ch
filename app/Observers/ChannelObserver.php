@@ -10,7 +10,6 @@ class ChannelObserver
     /**
      * Handle the user "creating" event.
      *
-     * @param  \App\Models\Channel  $channel
      * @return void
      */
     public function creating(Channel $channel)

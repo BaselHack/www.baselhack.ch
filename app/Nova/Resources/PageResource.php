@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Nova\Models;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\Page;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Page extends Resource
+class PageResource extends Resource
 {
-    public static $group = 'Marketing';
-
-    public static $model = \App\Models\Page::class;
+    public static $model = Page::class;
 
     public static function label()
     {
@@ -33,12 +32,16 @@ class Page extends Resource
     }
 
     public static $displayInNavigation = true;
-    public static $perPageOptions = [50, 100, 250];
-    public static $perPageViaRelationship = 25;
-    public static $globallySearchable = true;
-    public static $search = ['index', 'title'];
-    public static $searchRelations = [];
 
+    public static $perPageOptions = [50, 100, 250];
+
+    public static $perPageViaRelationship = 25;
+
+    public static $globallySearchable = true;
+
+    public static $search = ['index', 'title'];
+
+    public static $searchRelations = [];
 
     public static function softDeletes()
     {

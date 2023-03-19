@@ -1,19 +1,17 @@
 <?php
 
-namespace App\Nova\Models;
+namespace App\Nova\Resources;
 
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Models\Post;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Post extends Resource
+class PostResource extends Resource
 {
-    public static $group = 'Content';
-
-    public static $model = \App\Models\Post::class;
-
+    public static $model = Post::class;
 
     public static function label()
     {
@@ -22,7 +20,7 @@ class Post extends Resource
 
     public static function singularLabel()
     {
-        return 'Post';
+        return 'PostResource';
     }
 
     public function title()
@@ -36,10 +34,15 @@ class Post extends Resource
     }
 
     public static $displayInNavigation = true;
+
     public static $perPageOptions = [50, 100, 250];
+
     public static $perPageViaRelationship = 25;
+
     public static $globallySearchable = true;
+
     public static $search = ['title', 'teaser', 'body'];
+
     public static $searchRelations = [];
 
     public static function softDeletes()
@@ -68,7 +71,7 @@ class Post extends Resource
 
             Trix::make('Body', 'body')->withFiles('public')->alwaysShow(),
 
-            BelongsTo::make('Author', 'author', User::class)
+            BelongsTo::make('Author', 'author', UserResource::class)
                 ->nullable(),
 
         ];
