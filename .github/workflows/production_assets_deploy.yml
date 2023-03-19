@@ -50,7 +50,7 @@ jobs:
       - name: Apply Nova license
         run: composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_LICENSE_KEY }}
       - name: Install Composer dependencies
-        run: composer install -q --no-progress --prefer-dist --no-interaction --no-suggest --optimize-autoloader --no-scripts
+        run: composer install -q --no-progress --prefer-dist --no-interaction --optimize-autoloader --no-scripts
 
       # Frontend dependencies
       - name: Install dependencies & build assets
