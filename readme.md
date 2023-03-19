@@ -1,23 +1,61 @@
 # BaselHack Website
 
-#### Composer Install
+# Setup
 
-To install dependencies use ```composer```. The BaselHack website uses Laravel Nova CMS, which requires a license
-key in order to be downloaded by composer. Thus fist authenticate with Nova via composer:
-
-```
-    composer config http-basic.nova.laravel.com email licensekey
-```
-
-- email: use the BaselHack main email address
-- licensekey: use one of the Nova licenses of BaselHack (ask Didi)
-
-Then install the dependencies:
+## Preparation
 
 ```
-    composer install --prefer-dist --optimize-autoloader --no-scripts
+cp .env.example .env
+
+# update the .env file according your local dev environment
+
+cp .vite.config.js.example vite.config.js
+
+# update the vite.config.js file according your local dev environment
+
+cp auth.json.example auth.json 
+
+# update the auth.json file according to your license keys
 ```
 
-#### Test Suite
+## Installation
 
-Run with ```./vendor/bin/pest``` instead of phpunit.
+```
+# Install backend dependencies
+composer install
+
+# Install frontend dependencies & generate assets
+npm install && vite build
+
+# Databse migrations & local data
+php artisan migrate:fresh --seed
+```
+
+# Services
+
+## Github
+
+- Code Versioning
+
+## Laravel Forge & Laravel Envoyer
+
+- Server Deployment
+- Zero Downtime PHP Deployment
+
+## Laravel Nova
+
+- Administration Panel
+
+## Postmark
+
+Transaction E-Mails.
+https://postmarkapp.com
+
+```
+MAIL_MAILER=postmark
+POSTMARK_TOKEN=**<TOKEN>**
+```
+
+#### Tests
+
+Run with ```php artisan test```.

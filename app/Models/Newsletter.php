@@ -2,18 +2,14 @@
 
 namespace App\Models;
 
+use CodebarAg\LaravelDefault\Traits\HasUuid;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Activitylog\Traits\LogsActivity;
 
 class Newsletter extends Model
 {
+    use HasFactory;
+    use HasUuid;
     use SoftDeletes;
-
-    protected $guarded = [];
-
-    public function getRouteKeyName()
-    {
-        return 'uuid';
-    }
 }

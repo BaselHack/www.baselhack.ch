@@ -9,13 +9,6 @@ use Illuminate\Support\Str;
 class UserFactory extends Factory
 {
     /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
-    protected $model = User::class;
-
-    /**
      * Define the model's default state.
      *
      * @return array
@@ -31,8 +24,7 @@ class UserFactory extends Factory
         ];
     }
 
-
-        /**
+    /**
      * Indicate that the user is suspended.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
@@ -48,5 +40,4 @@ class UserFactory extends Factory
             ];
         });
     }
-
 }

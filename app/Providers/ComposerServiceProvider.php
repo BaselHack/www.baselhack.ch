@@ -19,7 +19,8 @@ class ComposerServiceProvider extends ServiceProvider
     {
         View::composer('*', function ($view) {
             $view->with([
-                'channels' => Channel::published()->orderBy('name','asc')->get(),
+                'channels' => Channel::published()->orderBy('name', 'asc')->get(),
+
                 'mainSponsors' => Company::published()
                     ->whereIn('type', [CompanyTypeEnum::SPONSOR_MAIN()->value])
                     ->orderBy('name')->get(),
@@ -34,7 +35,7 @@ class ComposerServiceProvider extends ServiceProvider
                     ->orderBy('name')->get(),
                 'partnerships' => Company::published()
                     ->whereIn('type', [CompanyTypeEnum::PARTNER()->value])
-                    ->orderBy('name')->get()
+                    ->orderBy('name')->get(),
             ]);
         });
     }

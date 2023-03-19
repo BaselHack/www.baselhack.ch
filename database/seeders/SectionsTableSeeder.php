@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Section;
-use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class SectionsTableSeeder extends Seeder
@@ -17,7 +16,7 @@ class SectionsTableSeeder extends Seeder
     {
         Section::create(
             [
-                'key' => 'privacy',
+                'index' => 'privacy:index',
                 'title' => 'Privacy',
                 'teaser' => 'This data protection declaration is subject to the laws of Switzerland and must be interpreted in accordance with these laws.',
                 'body' => file_get_contents(database_path('samples/privacy.md')),
@@ -26,72 +25,90 @@ class SectionsTableSeeder extends Seeder
 
         Section::create(
             [
-                'key' => 'terms',
+                'index' => 'terms:index',
                 'title' => 'Terms',
-                'teaser' => 'Please read the following terms and conditions carefully',
+                'teaser' => 'Please read the following terms and conditions carefully.',
                 'body' => file_get_contents(database_path('samples/terms.md')),
             ]
         );
 
         Section::create(
             [
-                'key' => 'partners',
+                'index' => 'partners:index',
                 'title' => 'Partners',
-                'teaser' => 'We proudly present our partners!',
+                'teaser' => 'Partners of the BaselHack',
                 'body' => file_get_contents(database_path('samples/partners.md')),
             ]
         );
 
         Section::create(
             [
-                'key' => 'sponsors',
+                'index' => 'sponsors:index',
                 'title' => 'Sponsors',
-                'teaser' => 'We proudly present our sponsors!',
+                'teaser' => 'Sponsors of the BaselHack',
                 'body' => file_get_contents(database_path('samples/sponsors.md')),
             ]
         );
 
         Section::create(
             [
-                'key' => 'team',
+                'index' => 'team:index',
                 'title' => 'Team',
-                'teaser' => 'We proudly present our team!',
+                'teaser' => 'The team behind the BaselHack',
                 'body' => null,
             ]
         );
 
         Section::create(
             [
-                'key' => 'contact',
+                'index' => 'contact:index',
                 'title' => 'Contact',
-                'teaser' => null,
+                'teaser' => 'Leave us a message!',
                 'body' => file_get_contents(database_path('samples/contact.md')),
             ]
         );
 
         Section::create(
             [
-                'key' => 'positions',
+                'index' => 'positions:index',
                 'title' => 'Positions',
-                'teaser' => null,
+                'teaser' => 'Current job openings with BaselHack sponsoring companies.',
                 'body' => null,
             ]
         );
 
         Section::create(
             [
-                'key' => 'posts',
+                'index' => 'posts:index',
                 'title' => 'Blog',
-                'teaser' => null,
+                'teaser' => 'News and information about the BaselHack event',
                 'body' => null,
             ]
         );
 
         Section::create(
             [
-                'key' => 'about',
+                'index' => 'about:index',
                 'title' => 'About',
-                'teaser' => 'About the BaselHack'
+                'teaser' => 'The hackathon for the Basel region.',
+                'body' => file_get_contents(database_path('samples/about.md')),
+            ]);
+
+        Section::create(
+            [
+                'index' => 'challenges:index',
+                'title' => 'Challenges',
+                'teaser' => 'The BaselHack is all about challenges! At the start of the hackathon, each participant joins a team to work on a freestyle or sponsored challenge.',
+                'body' => file_get_contents(database_path('samples/challenges.md')),
+            ]
+        );
+
+        Section::create(
+            [
+                'index' => 'schedule:index',
+                'title' => 'Schedule 2022',
+                'teaser' => 'The schedule for the BaselHack 2022',
+                'body' => file_get_contents(database_path('samples/schedule.md')),
             ]
         );
     }

@@ -2,18 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Channel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ChannelFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
-    protected $model = Channel::class;
-
     /**
      * Define the model's default state.
      *
@@ -31,7 +23,7 @@ class ChannelFactory extends Factory
             'fab fa-youtube',
             'fab fa-linkedin-in',
             'fab fa-google-plus-g',
-            'fad fa-envelope-open'
+            'fad fa-envelope-open',
         ];
 
         return [
@@ -40,8 +32,8 @@ class ChannelFactory extends Factory
             'url' => $this->faker->url,
         ];
     }
-    
-        /**
+
+    /**
      * Indicate that the user is suspended.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
@@ -50,9 +42,8 @@ class ChannelFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'published' => true
+                'published' => true,
             ];
         });
     }
-  
 }

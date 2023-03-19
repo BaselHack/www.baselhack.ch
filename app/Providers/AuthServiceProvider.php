@@ -2,23 +2,22 @@
 
 namespace App\Providers;
 
+use App\Models\Channel;
 use App\Models\Company;
+use App\Models\Contact;
 use App\Models\Event;
 use App\Models\Page;
 use App\Models\Password;
 use App\Models\Post;
 use App\Models\User;
-use App\Models\Channel;
-use App\Models\Contact;
-use App\Policies\ChannelPolicy;
-use App\Policies\CompanyPolicy;
 use App\Policies\ContactPolicy;
 use App\Policies\EventPolicy;
-use App\Policies\PagePolicy;
-use App\Policies\PasswordPolicy;
-use App\Policies\PostPolicy;
-use App\Policies\UserPolicy;
-
+use App\Policies\Nova\ChannelPolicy;
+use App\Policies\Nova\CompanyPolicy;
+use App\Policies\Nova\PagePolicy;
+use App\Policies\Nova\PasswordPolicy;
+use App\Policies\Nova\PostPolicy;
+use App\Policies\Nova\UserPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider

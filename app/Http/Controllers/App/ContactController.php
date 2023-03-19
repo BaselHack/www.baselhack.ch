@@ -2,22 +2,20 @@
 
 namespace App\Http\Controllers\App;
 
-use App\Models\Page;
 use App\Http\Controllers\Controller;
-use App\Models\Section;
-use Illuminate\Support\Str;
+use App\Views\Models\ContentDTO;
 
 class ContactController extends Controller
 {
     public function index()
     {
-        $page = Page::whereIndex('contact:index')->first();
-        $section = Section::where('key', 'contact')->first();
+        $content = ContentDTO::fromModel('contact:index');
+
         return view('app.contact.index')->with([
-            'page' => $page,
-            'title' => $section->title,
-            'teaser' => $section->teaser,
-            'body' => Str::of($section->body)->markdown(),
+            'page' => $content->page,
+            'title' => $content->title,
+            'teaser' => $content->teaser,
+            'body' => $content->body,
         ]);
     }
 }

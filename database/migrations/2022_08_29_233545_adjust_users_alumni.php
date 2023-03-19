@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class AdjustUsersAlumni extends Migration
@@ -13,7 +12,7 @@ class AdjustUsersAlumni extends Migration
      */
     public function up()
     {
-        Schema::table('users', function($table) {
+        Schema::table('users', function ($table) {
             $table->boolean('alumni')->default(false);
         });
     }
@@ -25,7 +24,7 @@ class AdjustUsersAlumni extends Migration
      */
     public function down()
     {
-        Schema::table('users', function($table) {
+        Schema::table('users', function ($table) {
             $table->dropColumn('alumni');
         });
     }

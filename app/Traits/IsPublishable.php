@@ -8,7 +8,6 @@ trait IsPublishable
 {
     public function scopePublished(Builder $builder)
     {
-        return $builder->where('published',true);
+        return $builder->where('published', true);
     }
-
 }

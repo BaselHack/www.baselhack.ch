@@ -3,19 +3,10 @@
 namespace Database\Factories;
 
 use App\Enums\CompanyTypeEnum;
-use App\Models\Company;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
 
 class CompanyFactory extends Factory
 {
-    /**
-     * The name of the factory's corresponding model.
-     *
-     * @var string
-     */
-    protected $model = Company::class;
-
     /**
      * Define the model's default state.
      *
@@ -30,7 +21,6 @@ class CompanyFactory extends Factory
         ];
     }
 
-
     /**
      * Indicate that the user is suspended.
      *
@@ -40,7 +30,7 @@ class CompanyFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'published' => true
+                'published' => true,
             ];
         });
     }
@@ -54,7 +44,7 @@ class CompanyFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'type' => CompanyTypeEnum::PARTNER()->value
+                'type' => CompanyTypeEnum::PARTNER()->value,
             ];
         });
     }
@@ -68,7 +58,7 @@ class CompanyFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'type' => CompanyTypeEnum::SPONSOR_MAIN()->value
+                'type' => CompanyTypeEnum::SPONSOR_MAIN()->value,
             ];
         });
     }
@@ -82,10 +72,8 @@ class CompanyFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'type' => CompanyTypeEnum::SPONSOR()->value
+                'type' => CompanyTypeEnum::SPONSOR()->value,
             ];
         });
     }
-
 }
-
