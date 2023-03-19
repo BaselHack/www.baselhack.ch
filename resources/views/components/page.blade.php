@@ -1,4 +1,6 @@
-<div bg-black text-white>
+@props(['title','teaser'])
+
+<div class="bg-black text-white">
     <div class="max-w-screen-xl mx-auto pt-8 px-4 sm:pt-12 sm:px-6 lg:px-8 lg:justify-between bg-black">
         <div>
             <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">
