@@ -3,30 +3,21 @@
 namespace App\Http\Controllers\App;
 
 use App\Enums\CompanyTypeEnum;
-use App\Models\Company;
-use App\Models\Page;
 use App\Http\Controllers\Controller;
-use App\Models\Section;
-use Illuminate\Support\Str;
+use App\Models\Company;
+use App\Views\Models\ContentDTO;
 
 class PartnersController extends Controller
 {
     public function index()
     {
-        $page = Page::whereIndex('partners:index')->first();
-
-        $section = Section::where('key', 'partners')->first();
-
-        $partners = Company::published()
-            ->whereIn('type', [CompanyTypeEnum::PARTNER()->value])
-            ->orderBy('name')->get();
+        $content = ContentDTO::fromModel('partners:index');
 
         return view('app.partners.index')->with([
-            'page' => $page,
-            'title' => $section->title,
-            'teaser' => $section->teaser,
-            'body' => Str::of($section->body)->markdown(),
-            'partners' => $partners,
+            'page' => $content->page,
+            'title' => $content->title,
+            'teaser' => $content->teaser,
+            'body' => $content->body,
         ]);
     }
 }

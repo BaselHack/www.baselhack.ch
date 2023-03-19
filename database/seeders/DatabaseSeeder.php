@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Post;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,13 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
-        # Administration
+        // Administration
         $this->call(PagesTableSeeder::class);
         $this->call(ChannelsTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(SectionsTableSeeder::class);
-
-        Post::factory(10)->published()->create();
+        $this->call(PostsTableSeeder::class);
     }
 }

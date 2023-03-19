@@ -2,23 +2,20 @@
 
 namespace App\Http\Controllers\App;
 
-use App\Models\Page;
 use App\Http\Controllers\Controller;
-use App\Models\Section;
-use Illuminate\Support\Str;
+use App\Views\Models\ContentDTO;
 
 class AboutController extends Controller
 {
     public function index()
     {
-        $page = Page::whereIndex('about:index')->first();
-        $section = Section::where('key', 'about')->first();
+        $content = ContentDTO::fromModel('about:index');
 
         return view('app.about.index')->with([
-            'page' => $page,
-            'title' => $section->title,
-            'teaser' => $section->teaser,
-            'body' => Str::of($section->body)?->markdown(),
+            'page' => $content->page,
+            'title' => $content->title,
+            'teaser' => $content->teaser,
+            'body' => $content->body,
         ]);
     }
 }

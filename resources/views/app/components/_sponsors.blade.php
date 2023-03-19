@@ -10,7 +10,7 @@
             Main Sponsor
         @endif
     </h3>
-    <x-sponsors height=48 gridClass="grid-cols-1 md:grid-cols-2" :sponsors="$mainSponsors" />
+    <x-sponsors height=48 gridClass="grid-cols-1 md:grid-cols-2" :sponsors="$mainSponsors"/>
 @endif
 
 @if(!empty($goldSponsors) && $goldSponsors->count())
@@ -21,7 +21,7 @@
             Gold Sponsor
         @endif
     </h3>
-    <x-sponsors height=36 gridClass="grid-cols-2 md:grid-cols-3" :sponsors="$goldSponsors" />
+    <x-sponsors height=36 gridClass="grid-cols-2 md:grid-cols-3" :sponsors="$goldSponsors"/>
 @endif
 
 @if(!empty($silverSponsors) && $silverSponsors->count())
@@ -32,7 +32,7 @@
             Silver Sponsor
         @endif
     </h3>
-    <x-sponsors height=24 gridClass="grid-cols-3 md:grid-cols-5" :sponsors="$silverSponsors" />
+    <x-sponsors height=24 gridClass="grid-cols-3 md:grid-cols-5" :sponsors="$silverSponsors"/>
 @endif
 
 @if(!empty($locationSponsors) && $locationSponsors->count())
@@ -43,7 +43,7 @@
             Location Sponsor
         @endif
     </h3>
-    <x-sponsors height=52 gridClass="grid-cols-1 md:grid-cols-2" :sponsors="$locationSponsors" />
+    <x-sponsors height=52 gridClass="grid-cols-1 md:grid-cols-2" :sponsors="$locationSponsors"/>
 @endif
 
 @if(request()->route()->getName() != 'sponsors.index' && !empty($partnerships) && $partnerships->count())
@@ -54,5 +54,5 @@
             Partner
         @endif
     </h3>
-    <x-sponsors height=52 gridClass="partnerships grid-cols-4 md:grid-cols-6" :sponsors="$partnerships" />
+    <x-sponsors height=52 gridClass="partnerships grid-cols-4 md:grid-cols-6" :sponsors="$partnerships"/>
 @endif

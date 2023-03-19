@@ -123,5 +123,4 @@
     mobileMenuButton.onclick = function() {
         mobileMenu.classList.toggle("hidden")
     }
-
 </script>

@@ -2,36 +2,34 @@
 
 namespace App\Models;
 
+use CodebarAg\LaravelDefault\Traits\HasUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, SoftDeletes;
+    use HasFactory;
+    use HasUuid;
+    use Notifiable;
+    use SoftDeletes;
 
     protected $guarded = [];
-
 
     protected $hidden = [
         'password', 'remember_token',
     ];
 
-    public function getRouteKeyName()
-    {
-        return 'uuid';
-    }
-
     public function getProfileImage()
     {
         if ($this->profile_gravatar) {
             $hash = md5(strtolower(trim($this->profile_gravatar)));
-            return 'https://www.gravatar.com/avatar/' . $hash . '?s=500&d=mp';
+
+            return 'https://www.gravatar.com/avatar/'.$hash.'?s=500&d=mp';
         }
 
         return asset('images/placeholders/profile.png');
-
     }
 
     public function scopeActive($query)
@@ -39,11 +37,8 @@ class User extends Authenticatable
         return $query->where(['profile_published' => true, 'alumni' => false]);
     }
 
-
     public function scopeAlumni($query)
     {
         return $query->where(['profile_published' => true, 'alumni' => true]);
     }
-
-
 }

@@ -1,3 +1,5 @@
+@props(['gridClass','height','sponsors'])
+
 @if(!empty($sponsors) and $sponsors->count())
     <div class="mb-12 grid gap-2 md:gap-4 {{ $gridClass }}">
         @foreach($sponsors as $sponsor)
