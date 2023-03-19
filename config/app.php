@@ -186,6 +186,7 @@ return [
          * Package Service Providers...
          */
 
+        \App\Providers\NovaServiceProvider::class,
         \App\Providers\ComposerServiceProvider::class,
 
         /*

@@ -2,11 +2,11 @@
 
 namespace App\Policies\Nova;
 
-use App\Models\Profile;
+use App\Models\Position;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ProfilePolicy
+class PositionPolicy
 {
     use HandlesAuthorization;
 
@@ -15,7 +15,7 @@ class ProfilePolicy
         return true;
     }
 
-    public function view(User $user, Profile $Profile)
+    public function view(User $user, Position $Position)
     {
         return true;
     }
@@ -25,22 +25,22 @@ class ProfilePolicy
         return true;
     }
 
-    public function update(User $user, Profile $Profile)
+    public function update(User $user, Position $Position)
     {
         return true;
     }
 
-    public function delete(User $user, Profile $Profile)
+    public function delete(User $user, Position $Position)
     {
         return true;
     }
 
-    public function restore(User $user, Profile $Profile)
+    public function restore(User $user, Position $Position)
     {
         return false;
     }
 
-    public function forceDelete(User $user, Profile $Profile)
+    public function forceDelete(User $user, Position $Position)
     {
         return false;
     }
