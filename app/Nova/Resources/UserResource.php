@@ -102,6 +102,11 @@ class UserResource extends Resource
                 ->hideFromIndex()
                 ->rules('nullable', 'string', 'url', 'max:254'),
 
+            Boolean::make(__('Alumni'), 'alumni')
+                ->sortable()
+                ->filterable()
+                ->rules('required', 'boolean'),
+
         ];
     }
 }
