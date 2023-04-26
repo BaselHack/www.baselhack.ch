@@ -11,44 +11,34 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://use.typekit.net/klr6jbt.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&display=swap" rel="stylesheet" />
 
     <!-- Styles & Scripts-->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-
     @yield('styles')
-
 </head>
 
-<body class="bg-black text-white">
+<body x-data="{ navOpen: false }" class="text-white bg-gradient-to-tr from-black to-neutral-800">
+    <div>
+        @include('app.layouts.partials._flash')
+        @include('app.layouts.partials._navigation')
 
-<div>
-    @include('app.layouts.partials._flash')
-    @include('app.layouts.partials._navigation')
+        <div class="max-w-screen-xl mx-auto">
+            @yield('content')
+        </div>
 
-    <div class="max-w-screen-xl mx-auto bg-black text-white">
-        @yield('content')
+        @if(request()->route()->getName() != 'sponsors.index')
+            @include('app.layouts.partials._sponsors')
+        @endif
+
+        @include('app.layouts.partials._newsletter')
+        @include('app.layouts.partials._footer')
     </div>
 
-    @if(request()->route()->getName() != 'sponsors.index')
-        @include('app.layouts.partials._sponsors')
-    @endif
+    @yield('scripts')
 
-    @include('app.layouts.partials._newsletter')
-
-    @include('app.layouts.partials._footer')
-</div>
-
-@yield('scripts')
-
-@production
-    @include('app.layouts.partials._analytics')
-
-@endproduction
-
-
+    @production
+        @include('app.layouts.partials._analytics')
+    @endproduction
 </body>
 </html>

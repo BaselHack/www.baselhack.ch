@@ -10,9 +10,18 @@ module.exports = {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
     ],
     theme: {
+        typography: (theme) => ({
+            DEFAULT: {
+                css: {
+                    a: {
+                        color: theme('colors.teal.300'),
+                    }
+                }
+            },
+        }),
         extend: {
             fontFamily: {
-                'sans': ['Inconsolata', 'monospace']
+                'sans': ['Fira Code', 'monospace']
             },
             fontSize: {
                 'sm': '0.88889rem',     // 16px - small
@@ -24,7 +33,7 @@ module.exports = {
                 '5xl': '2.22222rem',    // 40px
             },
             colors: {
-                gray: colors.trueGray,
+                gray: colors.neutral,
                 black: colors.black,
                 white: colors.white,
                 yellow: {
@@ -41,7 +50,6 @@ module.exports = {
 
     plugins: [
         require('@tailwindcss/forms'), 
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/aspect-ratio')
+        require('@tailwindcss/typography')
     ],
 };

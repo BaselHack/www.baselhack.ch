@@ -1,11 +1,47 @@
-<div class="relative bg-black header">
+<nav x-cloak class="container px-8 mx-auto my-12">
+    <div class="flex flex-wrap items-center justify-between w-full gap-4">
+        <a class="shrink-0" href="index.html">
+            <img class="h-16" src="https://www.baselhack.ch/images/app/logos/baselhack_white.png" alt="BaselHack" />
+        </a>
+        <button @click="navOpen = !navOpen" class="transition md:hidden hover:text-teal-300" role="button" aria-label="Navigation öffnen">
+            <svg x-show="!navOpen" class="w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg x-show="navOpen" class="w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <ul class="flex-row hidden gap-4 my-8 desktop-navigation md:flex">
+            <li><a class="uppercase transition hover:text-teal-400" href="about.html">About</a></li>
+            <li><a class="uppercase transition hover:text-teal-400" href="team.html">Team</a></li>
+            <li><a class="uppercase transition hover:text-teal-400" href="sponsors.html">Sponsors</a></li>
+            <li><a class="uppercase transition hover:text-teal-400" href="partner.html">Partner</a></li>
+            <li><a class="uppercase transition hover:text-teal-400" href="blog.html">Blog</a></li>
+            <li><a class="uppercase transition hover:text-teal-400" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div @click.outside="navOpen = false" x-show="navOpen" class="my-12 rounded mobile-navigation md:hidden" x-transition>
+        <ul class="grid grid-cols-1 divide-y divide-slate-300">
+            <li><a class="text-lg uppercase transition hover:text-teal-400" href="about.html">About</a></li>
+            <li><a class="text-lg uppercase transition hover:text-teal-400" href="team.html">Team</a></li>
+            <li><a class="text-lg uppercase transition hover:text-teal-400" href="sponsors.html">Sponsors</a></li>
+            <li><a class="text-lg uppercase transition hover:text-teal-400" href="partner.html">Partner</a></li>
+            <li><a class="text-lg uppercase transition hover:text-teal-400" href="blog.html">Blog</a></li>
+            <li><a class="text-lg uppercase transition hover:text-teal-400" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<!--
+<div class="relative header">
     <div class="relative">
         <div class="px-4 mx-auto max-w-7xl sm:px-6">
-            <div class="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+            <div class="flex items-center justify-between w-full px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
                 <div>
-                    <a href="{{ route('start.index') }}" class="flex">
-                        <img class="w-auto h-12 sm:h-12" src="{{ asset('images/app/logos/baselhack_white.png') }}"
-                             alt="{{ config('app.name') }}">
+                    <a class="shrink-0" href="{{ route('start.index') }}">
+                        <img class="h-16" src="{{ asset('images/app/logos/baselhack_white.png') }}" alt="{{ config('app.name') }}" />
                     </a>
                 </div>
                 <div class="-my-2 -mr-2 md:hidden">
@@ -26,24 +62,19 @@
                             {{ __('app/layouts.about') }}
                         </a>
 
-                        <!--<a href="{{ route('schedule.index')}}"
+                        <a href="{{ route('schedule.index')}}"
                            class="text-base font-medium leading-6 text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.schedule') }}
-                        </a>-->
-
-                        <!--
+                        </a>
                         <a href="{{ route('challenges.index')}}"
                            class="text-base font-medium leading-6 text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.challenges') }}
                         </a>
-                        -->
-
-                        <!--
+                        
                         <a href="{{ route('sponsors.index')}}"
                            class="text-base font-medium leading-6 text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.sponsors') }}
                         </a>
-                        -->
 
                         <a href="{{ route('posts.index')}}"
                            class="text-base font-medium leading-6 text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
@@ -55,15 +86,15 @@
                             {{ __('app/layouts.team') }}
                         </a>
 
-                        <!-- <a href="{{ route('contact.index')}}"
+                        <a href="{{ route('contact.index')}}"
                            class="text-base font-medium leading-6 text-gray-300 hover:text-white focus:outline-none focus:text-gray-300">
                             {{ __('app/layouts.contact') }}
-                        </a> -->
+                        </a>
                     </nav>
-                    <!--<a href="https://eventfrog.ch/en/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html"
+                    <a href="https://eventfrog.ch/en/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html"
                        target="_blank"
                        class="px-8 py-2 text-base font-bold text-black rounded-md bg-yellow hover:bg-yellow-accent">
-                        Register Ticket</a>-->
+                        Register Ticket</a>
                 </div>
             </div>
         </div>
@@ -81,25 +112,23 @@
                     {{ __('app/layouts.about') }}
                 </a>
 
-                <!--<a href="{{ route('schedule.index') }}"
+                <a href="{{ route('schedule.index') }}"
                    class="block px-3 py-2 mt-1 text-base font-medium text-black rounded-md bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.schedule') }}
-                </a>-->
+                </a>
 
-                <!--
                 <a href="{{ route('challenges.index') }}"
                    class="block px-3 py-2 mt-1 text-base font-medium text-black rounded-md bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.challenges') }}
                 </a>
-                -->
 
-                <!-- <a href="{{ route('sponsors.index') }}"
+                <a href="{{ route('sponsors.index') }}"
                    class="block px-3 py-2 mt-1 text-base font-medium text-black rounded-md bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.sponsors') }}
-                </a> -->
+                </a>
 
                 <a href="{{ route('posts.index') }}"
                    class="block px-3 py-2 mt-1 text-base font-medium text-black rounded-md bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
@@ -113,11 +142,11 @@
                     {{ __('app/layouts.team') }}
                 </a>
 
-                <!-- <a href="{{ route('contact.index') }}"
+                <a href="{{ route('contact.index') }}"
                    class="block px-3 py-2 mt-1 text-base font-medium text-black rounded-md bg-gray-50 hover:text-white hover:bg-gray-200 focus:outline-none focus:text-white focus:bg-gray-50"
                    role="menuitem">
                     {{ __('app/layouts.contact') }}
-                </a> -->
+                </a>
             </div>
         </div>
     </div>
@@ -129,3 +158,4 @@
         mobileMenu.classList.toggle("hidden")
     }
 </script>
+-->
