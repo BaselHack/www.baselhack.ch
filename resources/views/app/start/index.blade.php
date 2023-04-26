@@ -5,10 +5,11 @@
     <main class="px-4 mx-auto text-white bg-black max-w-7xl">
         <div class="text-center">
             <div class="mt-12 ld:mt-16 lg:mt-24">
-                
+
                 <h1 class="max-w-screen-xl mt-12 text-6xl">Save the Date</h1>
-                <h2 class="max-w-screen-xl text-4xl">28. / 29. Oktober 2023</h2>
-            
+                <h2 class="max-w-screen-xl text-4xl">28. / 29. October 2023</h2>
+                <h2 class="max-w-screen-xl text-4xl">HDW, Pratteln</h2>
+
                 <!--
                 <h1 class="max-w-screen-xl mt-12 text-4xl">BaselHack 2022</h1>
                 <p class="mt-4 text-base">BaselHack 2022 took place on 22. & 23. October 2022 at Haus der Wirtschaft,
@@ -18,7 +19,7 @@
                 <!--<h2 class="mt-4 text-base">22. & 23. October 2022</h2>-->
                 <!--<p class="mt-1 text-base">Haus der Wirtschaft, Hardstrasse 1, 4133 Pratteln</p>-->
 
-                <!-- 
+                <!--
                     <div class="mt-6">
                     <div class="flex items-center justify-center">
                         <iframe src="https://www.youtube.com/embed/THE--6AYbEY" style="max-width: 100vw;" width="640"
@@ -71,21 +72,21 @@
             </div>
 
 
-            <div class="max-w-xl mx-auto mt-4 space-y-4 sm:flex sm:justify-center sm:space-y-0 sm:space-x-4 md:mt-8">
+{{--            <div class="max-w-xl mx-auto mt-4 space-y-4 sm:flex sm:justify-center sm:space-y-0 sm:space-x-4 md:mt-8">--}}
 
-                <div class="rounded-md shadow">
-                    <a href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html#ticket-container"
-                       class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md hover:bg-gray-400 md:py-4 md:text-lg md:px-10">
-                        Register now
-                    </a>
-                </div>
-                <div class="rounded-md shadow">
-                    <a href="{{ route('sponsors.index') }}"
-                       class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md hover:bg-gray-400 md:py-4 md:text-lg md:px-10">
-                        Sponsor
-                    </a>
-                </div>
-            </div>
+{{--                <div class="rounded-md shadow">--}}
+{{--                    <a href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2022-6932206412039604221.html#ticket-container"--}}
+{{--                       class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md hover:bg-gray-400 md:py-4 md:text-lg md:px-10">--}}
+{{--                        Register now--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--                <div class="rounded-md shadow">--}}
+{{--                    <a href="{{ route('sponsors.index') }}"--}}
+{{--                       class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md hover:bg-gray-400 md:py-4 md:text-lg md:px-10">--}}
+{{--                        Sponsor--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
             <br>
             <br>
