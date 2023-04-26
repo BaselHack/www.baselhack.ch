@@ -35,12 +35,21 @@ module.exports = {
                     DEFAULT: '#5ebdc9',
                     'accent': '#3298a6',
                 }
-            }
+            },
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        "*": {
+                            color: theme('colors.white'),
+                        }
+                    }
+                },
+            }),
         },
     },
 
     plugins: [
-        require('@tailwindcss/forms'), 
+        require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio')
     ],
