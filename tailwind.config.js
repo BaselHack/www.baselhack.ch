@@ -10,6 +10,16 @@ module.exports = {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
     ],
     theme: {
+        container: {
+            center: true,
+            padding: {
+                DEFAULT: '1rem',
+                sm: '2rem',
+                lg: '4rem',
+                xl: '5rem',
+                '2xl': '6rem',
+            },
+        },
         typography: (theme) => ({
             DEFAULT: {
                 css: {
@@ -37,12 +47,34 @@ module.exports = {
                 black: colors.black,
                 white: colors.white,
                 yellow: {
-                    DEFAULT: '#f2e94d',
+                    DEFAULT: '#F2E94D',
                     'accent': '#d4ca17',
+                    50: '#FEFEF8',
+                    100: '#FDFCE5',
+                    200: '#FAF7BF',
+                    300: '#F8F299',
+                    400: '#F5EE73',
+                    500: '#F2E94D',
+                    600: '#EEE319',
+                    700: '#C1B70E',
+                    800: '#8C850A',
+                    900: '#585406',
+                    950: '#3E3B05',
                 },
                 teal: {
-                    DEFAULT: '#5ebdc9',
+                    DEFAULT: '#5EBDC9',
                     'accent': '#3298a6',
+                    50: '#E7F5F7',
+                    100: '#D8EFF2',
+                    200: '#BAE3E8',
+                    300: '#9BD6DD',
+                    400: '#7DCAD3',
+                    500: '#5EBDC9',
+                    600: '#3CA6B3',
+                    700: '#2E7F89',
+                    800: '#20585F',
+                    900: '#123135',
+                    950: '#0B1D20'
                 }
             }
         },
