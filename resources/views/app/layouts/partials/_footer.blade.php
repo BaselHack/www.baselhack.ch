@@ -1,30 +1,25 @@
-<footer x-cloak class="block py-12 mx-auto mt-12 text-center page-footer md:mt-16">
+<footer x-cloak class="block py-12 mx-auto text-center page-footer md:mt-16">
     <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
         <div class="pb-6">
-            <a href="{{ route('about.index') }}" class="text-sm leading-6 uppercase">{{ __('app/layouts.about') }}</a>
+            <a href="{{ route('about.index') }}" class="{{ request()->routeIs('about.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.about') }}</a>
         </div>
         <div class="pb-6">
-            <a href="{{ route('team.index') }}" class="text-sm leading-6 uppercase">{{ __('app/layouts.team') }}</a>
+            <a href="{{ route('team.index') }}" class="{{ request()->routeIs('team.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.team') }}</a>
         </div>
         <div class="pb-6">
-            <a href="{{ route('sponsors.index') }}" class="text-sm leading-6 uppercase">{{ __('app/layouts.sponsors') }}</a>
-        </div>
-        <!--
-        <div class="pb-6">
-            <a href="#" class="text-sm leading-6 uppercase">Partner</a>
-        </div>
-        -->
-        <div class="pb-6">
-            <a href="{{ route('posts.index') }}" class="text-sm leading-6 uppercase">{{ __('app/layouts.posts') }}</a>
+            <a href="{{ route('sponsors.index') }}" class="{{ request()->routeIs('sponsors.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.sponsors') }}</a>
         </div>
         <div class="pb-6">
-            <a href="{{ route('contact.index') }}" class="text-sm leading-6 uppercase">{{ __('app/layouts.contact') }}</a>
+            <a href="{{ route('posts.index') }}" class="{{ request()->routeIs('posts.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.posts') }}</a>
+        </div>
+        <div class="pb-6">
+            <a href="{{ route('contact.index') }}" class="{{ request()->routeIs('contact.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.contact') }}</a>
         </div>
     </nav>
-    <div class="flex justify-center gap-12 my-8 text-white md:my-12">
+    <div class="flex flex-wrap justify-center gap-12 mx-8 my-8 text-white md:my-12">
         @if(!empty($channels) and $channels->count())
             @foreach($channels as $channel)
-                <a href="{{ $channel->url }}" title="{{ $channel->name }}" target="_blank">
+                <a class="hover:text-yellow-500" href="{{ $channel->url }}" title="{{ $channel->name }}" target="_blank">
                     <span class="sr-only">{{ $channel->name }}</span>
                     @switch($channel->name)
                         @case('Github')
@@ -85,9 +80,9 @@
     </div>
     <div class="flex flex-col items-center justify-center gap-4 text-sm text-white">
         <div class="flex gap-4">
-            <a class="border-b" href="{{ route('terms.index') }}">{{ __('app/layouts.terms') }}</a>
-            <a class="border-b" href="{{ route('privacy.index') }}">{{ __('app/layouts.privacy') }}</a>
+            <a class="{{ request()->routeIs('terms.index') ? 'text-yellow-500' : '' }} hover:text-yellow-500" href="{{ route('terms.index') }}">{{ __('app/layouts.terms') }}</a>
+            <a class="{{ request()->routeIs('privacy.index') ? 'text-yellow-500' : '' }} hover:text-yellow-500" href="{{ route('privacy.index') }}">{{ __('app/layouts.privacy') }}</a>
         </div>
-        <small class="block mt-6 text-xs">&copy; {{ date('Y')}} BaselHack | All rights reserved</small>
+        <small class="block mt-6 text-xs text-neutral-400">&copy; {{ date('Y')}} BaselHack | All rights reserved</small>
     </div>
 </footer>

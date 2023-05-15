@@ -9,7 +9,7 @@
             <div class="prose prose-lg">
                 {!! $body !!}
             </div>
-            <div class="mt-24 mb-8">
+            <div class="my-8 md:my-16">
                 <h2 class="mb-4 text-2xl">Annual Reports</h2>
                 <div class="grid grid-cols-1 divide-y divide-white">
                     <a class="flex items-center gap-3 py-4 hover:text-yellow-500" href="{{ asset('pdfs/baselhack-jahresbericht-2022.pdf') }}" target="_blank">
