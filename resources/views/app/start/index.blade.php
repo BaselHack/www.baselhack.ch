@@ -51,13 +51,8 @@
                     <!--<a href="{{ asset('files/baselhack-2022.ics') }}"
                        class="inline-block px-6 py-2 m-2 text-sm font-medium text-white bg-gray-600 border border-transparent rounded-md md:text-base hover:bg-gray-400">
                         Add to Calendar</a>-->
-                    <a href="#more"
-                       class="inline-block px-6 py-2 m-2 text-sm font-medium text-white bg-gray-600 border border-gray-600 rounded-md md:text-base hover:bg-gray-400">
-                        Learn More</a>
-                    <a href="{{ route('posts.index') }}"
-                       class="inline-block px-6 py-2 m-2 text-sm font-bold text-black border rounded-md border-yellow md:text-base bg-yellow hover:bg-yellow-accent">
-                        Latest News
-                    </a>
+                    <a href="#more" class="px-4 py-2 rounded-md cursor-pointer bg-gradient-to-tr hover:from-yellow-500 transition-colors hover:to-yellow-500 from-[#efe73e] to-[#50b1bf] text-black">Learn More</a>
+                    <a href="{{ route('posts.index') }}" class="px-4 py-2 rounded-md cursor-pointer bg-gradient-to-tr hover:from-yellow-500 transition-colors hover:to-yellow-500 from-[#efe73e] to-[#50b1bf] text-black">Latest News</a>
                 </div>
             </div>
 
