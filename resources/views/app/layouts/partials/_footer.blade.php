@@ -1,5 +1,5 @@
-<footer x-cloak class="block py-12 mx-auto text-center page-footer md:mt-16">
-    <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+<footer x-cloak class="block py-8 mx-auto text-center md:py-12 page-footer md:mt-16">
+    <nav class="-mb-6 columns-1 md:columns-3 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
         <div class="pb-6">
             <a href="{{ route('about.index') }}" class="{{ request()->routeIs('about.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.about') }}</a>
         </div>
