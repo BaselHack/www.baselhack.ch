@@ -6,19 +6,15 @@
         <div class="pb-6">
             <a href="{{ route('team.index') }}" class="{{ request()->routeIs('team.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.team') }}</a>
         </div>
-        <!--
-        <div class="pb-6">
-            <a href="{{ route('sponsors.index') }}" class="{{ request()->routeIs('sponsors.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.sponsors') }}</a>
-        </div>
-        -->
         <div class="pb-6">
             <a href="{{ route('posts.index') }}" class="{{ request()->routeIs('posts.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.posts') }}</a>
         </div>
-        <!--
         <div class="pb-6">
-            <a href="{{ route('contact.index') }}" class="{{ request()->routeIs('contact.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.contact') }}</a>
+            <a href="{{ route('sponsors.index') }}" class="{{ request()->routeIs('sponsors.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.sponsors') }}</a>
         </div>
-        -->
+        <!--<div class="pb-6">
+            <a href="{{ route('contact.index') }}" class="{{ request()->routeIs('contact.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.contact') }}</a>
+        </div>-->
     </nav>
     <div class="flex flex-wrap justify-center gap-12 mx-8 my-8 text-white md:my-12">
         @if(!empty($channels) and $channels->count())
