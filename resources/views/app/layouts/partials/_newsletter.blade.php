@@ -1,36 +1,28 @@
-
-<div class="text-white bg-black">
-    <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:py-16 lg:px-8">
-        <div class="px-6 py-6 border-2 rounded-lg border-white-600 md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
-            <div class="xl:w-0 xl:flex-1">
-                <h2 class="text-2xl font-extrabold leading-8 tracking-tight text-white sm:text-3xl sm:leading-9">
-                    {{ __('app/newsletter.title') }}
+<div class="container px-8 mx-auto">
+    <div class="max-w-6xl p-8 mx-auto my-8 border-2 rounded-lg md:p-12 md:my-16 newsletter-signup border-slate-300">
+        <div class="flex grid items-center grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-12">
+            <div class="mb-4 lg:mb-0">
+                <h2 class="flex items-center gap-4 mb-4 text-2xl font-bold">
+                    <svg class="hidden w-6 shrink-0 sm:inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 01-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 001.183 1.981l6.478 3.488m8.839 2.51l-4.66-2.51m0 0l-1.023-.55a2.25 2.25 0 00-2.134 0l-1.022.55m0 0l-4.661 2.51m16.5 1.615a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V8.844a2.25 2.25 0 011.183-1.98l7.5-4.04a2.25 2.25 0 012.134 0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z" />
+                    </svg>
+                    <span>{{ __('app/newsletter.title') }}</span>
                 </h2>
-                <p class="max-w-3xl mt-3 text-lg leading-6 text-gray-300" id="newsletter-headline">
-                    {{ __('app/newsletter.subtitle') }}
-                </p>
+                <span>{{ __('app/newsletter.subtitle') }}</span>
             </div>
-            <div class="mt-8 sm:w-full sm:max-w-md xl:mt-0 xl:ml-8">
-                <form class="sm:flex" aria-labelledby="newsletter-headline" method="POST" action="{{ route('newsletter.store') }}">
+            <div class="flex flex-col items-start lg:items-end">
+                <form class="flex flex-col flex-wrap justify-start w-full gap-3 sm:flex-row sm:w-auto" aria-labelledby="newsletter-headline" method="POST" action="{{ route('newsletter.store') }}">
                     @csrf
                     @honeypot
-                    <input id="email" name="email" aria-label="{{ __('app/newsletter.form.input.email') }}" type="email" required class="w-full px-5 py-3 text-base leading-6 text-white placeholder-gray-200 transition duration-150 ease-in-out bg-black border border-white rounded-md appearance-none focus:outline-none focus:placeholder-gray-200" placeholder="{{ __('app/newsletter.form.input.email') }}">
-                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                        <button class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-gray-600 border border-transparent rounded-md hover:bg-gray-400 focus:outline-none focus:bg-gray-400">
-                            {{ __('app/newsletter.form.button') }}
-                        </button>
-                    </div>
+                    <input id="email" name="email" aria-label="{{ __('app/newsletter.form.input.email') }}" type="email" required class="w-full px-4 py-3 bg-transparent border-2 border-white rounded-md focus:border-yellow-500 focus:ring-transparent sm:w-80" placeholder="{{ __('app/newsletter.form.input.email') }}">
+                    <input type="submit" class="hover:from-yellow-500 hover:to-yellow-500 focus:outline outline-offset-2 outline-2 outline-yellow-500 w-full md:w-auto px-4 py-2 rounded-md cursor-pointer bg-gradient-to-tr transition-colors from-[#efe73e] to-[#50b1bf] text-black focus:from-yellow-500 focus:to-yellow-500" value="{{ __('app/newsletter.form.button') }}">
                 </form>
-
                 @error('email')
-                <p class="mt-3 text-sm leading-5 text-red-200">
-                    {{ $errors->first('email') }}
-                </p>
+                    <p class="mt-3 text-sm leading-5 text-red-200">
+                        {{ $errors->first('email') }}
+                    </p>
                 @enderror
-                <p class="mt-3 text-sm leading-5 text-gray-300">
-                    {{ __('app/newsletter.form.privacy') }}
-                </p>
-
+                <small class="inline-block mt-4">{{ __('app/newsletter.form.privacy') }}</small>
             </div>
         </div>
     </div>

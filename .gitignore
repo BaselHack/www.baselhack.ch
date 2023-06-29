@@ -24,3 +24,4 @@ auth.json
 reports/*
 vite.config.js
 .env.production
+.DS_Store

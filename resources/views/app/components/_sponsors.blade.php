@@ -1,6 +1,5 @@
-<!--
 @if(request()->route()->getName() != 'sponsors.index')
-    <h2 class="mt-24 mb-12 text-center">Sponsors 2022</h2>
+    <h2 class="mt-24 mb-12 text-center">Sponsors 2023</h2>
 @endif
 
 @if(!empty($mainSponsors) && $mainSponsors->count())
@@ -57,5 +56,3 @@
     </h3>
     <x-sponsors height=52 gridClass="partnerships grid-cols-4 md:grid-cols-6" :sponsors="$partnerships"/>
 @endif
-
--->
