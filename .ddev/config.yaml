@@ -205,11 +205,11 @@ project_tld: test
 # The default time that ddev waits for all containers to become ready can be increased from
 # the default 120. This helps in importing huge databases, for example.
 
-#web_extra_exposed_ports:
-#- name: nodejs
-#  container_port: 3000
-#  http_port: 2999
-#  https_port: 3000
+web_extra_exposed_ports:
+- name: node-vite
+  container_port: 5173
+  http_port: 5172
+  https_port: 5173
 #- name: something
 #  container_port: 4000
 #  https_port: 4000
