@@ -1,22 +1,23 @@
 @extends('app.layouts.default')
 
 @section('content')
-
     <main class="px-4 mx-auto max-w-7xl">
         <div class="text-center">
-            <div class="mt-12 ld:mt-16 lg:mt-20">
-                <h1 class="max-w-screen-xl mt-12 text-4xl leading-tight uppercase md:text-6xl">Save the Date</h1>
-                <h2 class="max-w-screen-xl mt-6 text-xl leading-tight md:text-4xl md:mt-3">
-                    28. / 29. October 2023<br>
+            <div class="mt-12 ld:mt-16 lg:mt-20 min-h-[20vw]">
+                <h1 class="max-w-screen-xl mt-12 text-4xl leading-tight uppercase md:text-7xl">Save the Date</h1>
+                <h2 id="descryption-text" class="max-w-screen-xl mt-6 text-xl leading-tight md:text-4xl md:mt-3">
+                    <span>28. / 29. October 2023</span><br>
                     HDW, Pratteln
                 </h2>
             </div>
 
             @include('app.components._cta')
 
+            @include('app.components._image-text')
+
             <!-- <h2 class="max-w-screen-xl mt-16 text-4xl md:mt-24">About BaselHack</h2> -->
-            <div class="flex justify-center mt-12 ld:mt-16 lg:mt-20">
-                <p class="max-w-2xl text-lg leading-normal text-center">
+            <div class="flex mt-12 ld:mt-16 lg:mt-20">
+                <p class="max-w-3xl text-lg leading-normal text-left">
                     BaselHack is the hackathon for Basel, Northwestern Switzerland and bordering Alsace and
                     Südbaden. Young and young-at-heart developers, technology fanatics, designers and others meet for a
                     weekend tinkering and developing various ideas. Join us for a weekend full of fun, challenges, for

@@ -1,0 +1,1 @@
+<div>[image + text component - impressions + lead]</div>

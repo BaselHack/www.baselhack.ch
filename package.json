@@ -18,5 +18,9 @@
         "tailwindcss": "^3.3",
         "vite": "^4.3",
         "vite-plugin-static-copy": "^0.14"
+    },
+    "dependencies": {
+        "@alpinejs/collapse": "^3.12.2",
+        "gsap": "^3.12.2"
     }
 }
