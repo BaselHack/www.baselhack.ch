@@ -1,4 +1,4 @@
-name: www.baselhack.ch
+name: baselhack
 type: laravel
 docroot: public
 php_version: "8.2"
@@ -239,8 +239,9 @@ web_extra_exposed_ports:
 # and you can't erase existing hooks or all environment variables.
 # However, with "override_config: true" in a particular config.*.yaml file,
 # 'nfs_mount_enabled: false' can override the existing values, and
-# hooks:
-#   post-start: []
+hooks:
+    post-start:
+      - exec: "npm run dev -- --host"
 # or
 # web_environment: []
 # or
