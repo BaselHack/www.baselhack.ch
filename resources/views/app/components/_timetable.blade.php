@@ -1,8 +1,8 @@
 <div class="my-24">
     <h2 class="mb-4 text-4xl">BaselHack Timetable</h2>
-    <p class="max-w-2xl mb-8">Here you can find the timetable for the event. Please note that the timetable is subject to change.</p>
-    <div class="grid items-start grid-cols-3 gap-12">
-    <div class="flex flex-col items-start justify-center p-8 text-white transition-colors duration-500 border-l-8 border-yellow-600 rounded-lg time-block bg-neutral-800">
+    <p class="max-w-2xl mb-12">Here you can find the timetable for the event. Please note that the timetable is subject to change.</p>
+    <div class="grid items-start grid-cols-1 gap-12 md:grid-cols-3">
+    <div class="flex flex-col items-start justify-center p-8 text-white transition-colors duration-500 border-l-8 border-yellow-600 time-block bg-neutral-800">
             <div class="text-xl font-bold">Friday</div>
             <hr class="my-2 w-50">
             <div class="mb-8">
@@ -18,7 +18,7 @@
                 14:00 - 18:00 | Part 2
             </div>
         </div>
-        <div class="flex flex-col items-start justify-center p-8 text-white border-l-8 border-yellow-600 rounded-lg time-block bg-neutral-800">
+        <div class="flex flex-col items-start justify-center p-8 text-white border-l-8 border-yellow-600 time-block bg-neutral-800">
             <div class="text-xl font-bold">Saturday</div>
             <hr class="my-2 w-50">
             <div class="mb-8">
@@ -34,7 +34,7 @@
                 14:00 - 18:00 | Work
             </div>
         </div>
-        <div class="flex flex-col items-start justify-center p-8 text-white border-l-8 border-yellow-600 rounded-lg time-block bg-neutral-800">
+        <div class="flex flex-col items-start justify-center p-8 text-white border-l-8 border-yellow-600 time-block bg-neutral-800">
             <div class="text-xl font-bold">Sunday</div>
             <hr class="my-2 w-50">
             <div class="mb-8">
