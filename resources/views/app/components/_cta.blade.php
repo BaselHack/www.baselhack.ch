@@ -14,8 +14,8 @@
     }
 </style>
 
-<div class="mt-12 ld:mt-16 lg:mt-24">
-    <div class="my-8 text-black md:my-16 bg-[#efe73e] card-shine appearance-none relative overflow-hidden p-12 before:absolute before:content-[''] rounded-sm group outline-none">
+<div class="py-8">
+    <div class="cta-element my-8 text-black md:my-16 bg-[#efe73e] card-shine appearance-none relative overflow-hidden p-12 before:absolute before:content-[''] rounded-sm group outline-none">
         <div class="flex flex-col justify-center w-full gap-4">
             <h1 class="relative text-2xl text-center pointer-events-none">
                 <strong>Participate in BaselHack 2023 in October?</strong>
