@@ -2,6 +2,7 @@ import './bootstrap';
 
 // import gsap animation library
 import { gsap } from 'gsap';
+
 import './custom.js';
 
 import Alpine from 'alpinejs';
