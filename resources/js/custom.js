@@ -3,6 +3,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // ANIMATIONS 
+/*
 const tl = gsap.timeline();
 tl.fromTo('.time-block', { 
     clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)'
@@ -18,7 +19,18 @@ tl.fromTo('.time-block', {
         scrub: true
     }
 });
+*/
 
+/* 
+document.querySelector(".card-shine").onmousemove = (e) => {
+    const x = e.pageX - e.target.offsetLeft;
+    const y = e.pageY - e.target.offsetTop;
+    e.target.style.setProperty("--x", `${x}px`);
+    e.target.style.setProperty("--y", `${y}px`);
+};
+*/
+
+/*
 tl.fromTo('.cta-element', {
     opacity: 0,
     clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)'
@@ -35,6 +47,7 @@ tl.fromTo('.cta-element', {
         scrub: true
     }
 });
+*/
 
 // COUNTDOWN TIMER
 import moment from 'moment';

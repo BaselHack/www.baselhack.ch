@@ -1,4 +1,6 @@
+
 <footer x-cloak class="block py-8 mx-auto text-center md:py-12 page-footer md:mt-16">
+    <!--
     <nav class="-mb-6 columns-1 md:columns-3 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
         <div class="pb-6">
             <a href="{{ route('about.index') }}" class="{{ request()->routeIs('about.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.about') }}</a>
@@ -12,10 +14,11 @@
         <div class="pb-6">
             <a href="{{ route('sponsors.index') }}" class="{{ request()->routeIs('sponsors.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.sponsors') }}</a>
         </div>
-        <!--<div class="pb-6">
+        <div class="pb-6">
             <a href="{{ route('contact.index') }}" class="{{ request()->routeIs('contact.index') ? 'text-yellow-500' : '' }} text-sm leading-6 uppercase hover:text-yellow-500">{{ __('app/layouts.contact') }}</a>
-        </div>-->
+        </div>
     </nav>
+    -->
     <div class="flex flex-wrap justify-center gap-12 mx-8 my-8 text-white md:my-12">
         @if(!empty($channels) and $channels->count())
             @foreach($channels as $channel)

@@ -1,7 +1,8 @@
 @extends('app.layouts.default')
 
 @section('content')
-    <main class="px-4 mx-auto max-w-7xl">
+
+    <main>
         <div class="text-center">
             <!--
             <div class="mt-12 ld:mt-16 lg:mt-20">
@@ -17,17 +18,20 @@
 
             @include('app.components._cta')
 
-            <!-- <h2 class="max-w-screen-xl mt-16 text-4xl md:mt-24">About BaselHack</h2> -->
-            <div class="flex justify-center my-12">
+            <div class="flex flex-col items-center justify-center my-12">
+                <h1 class="max-w-3xl mb-8 text-4xl leading-tight">BaselHack is more than a hackathon – we connect people, take fun seriously and grow open innovation</h1>
                 <p class="max-w-3xl text-lg leading-normal text-center">
                     BaselHack is the hackathon for Basel, Northwestern Switzerland and bordering Alsace and
                     Südbaden. Young and young-at-heart developers, technology fanatics, designers and others meet for a
                     weekend tinkering and developing various ideas. Join us for a weekend full of fun, challenges, for
                     meeting new friends and to enjoy free drinks & foods.
                 </p>
-            </div>            
+            </div>
 
-            @include('app.components._image-text')
+            @include('app.components._sponsors')
+
+            <!-- @include('app.components._image-text') -->
+            
 
             <!-- <div class="flex flex-wrap justify-center gap-6 mt-6 md:mt-12">
                 <!--<a target="_blank"
@@ -46,6 +50,7 @@
 
         @include('app.components._faq')
 
+        <!--
         <div class="flex justify-center mt-20 md:mt-28">
             <a id="more" name="more" class="mb-4"></a>
             <h2 class="max-w-screen-xl mb-4 text-4xl">The BaselHack in a Nutshell</h2>
@@ -55,7 +60,9 @@
             <img class="w-auto mix-blend-lighten" src="{{ asset('images/app/baselhack-in-a-nutshell.png') }}"
                     alt="Baselhack in a nutshell (infographic)">
         </div>
+        -->
 
+<!--
 {{--            <div class="max-w-xl mx-auto mt-4 space-y-4 sm:flex sm:justify-center sm:space-y-0 sm:space-x-4 md:mt-8">--}}
 
 {{--                <div class="rounded-md shadow">--}}
@@ -72,30 +79,27 @@
 {{--                </div>--}}
 {{--            </div>--}}
 
-            <br>
-            <br>
-
             {{--            <div class="max-w-2xl mx-auto">--}}
-
             {{--                @include('app.archived.main_posts')--}}
-
             {{--                --}}{{--                <h2 class="text-xl tracking-tight text-white sm:text-xl md:text-2xl">--}}
             {{--                --}}{{--                    <span class="block hack-font-regular xl:inline">We are more than a Hackathon. We connect people, take fun seriously and grow open innovation.</span>--}}
             {{--                --}}{{--                </h2>--}}
             {{--            </div>--}}
-
+-->
+            
+            <!--
             <div class="flex items-center justify-center">
                 <div class="mt-4 mb-12">
                     <p>Impressions from BaselHack 2022, Haus der Wirtschaft, Pratteln</p>
                     <iframe style="width: 100%; max-width: 900px; height: 450px;" src="https://www.youtube.com/embed/THE--6AYbEY" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <!--
+                
                 <div class="my-4">
                     <p>Impressions from BaselHack 2021, Launchlabs, Basel</p>
                     <iframe style="width: 100%; height: 355px;" src="https://player.vimeo.com/video/633003007?h=67fce8f4ff" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                -->
             </div>
+            -->
         </div>
     </main>
 @endsection

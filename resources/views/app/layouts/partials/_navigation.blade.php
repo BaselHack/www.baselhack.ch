@@ -1,4 +1,4 @@
-<nav x-cloak class="container my-12">
+<nav x-cloak class="container my-4">
     <div class="flex flex-wrap items-center justify-between gap-4">
         <a class="shrink-0" href="{{ route('start.index')}}">
             <img class="h-16" src="https://www.baselhack.ch/images/app/logos/baselhack_white.png" alt="BaselHack" />
