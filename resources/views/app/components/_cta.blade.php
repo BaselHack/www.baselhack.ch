@@ -14,7 +14,7 @@
     }
 </style>
 
-<div class="container py-8">
+<div class="py-4">
     <div class="cta-element my-8 text-black md:my-16 bg-[#efe73e] card-shine appearance-none relative overflow-hidden p-8 md:p-12 before:absolute before:content-[''] rounded-sm group outline-none">
         <div class="flex flex-col items-start w-full">
             <h1 class="relative mb-4 text-xl leading-tight pointer-events-none md:text-4xl">
