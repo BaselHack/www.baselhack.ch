@@ -1,4 +1,4 @@
-<div class="my-32">
+<div class="p-8 my-32">
     <div x-data="{ active: 1 }" class="mx-auto max-w-6xl w-full min-h-[16rem]">
         <div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-b shadow border-neutral-600">
             <h2 class="py-4 rounded">

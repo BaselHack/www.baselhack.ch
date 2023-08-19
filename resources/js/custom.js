@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let secondField = document.getElementById("countSeconds");
 
     let interval;
-    const eventDay = moment("2023-10-27 08:30:00");
+    const eventDay = moment("2023-10-28 09:00:00");
 
     // Convert to millisecond
     const second = 1000;

@@ -1,7 +1,6 @@
 @extends('app.layouts.default')
 
 @section('content')
-
     <x-page :title="$title" :teaser="$teaser">
         <div class="my-12 prose prose-lg">
             {!! $body !!}

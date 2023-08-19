@@ -25,10 +25,6 @@
 
         @yield('content')
 
-        @if(request()->route()->getName() != 'sponsors.index')
-            @include('app.layouts.partials._sponsors')
-        @endif
-
         @include('app.layouts.partials._newsletter')
         @include('app.layouts.partials._footer')
     </div>
