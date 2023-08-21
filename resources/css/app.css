@@ -118,3 +118,7 @@ blockquote,
 cite {
     @apply mx-4;
 }
+
+[x-cloak] { 
+    display: none !important; 
+}

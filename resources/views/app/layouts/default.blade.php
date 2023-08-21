@@ -23,13 +23,7 @@
         @include('app.layouts.partials._flash')
         @include('app.layouts.partials._navigation')
 
-        <div class="container">
-            @yield('content')
-        </div>
-
-        @if(request()->route()->getName() != 'sponsors.index')
-            @include('app.layouts.partials._sponsors')
-        @endif
+        @yield('content')
 
         @include('app.layouts.partials._newsletter')
         @include('app.layouts.partials._footer')

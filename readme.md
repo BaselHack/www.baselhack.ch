@@ -31,6 +31,23 @@ npm install && vite build
 php artisan migrate:fresh --seed
 ```
 
+# Use / Start Dev Server
+
+note: a regular start with "ddev npm run dev" is not possible, because the vite dev server is not accessible from the outside, it will assume:
+
+```Network: use --host to expose````
+
+use:
+
+```- ddev exec npm run dev -- --host```
+
+The output should indicate that your vite dev server now listens on other interfaces than only localhost.
+[Medium Link](https://medium.com/@mtillmann_68557/using-laravel-9-breeze-with-ddev-and-vite-3e40abd2954a)
+
+the start of the ddev container will automatically start the command (see .ddev/config.yaml -> hooks -> post-start)
+
+! Don't forget to add DDEV_HOSTNAME to your .env file.
+
 # Services
 
 ## Github
