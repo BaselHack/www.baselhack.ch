@@ -5,7 +5,7 @@
 
 @section('content')
     <x-page :title="$title" :teaser="$teaser">
-        <div class="container">
+        <div>
             <div class="prose prose-lg">
                 {!! $body !!}
             </div>

@@ -76,6 +76,7 @@
         </div>
     </x-page>
 
+    {{-- 
     <x-page :title="__('app/alumni.title')" :teaser="__('app/alumni.teaser')">
         <div class="my-12 space-y-12 text-center">
             <ul class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl">
@@ -146,4 +147,5 @@
             </ul>
         </div>
     </x-page>
+    --}}
 @endsection
