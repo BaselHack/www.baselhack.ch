@@ -18,7 +18,7 @@
     @yield('styles')
 </head>
 
-<body x-data="{ navOpen: false }" class="text-white bg-gradient-to-tr from-black to-neutral-800">
+<body x-data="{ navOpen: false }" class="min-h-[100vh] text-white bg-gradient-to-tr from-black to-neutral-800 bg-[#010101]">
     <div>
         @include('app.layouts.partials._flash')
         @include('app.layouts.partials._navigation')

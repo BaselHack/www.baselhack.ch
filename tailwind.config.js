@@ -24,7 +24,11 @@ module.exports = {
             DEFAULT: {
                 css: {
                     a: {
-                        color: theme('colors.teal.300'),
+                        color: theme('colors.yellow.500'),
+                        '&:hover': {
+                            color: theme('colors.yellow.400'),
+                            textDecoration: 'underline',
+                        }
                     }
                 }
             },
