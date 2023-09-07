@@ -7,6 +7,22 @@
                 {!! $body !!}
             </div>
 
+            <div class="my-12">
+                <h2 class="mb-8 text-2xl font-bold">The Team behind BaselHack</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3">
+                    @foreach($teams as $key => $team)
+                        <article class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-800">
+                            <img class="mb-2 rounded-full" src="https://via.placeholder.com/250x250" alt="">
+                            <div class="text-center">
+                                <h1 class="text-lg">{{ $team->name }}</h1>
+                                <div>{{ $team->funktion }}</div>
+                                <div>IWF Web Solutions</div>
+                            </div>
+                        </article>
+                    @endforeach
+                </div>
+            </div>
+
             @if(!empty($channels) and $channels->count())
                 <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
                     @foreach($channels as $channel)
