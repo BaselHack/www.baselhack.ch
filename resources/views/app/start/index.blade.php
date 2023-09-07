@@ -5,8 +5,8 @@
             <div>
                 <div class="container relative py-16 md:py-32">
                     <div>
-                        <h1 class="max-w-screen-xl text-5xl leading-tight uppercase md:text-7xl">Register now</h1>
-                        <h2 id="descryption-text" class="max-w-screen-xl mt-4 text-xl font-normal leading-tight md:text-4xl">
+                        <h1 class="max-w-screen-xl text-[3em] leading-[1em] sm:leading-tight uppercase sm:text-6xl md:text-7xl md:mb-6">Register now</h1>
+                        <h2 id="descryption-text" class="max-w-screen-xl mt-4 text-lg font-normal leading-tight md:text-4xl">
                             <span>28. / 29. October 2023</span><br>
                             <span>HDW, Pratteln</span>
                         </h2>
@@ -28,8 +28,6 @@
             @include('app.components._countdown')
 
             @include('app.components._sponsors')
-
-
 
             {{--
             <div class="py-16">
@@ -58,8 +56,7 @@
             </div>
             --}}
 
-
-            <div class="p-8 my-8 lg:my-20">
+            <div class="md:p-8 lg:my-20">
                 <div class="container">
                     <div class="flex items-center w-full h-6 max-w-xs gap-5 mx-auto mb-12 lg:mb-24" role="separator">
                         <div class="flex-1 bg-white h-0.5"></div>
@@ -104,81 +101,83 @@
 
         {{-- @include('app.components._timetable') --}}
 
-        <div class="container p-8 my-32">
-            <div x-data="{ active: 1 }" class="mx-auto max-w-6xl w-full min-h-[16rem]">
-                <div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-b shadow border-neutral-600">
-                    <h2 class="py-4 rounded">
-                        <button :class="expanded ? 'text-yellow-500' : ''" x-on:click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-2 text-xl font-bold group">
-                            <div class="flex items-center gap-4">
-                                <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 transition duration-200 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-                                </svg>
-                                <span class="transition duration-200 group-hover:text-yellow-500">What is a hackathon?</span>
-                            </div>
-                            <div x-cloak x-show="expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </div>
-                            <div x-cloak x-show="!expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-                                </svg>
-                            </div>
-                        </button>
-                    </h2>
-                    <div x-show="expanded" x-collapse x-cloak>
-                        <div class="pb-6">A hackathon is a multi-day event (usually 48 hours) where people meet to solve challenges together. The problems are presented by companies or institutions at the start of the event. You have the chance to spend a weekend with a team developing ideas for a real problem and turning them into a working prototype.</div>
+        <div class="my-8 md:p-8 lg:my-20">
+            <div class="container">
+                <div x-data="{ active: 1 }" class="mx-auto max-w-6xl w-full min-h-[16rem]">
+                    <div x-data="{ id: 1, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-b shadow border-neutral-600">
+                        <h2 class="py-4 rounded">
+                            <button :class="expanded ? 'text-yellow-500' : ''" x-on:click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-2 text-sm font-bold md:text-xl group">
+                                <div class="flex items-center gap-4">
+                                    <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 h-6 transition duration-200 shrink-0 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                                    </svg>
+                                    <span class="text-left transition duration-200 group-hover:text-yellow-500">What is a hackathon?</span>
+                                </div>
+                                <div x-cloak x-show="expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+                                <div x-cloak x-show="!expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </h2>
+                        <div x-show="expanded" x-collapse x-cloak>
+                            <div class="pb-6">A hackathon is a multi-day event (usually 48 hours) where people meet to solve challenges together. The problems are presented by companies or institutions at the start of the event. You have the chance to spend a weekend with a team developing ideas for a real problem and turning them into a working prototype.</div>
+                        </div>
                     </div>
-                </div>
-                <div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-b shadow border-neutral-600">
-                    <h2 class="py-4 rounded">
-                        <button :class="expanded ? 'text-yellow-500' : ''" x-on:click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-2 text-xl font-bold group">
-                            <div class="flex items-center gap-4">
-                                <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 transition duration-200 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-                                </svg>
-                                <span class="transition duration-200 group-hover:text-yellow-500">Who can participate at BaselHack - do I need coding skills?</span>
-                            </div>
-                            <span x-cloak x-show="expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </span>
-                            <span x-cloak x-show="!expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-                                </svg>
-                            </span>
-                        </button>
-                    </h2>
-                    <div x-show="expanded" x-collapse x-cloak>
-                        <div class="pb-6">Anyone interested in technology – including but not limited to developers, technology fanatics, and designers – can participate. Although programming can be a part of many projects, non-programmers are also very welcome. We appreciate an interdisciplinary audience.</div>
+                    <div x-data="{ id: 2, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-b shadow border-neutral-600">
+                        <h2 class="py-4 rounded">
+                            <button :class="expanded ? 'text-yellow-500' : ''" x-on:click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-2 text-sm font-bold md:text-xl group">
+                                <div class="flex items-center gap-4">
+                                    <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 transition duration-200 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                                    </svg>
+                                    <span class="text-left transition duration-200 group-hover:text-yellow-500">Who can participate at BaselHack - do I need coding skills?</span>
+                                </div>
+                                <span x-cloak x-show="expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </span>
+                                <span x-cloak x-show="!expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </h2>
+                        <div x-show="expanded" x-collapse x-cloak>
+                            <div class="pb-6">Anyone interested in technology – including but not limited to developers, technology fanatics, and designers – can participate. Although programming can be a part of many projects, non-programmers are also very welcome. We appreciate an interdisciplinary audience.</div>
+                        </div>
                     </div>
-                </div>
-                <div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="border-b shadow border-neutral-600">
-                    <h2 class="py-4 rounded">
-                        <button :class="expanded ? 'text-yellow-500' : ''" x-on:click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-2 text-xl font-bold group">
-                            <div class="flex items-center gap-4">
-                                <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 transition duration-200 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-                                </svg>
-                                <span class="transition duration-200 group-hover:text-yellow-500">Why should I participate in a hackathon?</span>
-                            </div>
-                            <span x-cloak x-show="expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </span>
-                            <span x-cloak x-show="!expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-                                </svg>
-                            </span>
-                        </button>
-                    </h2>
-                    <div x-show="expanded" x-collapse x-cloak>
-                        <div class="pb-6">Our hackathon is a great opportunity to network with like-minded people and meet exciting companies. You'll have the possibility to experiment, being close to new technologies, experience collaborative teamwork, and benefit from top mentoring. You also have the chance to win attractive award prize money!</div>
+                    <div x-data="{ id: 3, get expanded() { return this.active === this.id }, set expanded(value) { this.active = value ? this.id : null } }" role="region" class="shadow">
+                        <h2 class="py-4 rounded">
+                            <button :class="expanded ? 'text-yellow-500' : ''" x-on:click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-2 text-sm font-bold md:text-xl group">
+                                <div class="flex items-center gap-4">
+                                    <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 transition duration-200 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                                    </svg>
+                                    <span class="text-left transition duration-200 group-hover:text-yellow-500">Why should I participate in a hackathon?</span>
+                                </div>
+                                <span x-cloak x-show="expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </span>
+                                <span x-cloak x-show="!expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </h2>
+                        <div x-show="expanded" x-collapse x-cloak>
+                            <div class="pb-6">Our hackathon is a great opportunity to network with like-minded people and meet exciting companies. You'll have the possibility to experiment, being close to new technologies, experience collaborative teamwork, and benefit from top mentoring. You also have the chance to win attractive award prize money!</div>
+                        </div>
                     </div>
                 </div>
             </div>
