@@ -1,7 +1,7 @@
-<div class="py-8 md:py-16 lg:py-28 bg-[#020202]">
+<div class="py-8 md:py-16 lg:py-28 bg-[#060606]">
   <div class="container text-left">
       <dl class="grid max-w-xl grid-cols-1 gap-16 md:gap-24 lg:max-w-none md:grid-cols-2 lg:grid-cols-3">
-          <div class="flex flex-col bg-[#070707] rounded-sm">
+          <div class="flex flex-col rounded-sm">
             <dt class="text-lg font-semibold leading-7 text-white">
               <div class="flex items-center justify-center w-12 h-12 mb-6 bg-yellow-500 rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8 text-black" viewBox="0 0 16 16">
@@ -14,7 +14,7 @@
               <p class="flex-auto">Fuel your creativity and stay energized throughout the event with a variety of free food and snacks.</p>
             </dd>
           </div>
-          <div class="flex flex-col bg-[#070707] rounded-sm">
+          <div class="flex flex-col rounded-sm">
             <dt class="text-lg font-semibold leading-7 text-white">
               <div class="flex items-center justify-center w-12 h-12 mb-6 text-black bg-yellow-500 rounded">
 
@@ -28,7 +28,7 @@
               <p class="flex-auto">No need to worry about rushing home. We've got you covered with a place where you can sleep a few hours.</p>
             </dd>
           </div>
-          <div class="flex flex-col bg-[#070707] rounded-sm">
+          <div class="flex flex-col rounded-sm">
             <dt class="text-lg font-semibold leading-7 text-white">
               <div class="flex items-center justify-center w-12 h-12 mb-6 bg-yellow-500 rounded">
                 <svg class="w-8 h-8 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -41,7 +41,7 @@
               <p class="flex-auto">The carefully crafted challenges are designed to inspire innovation and out-of-the-box thinking.</p>
             </dd>
           </div>
-          <div class="flex flex-col bg-[#070707] rounded-sm">
+          <div class="flex flex-col rounded-sm">
             <dt class="text-lg font-semibold leading-7 text-white">
               <div class="flex items-center justify-center w-12 h-12 mb-6 bg-yellow-500 rounded">
                 <svg class="w-8 h-8 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -56,7 +56,7 @@
               </p>
             </dd>
           </div>
-          <div class="flex flex-col bg-[#070707] rounded-sm">
+          <div class="flex flex-col rounded-sm">
             <dt class="text-lg font-semibold leading-7 text-white">
               <div class="flex items-center justify-center w-12 h-12 mb-6 text-black bg-yellow-500 rounded">
                 <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
