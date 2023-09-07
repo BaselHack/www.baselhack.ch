@@ -1,6 +1,6 @@
 <div class="bg-[#040404] py-8 md:py-16 border-black border-t border-b" style="background-color: #2828281a; background-image: linear-gradient(135deg,#00000080 10%,#0000 0,#0000 50%,#00000080 0,#00000080 60%,#0000 0,#0000); background-size: 7.07px 7.07px;">
     <div class="container flex flex-col justify-center items-start min-h-[20rem]">
-        <div class="max-w-4xl mx-auto">
+        <div class="w-full">
         <h2 class="mb-2 text-4xl text-center">Join the countdown</h2>
             <p class="mb-8 text-lg text-center">The clock is ticking. Don't miss your chance to be part of this exciting event.</p>
             <div class="grid grid-cols-1 gap-1 mt-6 mb-8 sm:grid-cols-2 md:grid-cols-4">
