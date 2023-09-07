@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 use Spatie\Enum\Laravel\Rules\EnumRule;
@@ -76,6 +77,9 @@ class CompanyResource extends Resource
             Text::make('Name', 'name')
                 ->sortable()
                 ->rules('required', 'max:254'),
+
+            Trix::make('Kurzbeschrieb', 'kurzbeschrieb')->alwaysShow()
+                ->rules('required', 'max:4096'),
 
             Text::make('URL', 'url')
                 ->hideFromIndex()

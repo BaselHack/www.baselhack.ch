@@ -61,7 +61,6 @@ class ChallengeResource extends Resource
             Text::make('Subtitle', 'subtitle'),
 
             Trix::make('Description', 'description')->alwaysShow()
-                ->alwaysShow()
                 ->rules('required', 'max:4096'),
 
             BelongsTo::make('Company', 'company', CompanyResource::class),
