@@ -122,3 +122,20 @@ cite {
 [x-cloak] { 
     display: none !important; 
 }
+
+/* General Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+background: black;
+}
+::-webkit-scrollbar-thumb {
+background-color: #4e4e4c;
+}
+
+/* Scrollbar Firefox */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #4e4e4c black;
+}

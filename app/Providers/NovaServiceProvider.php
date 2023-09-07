@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Nova\Resources\ChannelResource;
 use App\Nova\Resources\CompanyResource;
+use App\Nova\Resources\ChallengeResource;
 use App\Nova\Resources\NewsletterResource;
 use App\Nova\Resources\PageResource;
 use App\Nova\Resources\PasswordResource;
@@ -55,6 +56,7 @@ class NovaServiceProvider extends CustomNovaServiceProvider
                     MenuGroup::make(__('Content'), [
                         MenuItem::resource(SectionResource::class),
                         MenuItem::resource(CompanyResource::class),
+                        MenuItem::resource(ChallengeResource::class),
                     ])->collapsable(),
 
                     MenuGroup::make(__('Jobs'), [

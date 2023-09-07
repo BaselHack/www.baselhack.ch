@@ -6,7 +6,7 @@ return [
     'team' => 'Team',
     'posts' => 'Blog',
     'contact' => 'Contact',
-    'events' => 'Events',
+    'event' => 'Event',
     'partners' => 'Partners',
     'positions' => 'Positions',
     'sponsors' => 'Sponsors',

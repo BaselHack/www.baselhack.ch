@@ -19,7 +19,7 @@
         </div>
     </nav>
     --}}
-    <div class="flex flex-wrap justify-center gap-12 mx-8 my-8 text-white md:my-12">
+    <div class="flex flex-wrap justify-center gap-12 mx-8 my-8 md:my-12">
         @if(!empty($channels) and $channels->count())
             @foreach($channels as $channel)
                 <a class="hover:text-yellow-500" href="{{ $channel->url }}" title="{{ $channel->name }}" target="_blank">
@@ -67,11 +67,6 @@
                                 <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
                             </svg>
                             @break
-                        @case('Twitter')
-                            <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                            </svg>
-                            @break
                         @case('Facebook')
                             <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                 <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -81,10 +76,10 @@
             @endforeach
         @endif
     </div>
-    <div class="flex flex-col items-center justify-center gap-4 text-sm text-white">
+    <div class="flex flex-col items-center justify-center gap-4 text-sm">
         <div class="flex gap-4">
-            <a class="{{ request()->routeIs('terms.index') ? 'text-yellow-500' : '' }} hover:text-yellow-500 hover:underline" href="{{ route('terms.index') }}">{{ __('app/layouts.terms') }}</a>
-            <a class="{{ request()->routeIs('privacy.index') ? 'text-yellow-500' : '' }} hover:text-yellow-500 hover:underline" href="{{ route('privacy.index') }}">{{ __('app/layouts.privacy') }}</a>
+            <a class="{{ request()->routeIs('terms.index') ? 'text-yellow-500' : '' }} hover:text-yellow-500 hover:underline uppercase" href="{{ route('terms.index') }}">{{ __('app/layouts.terms') }}</a>
+            <a class="{{ request()->routeIs('privacy.index') ? 'text-yellow-500' : '' }} hover:text-yellow-500 hover:underline uppercase" href="{{ route('privacy.index') }}">{{ __('app/layouts.privacy') }}</a>
         </div>
         <small class="block mt-6 text-xs text-neutral-400">&copy; {{ date('Y')}} BaselHack | All rights reserved</small>
     </div>
