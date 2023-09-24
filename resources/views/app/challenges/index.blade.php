@@ -4,8 +4,8 @@
     <main>
         <div class="container mt-8 mb-16">
             
-            <div class="my-8 md:my-20">
-                <h1 class="mb-2 text-5xl">Sponsored Challenges</h1>
+            <div class="my-12 md:my-24">
+                <h1 class="mb-1 text-6xl">Sponsored Challenges</h1>
                 <h2 class="text-xl font-normal text-neutral-300">Get Ready to Hack & Win: Check out our sponsored challenges!</h2>
             </div>
             
@@ -36,12 +36,12 @@
             <hr class="my-12 md:my-24 border-neutral-700">
 
             <div class="my-12 md:my-24">
-                <div class="mb-16">
-                    <h1 class="mb-2 text-5xl">Freestyle Challenges</h1>
+                <div>
+                    <h1 class="mb-1 text-6xl">Freestyle Challenges</h1>
                     <h2 class="text-xl font-normal text-neutral-300">Pitches and Freestyle Challenges for the Hack Sake</h2>
                 </div>
 
-                <section class="px-12 py-8 text-white rounded bg-[#080808] border-neutral-800 border">
+                <section class="my-12 md:my-16 px-12 py-8 text-white rounded bg-[#080808] border-neutral-800 border">
                     <div class="flex flex-col gap-4">
                         <div class="mb-2">
                             <h2 class="text-2xl">Pitch your own idea!</h2>
@@ -57,28 +57,28 @@
             <hr class="my-12 md:my-24 border-neutral-700">
 
             <div>
-                <h2 class="text-4xl">What is a good hackathon challenge?</h2>
-                <p class="mb-12 text-neutral-400">It's characterized by certain features that encourage engagement, creativity and competition of the participants.</p>
-                <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
+                <h2 class="text-5xl">What is a good hackathon challenge?</h2>
+                <p class="mb-12 text-xl md:mb-20 text-neutral-400">It's characterized by certain features that encourage engagement, creativity and competition of the participants.</p>
+                <div class="grid grid-cols-1 gap-16 mb-12 md:grid-cols-2 md:mb-24">
                     <article>
                         <h1 class="text-xl">Relevance</h1>
-                        <hr class="my-3 border-gradient-to-r from-yellow-500 to-transparent">
-                        <p class="text-neutral-300">A challenge should be related to a specific topic and is appealing when it addresses a current problem. It is more exciting to develop an approach that can have a positive impact.</p>
+                        <hr class="my-3 border-neutral-700">
+                        <p class="text-neutral-400">A challenge should be related to a specific topic and is appealing when it addresses a current problem. It is more exciting to develop an approach that can have a positive impact.</p>
                     </article>
                     <article>
                         <h1 class="text-xl">Challenge</h1>
                         <hr class="my-3 border-neutral-700">
-                        <p class="text-neutral-300">The challenge itself can often be quite challenging. It can be difficult to push participants to use their full skillset. There should be ample room for innovation and advanced solutions to encourage the development of new technologies and ideas.</p>
+                        <p class="text-neutral-400">The challenge itself can often be quite challenging. It can be difficult to push participants to use their full skillset. There should be ample room for innovation and advanced solutions to encourage the development of new technologies and ideas.</p>
                     </article>
                     <article>
                         <h1 class="text-xl">Goals</h1>
                         <hr class="my-3 border-neutral-700">
-                        <p class="text-neutral-300">The challenge must set clear objectives to ensure participants understand expectations and can be effectively guided towards success. Clarity in goals is essential for a productive hackathon experience.</p>
+                        <p class="text-neutral-400">The challenge must set clear objectives to ensure participants understand expectations and can be effectively guided towards success. Clarity in goals is essential for a productive hackathon experience.</p>
                     </article>
                     <article>
                         <h1 class="text-xl">Openness</h1>
                         <hr class="my-3 border-neutral-700">
-                        <p class="text-neutral-300">While there are goals and rules, a good hackathon challenge should leave enough room for creativity. It's important to encourage diverse approaches and solutions. This allows participants to harness their skills and ideas and develop solutions that embrace various perspectives and use cases.</p>
+                        <p class="text-neutral-400">While there are goals and rules, a good hackathon challenge should leave enough room for creativity. It's important to encourage diverse approaches and solutions. This allows participants to harness their skills and ideas and develop solutions that embrace various perspectives and use cases.</p>
                     </article>
                 </div>
             </div>

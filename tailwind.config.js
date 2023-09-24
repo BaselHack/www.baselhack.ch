@@ -38,14 +38,41 @@ module.exports = {
                 'sans': ['Fira Code', 'monospace']
             },
             fontSize: {
-                'sm': '0.88889rem',     // 16px - small
-                'base': '1rem',         // 18px - p, default
-                'xl': '1.33333rem',     // 24px - h3
-                '2xl': '1.55556em',     // 28px - h2
-                '3xl': '1.77778rm',     // 32px - h1
-                '4xl': '2em',           // 36px
-                '5xl': '2.22222rem',    // 40px
+                'sm':   '0.875rem',      // 16px - small
+                'base': '1.1rem',        // 18px - p, default
+                'xl':   '1.5rem',        // 24px - h3
+                '2xl':  '1.75rem',       // 28px - h2
+                '3xl':  '2rem',          // 32px - h1
+                '4xl':  '2.25rem',       // 36px
+                '5xl':  '2.5rem',        // 40px
+                '6xl':  '3rem',          // 48px
             },
+            /* 
+            fontSize: {
+                "4xl": ["4.292rem", "5.5rem"],
+                "3xl": ["3.433rem", "4.125rem"],
+                "2xl": ["2.747rem", "4.125rem"],
+                "xl": ["2.197rem", "2.75rem"],
+                "lg": ["1.758rem", "2.75rem"],
+                "md": ["1.406rem", "2.75rem"],
+                "base": ["1.125rem", "2.75rem"],
+                "sm": ["0.9rem", "1.375rem"],
+                "xs": ["0.72rem", "1.375rem"]
+              },
+              spacing: {
+                "quarter": "0.34375rem",
+                "half": "0.6875rem",
+                "one": "1.375rem",
+                "two": "2.75rem",
+                "three": "4.125rem",
+                "four": "5.5rem",
+                "five": "6.875rem",
+                "six": "8.25rem",
+                "eight": "11rem",
+                "twelve": "16.5rem",
+                "sixteen": "22rem"
+              },
+            */
             colors: {
                 gray: colors.neutral,
                 black: colors.black,
