@@ -38,6 +38,7 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact.index'
 Route::get('schedule', [ScheduleController::class, 'index'])->name('schedule.index');
 
 Route::get('challenges', [ChallengesController::class, 'index'])->name('challenges.index');
+Route::get('challenges/{challenge}', [ChallengesController::class, 'show'])->name('challenges.show');
 
 Route::get('event', [EventController::class, 'index'])->name('event.index');
 
