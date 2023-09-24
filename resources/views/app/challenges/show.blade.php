@@ -17,7 +17,7 @@
                 </h2>
             </div>
             <hr class="my-8 border-neutral-700">
-            <div class="mt-8 md:mt-12">{!! $challenge->description !!}</div>            
+            <div class="mt-8 prose md:mt-12">{!! $challenge->description !!}</div>            
         </div>
     </div>
 @endsection
