@@ -3,15 +3,19 @@
     <main>
         <div>
             <div>
-                <div class="container relative py-16 md:py-32">
-                    <div>
-                        <h1 class="max-w-screen-xl text-[3em] leading-[1em] sm:leading-tight uppercase sm:text-6xl md:text-7xl md:mb-6">Register now</h1>
-                        <h2 id="descryption-text" class="max-w-screen-xl mt-4 text-lg font-normal leading-tight md:text-4xl">
-                            <span>28. / 29. October 2023</span><br>
-                            <span>HDW, Pratteln</span>
-                        </h2>
+                <div class="container relative py-24">
+                    <div class="grid items-center grid-cols-1 gap-8 md:grid-cols-2">
+                        <div>
+                            <h1 class="max-w-screen-xl text-[3em] leading-[1em] sm:leading-tight uppercase sm:text-6xl md:text-7xl md:mb-6">Register now</h1>
+                            <h2 id="descryption-text" class="max-w-screen-xl mt-4 text-lg font-normal leading-tight md:text-4xl">
+                                <span>28. / 29. October 2023</span><br>
+                                <span>HDW, Pratteln</span>
+                            </h2>
+                        </div>
+                        <div class="flex justify-end me-4">
+                            <img class="w-[28rem]" src="/images/app/baselhack_laptop.png" alt="">
+                        </div>
                     </div>
-
                     {{--
                         <div class="absolute inset-0">
                             <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.432/build/spline-viewer.js"></script>

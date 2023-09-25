@@ -28,9 +28,8 @@
     }
 </style>
 --}}
-{{-- <div class="bg-[#050505]"> --}}
-
-    <nav x-cloak class="container py-8 md:py-2 navigation">
+<div class="border-b bg-neutral-900 border-neutral-800">
+    <nav x-cloak class="container py-4 md:py-2 navigation">
         <div class="flex flex-wrap items-center justify-between gap-4">
             <a class="logo shrink-0" href="{{ route('start.index')}}">
                 <img class="h-16" src="https://www.baselhack.ch/images/app/logos/baselhack_white.png" alt="BaselHack" />
@@ -47,12 +46,12 @@
             </button>
             <div class="items-center justify-center hidden gap-8 md:block">
                 <ul class="flex-row hidden gap-8 my-8 xl:gap-10 md:flex">
-                    <li><a class="{{ request()->routeIs('about.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('about.index') }}" href="{{ route('about.index') }}">{{ __('app/layouts.about') }}</a></li>
-                    {{--<li><a class="{{ request()->routeIs('event.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('event.index') }}" href="{{ route('event.index') }}">{{ __('app/layouts.event') }}</a></li>--}}
+{{--                    <li><a class="{{ request()->routeIs('event.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('event.index') }}" href="{{ route('event.index') }}">{{ __('app/layouts.event') }}</a></li>--}}
                     <li><a class="{{ request()->routeIs('team.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('team.index') }}" href="{{ route('team.index') }}">{{ __('app/layouts.team') }}</a></li>
-                    {{--<li><a class="{{ request()->routeIs('challenges.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('challenges.index') }}" href="{{ route('challenges.index') }}">{{ __('app/layouts.challenges') }}</a></li>--}}
+                    <li><a class="{{ request()->routeIs('challenges.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('challenges.index') }}" href="{{ route('challenges.index') }}">{{ __('app/layouts.challenges') }}</a></li>
                     <li><a class="{{ request()->routeIs('sponsors.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('sponsors.index') }}">SUPPORTERS</a></li>
                     <li><a class="{{ request()->routeIs('posts.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('posts.index') }}" href="{{ route('posts.index') }}">{{ __('app/layouts.posts') }}</a></li>
+                    <li><a class="{{ request()->routeIs('about.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('about.index') }}" href="{{ route('about.index') }}">{{ __('app/layouts.about') }}</a></li>
                     {{--<li><a class="{{ request()->routeIs('contact.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('contact.index') }}" href="{{ route('contact.index') }}">{{ __('app/layouts.contact') }}</a></li>--}}
                     <div class="custom-cursor"></div>
                 </ul>
@@ -60,17 +59,18 @@
         </div>
         <div @click.outside="navOpen = false" x-show="navOpen" class="my-12 rounded mobile-navigation md:hidden" x-transition>
             <ul class="grid grid-cols-1 gap-4 text-center">
-                <li><a class="{{ request()->routeIs('about.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('about.index') }}">{{ __('app/layouts.about') }}</a></li>
-                {{--<li><a class="{{ request()->routeIs('event.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('event.index') }}">{{ __('app/layouts.event') }}</a></li>--}}
+{{--                <li><a class="{{ request()->routeIs('event.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('event.index') }}">{{ __('app/layouts.event') }}</a></li>--}}
                 <li><a class="{{ request()->routeIs('team.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('team.index') }}">{{ __('app/layouts.team') }}</a></li>
-                {{--<li><a class="{{ request()->routeIs('challenges.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('challenges.index') }}">{{ __('app/layouts.challenges') }}</a></li>--}}
+                <li><a class="{{ request()->routeIs('challenges.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('challenges.index') }}">{{ __('app/layouts.challenges') }}</a></li>
                 <li><a class="{{ request()->routeIs('sponsors.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('sponsors.index') }}">SUPPORTERS</a></li>
                 <li><a class="{{ request()->routeIs('posts.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('posts.index')}}">{{ __('app/layouts.posts') }}</a></li>
+                <li><a class="{{ request()->routeIs('about.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('about.index') }}">{{ __('app/layouts.about') }}</a></li>
                 {{--<li><a class="{{ request()->routeIs('contact.index') ? 'text-yellow-500 underline' : '' }} text-lg uppercase transition hover:text-yellow-500 hover:underline" href="{{ route('contact.index') }}">{{ __('app/layouts.contact') }}</a></li>--}}
             </ul>
         </div>
     </nav>
-{{-- </div> --}}
+</div>
+{{--
 <script>
     const customCursor = document.querySelector(".custom-cursor");
     document.addEventListener("mousemove", (e) => {
@@ -78,3 +78,4 @@
         customCursor.style.top = e.pageY + "px";
     });
 </script>
+--}}
