@@ -3,35 +3,38 @@
 @section('content')
     <main>
         <div class="container mt-8 mb-16">
-            
             <div class="my-12 md:my-24">
                 <h1 class="mb-1 text-6xl">Sponsored Challenges</h1>
                 <h2 class="text-xl font-normal text-neutral-300">Get Ready to Hack & Win: Check out our sponsored challenges!</h2>
             </div>
             
-            <section class="grid grid-cols-1 gap-10 md:grid-cols-2">
-                @foreach($challenges->shuffle() as $challenge)
-                    <a href="{{ route('challenges.show', $challenge) }}" class="flex flex-col gap-2 p-8 border rounded group bg-neutral-900 border-neutral-700">
-                        <div class="flex self-start gap-4 mb-2 text-white group-hover:text-yellow-500">
-                            <svg class="w-6 h-6 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-                            </svg>
-                            {{ $challenge->company->name }}
-                        </div>
-                        <div>
-                            <h1 class="mb-1 text-xl font-bold group-hover:text-yellow-500">{{ $challenge->title }}</h1>
-                            <small class="text-neutral-300 group-hover:text-yellow-500">{{ $challenge->subtitle }}</small>
-                        </div>
-                        <hr class="my-4 border-neutral-500">
-                        <div class="flex items-center gap-4 group">
-                            <svg class="w-5 h-5 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                            </svg>
-                            <span class="group-hover:text-yellow-500">Read Details</span>
-                        </div>
-                    </a>
-                @endforeach
-            </section>
+            @if(!$challenges->isEmpty())
+                <section class="grid grid-cols-1 gap-10 md:grid-cols-2">
+                    @foreach($challenges->shuffle() as $challenge)
+                        <a href="{{ route('challenges.show', $challenge) }}" class="flex flex-col gap-2 p-8 border rounded group bg-neutral-900 border-neutral-700">
+                            <div class="flex self-start gap-4 mb-2 text-white group-hover:text-yellow-500">
+                                <svg class="w-6 h-6 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                                </svg>
+                                {{ $challenge->company->name }}
+                            </div>
+                            <div>
+                                <h1 class="mb-1 text-xl font-bold group-hover:text-yellow-500">{{ $challenge->title }}</h1>
+                                <small class="text-neutral-300 group-hover:text-yellow-500">{{ $challenge->subtitle }}</small>
+                            </div>
+                            <hr class="my-4 border-neutral-500">
+                            <div class="flex items-center gap-4 group">
+                                <svg class="w-5 h-5 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                                <span class="group-hover:text-yellow-500">Read Details</span>
+                            </div>
+                        </a>
+                    @endforeach
+                </section>
+            @else
+                <div class="p-4 text-lg text-center bg-black rounded">Currently no challenges published yet!</div>
+            @endif
             
             <hr class="my-12 md:my-24 border-neutral-700">
 
@@ -49,7 +52,7 @@
                                 Your have your own pitch idea?<br>
                                 Present it within 3 minutes and get your team together!</p>
                         </div>
-                        <a class="self-start px-6 py-3 text-black bg-yellow-500 rounded" href="https://github.com/BaselHack/BaselHack-2023#how-does-it-work" target="_blank">Learn how to pitch</a> 
+                        <a class="self-start px-6 py-3 text-black bg-yellow-500 rounded" href="https://github.com/BaselHack/BaselHack-2023#how-does-it-work" target="_blank">Post on Github <nobr>(not required!)</nobr></a> 
                     </div>
                 </section>
             </div>

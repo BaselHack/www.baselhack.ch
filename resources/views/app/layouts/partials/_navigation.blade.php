@@ -31,7 +31,7 @@
 <div class="border-b bg-neutral-900 border-neutral-800">
     <nav x-cloak class="container py-4 md:py-2 navigation">
         <div class="flex flex-wrap items-center justify-between gap-4">
-{{--            <a class="logo shrink-0" href="{{ route('start.index')}}">--}}
+            <a class="logo shrink-0" href="{{ route('start.index')}}">
                 <img class="h-16" src="https://www.baselhack.ch/images/app/logos/baselhack_white.png" alt="BaselHack" />
             </a>
             <button @click="navOpen = !navOpen" class="text-white transition md:hidden bg-clip-text hover:bg-gradient-to-tr from-yellow-500 to-teal-500" role="button" aria-label="Navigation öffnen">
