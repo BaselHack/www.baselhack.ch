@@ -117,16 +117,16 @@
                                     </svg>
                                     <span class="text-left transition duration-200 group-hover:text-yellow-500">What is a hackathon?</span>
                                 </div>
-                                <div x-cloak x-show="expanded" aria-hidden="true" class="w-6 h-6 ml-4 group-hover:text-yellow-500">
-                                    <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 h-6 transition duration-200 shrink-0 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                                <span x-cloak x-show="expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
-                                </div>
-                                <div x-cloak x-show="!expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
-                                    <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 h-6 transition duration-200 shrink-0 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                                </span>
+                                <span x-cloak x-show="!expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
                                     </svg>
-                                </div>
+                                </span>
                             </button>
                         </h2>
                         <div x-show="expanded" x-collapse x-cloak>
@@ -137,10 +137,10 @@
                         <h2 class="py-4 rounded">
                             <button :class="expanded ? 'text-yellow-500' : ''" x-on:click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-2 text-sm font-bold md:text-xl group">
                                 <div class="flex items-center gap-4">
-                                    <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 transition duration-200 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 h-6 transition duration-200 shrink-0 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
                                     </svg>
-                                    <span class="text-left transition duration-200 group-hover:text-yellow-500">Who can participate at BaselHack - do I need coding skills?</span>
+                                    <span class="text-left transition duration-200 group-hover:text-yellow-500">Who can participate in BaselHack 2023 - Do I need coding skills?</span>
                                 </div>
                                 <span x-cloak x-show="expanded" aria-hidden="true" class="ml-4 group-hover:text-yellow-500">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -162,7 +162,7 @@
                         <h2 class="py-4 rounded">
                             <button :class="expanded ? 'text-yellow-500' : ''" x-on:click="expanded = !expanded" :aria-expanded="expanded" class="flex items-center justify-between w-full py-2 text-sm font-bold md:text-xl group">
                                 <div class="flex items-center gap-4">
-                                    <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 transition duration-200 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <svg :class="expanded ? 'text-yellow-500' : ''" class="w-6 h-6 transition duration-200 shrink-0 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
                                     </svg>
                                     <span class="text-left transition duration-200 group-hover:text-yellow-500">Why should I participate in a hackathon?</span>

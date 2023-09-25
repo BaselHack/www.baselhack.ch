@@ -2,16 +2,16 @@
 
 @section('content')
     <main>
-        <div class="container my-16">
-            <div class="mb-6 md:mb-12">
-                <h1 class="text-6xl">The Event 2023</h1>
-                <h2 class="text-xl font-normal text-neutral-300">Everything about the event</h2>
+        <div class="container mt-8 mb-16">
+            <div class="my-12 md:my-24">
+                <h1 class="mb-4 text-2xl leading-tight md:mb-2 md:text-6xl">The 2023 BaselHack Event</h1>
+                <h2 class="text-lg font-normal md:text-xl text-neutral-300">Everything about the event</h2>
             </div>
 {{--            <div class="">--}}
-{{--                <h1 class="text-4xl mb-5">Program</h1>--}}
+{{--                <h1 class="mb-5 text-4xl">Program</h1>--}}
 {{--                <div class="grid gap-2 md:divide-x divide-solid md:grid-cols-2">--}}
 {{--                    <div class="">--}}
-{{--                        <h2 class="text-2xl mb-3">Saturday</h2>--}}
+{{--                        <h2 class="mb-3 text-2xl">Saturday</h2>--}}
 {{--                        <p>09:00 Door opening on Saturday</p>--}}
 {{--                        <p>09:30 Offical program start</p>--}}
 {{--                        <p>10:00 Challenge pitching (pick a challenge or present your own)</p>--}}
@@ -21,7 +21,7 @@
 {{--                    </div>--}}
 
 {{--                    <div>--}}
-{{--                        <h2 class="text-2xl mb-3">Sunday</h2>--}}
+{{--                        <h2 class="mb-3 text-2xl">Sunday</h2>--}}
 {{--                        <p class="text-yellow">...hack, hack, hack..</pc>--}}
 {{--                        <p>16:00 Hands-off for all teams</p>--}}
 {{--                        <p>16:10 Final presentations</p>--}}
@@ -31,65 +31,73 @@
 {{--                </div>--}}
 {{--            </div>--}}
 
-            <div class="container my-24">
-                <h2 class="mb-4 text-4xl">BaselHack Timetable</h2>
-                <p class="max-w-2xl mb-12">Here you can find the timetable for the event. Please note that the timetable is subject to change.</p>
-                <div class="grid items-start grid-cols-1 gap-12 md:grid-cols-3">
-                    <div class="flex flex-col items-start justify-center p-8 text-white transition-colors duration-500 border-l-8 border-yellow-600 time-block">
-                        <div class="text-xl font-bold">Friday</div>
-                        <hr class="my-2 w-50">
+            <div class="my-12 md:my-24">
+                <div class="grid items-start grid-cols-1 gap-12 md:grid-cols-2">
+                    {{-- <div class="flex flex-col items-start justify-center w-48 p-8 text-white border bg-neutral-900 time-block border-neutral-800">
+                        <div class="text-xl font-bold uppercase">Friday</div>
+                        <hr class="my-2 border-neutral-500">
                         <div class="mb-8">
-                            <strong class="block">Get-In / Meeting Point</strong>
-                            09:00 - 10:00 | Aeschenplatz Basel
+                            <span class="font-light">09:00 - 18:00</span>
+                            <strong class="block">Pre Event | Workshop by Let's Boot</strong>
                         </div>
-                        <div class="mb-8">
-                            <strong class="block">Workshop Kubernetes</strong>
-                            10:00 - 12:00 | Part 1
+                    </div> --}}
+                    <div class="flex flex-col items-start justify-center p-8 text-white border bg-neutral-900 time-block border-neutral-800">
+                        <div class="mb-6 text-xl font-bold leading-tight uppercase md:mb-8">Saturday, 27.10.2023</div>
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">08:00 - 09:00</strong>
+                            <span class="font-light">Opening + Keynote</span>
+                        </div>
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">09:00 - 09:45</strong>
+                            <span class="font-light">Pitching & Challenges</span>
+                        </div>
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">09:45 - 12:00</strong>
+                            <span class="font-light">Start Hacking | Let's go!</span>
+                        </div>
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">12:00 - 13:00</strong>
+                            <span class="font-light">Lunchbreak | Yum, nice food!</span>
+                        </div>
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">13:00 - 18:30</strong>
+                            <span class="font-light">Hacking</span>
                         </div>
                         <div>
-                            <strong class="block">Workshop Kubernetes</strong>
-                            14:00 - 18:00 | Part 2
+                            <strong class="block text-lg font-normal">18:30 - 19:30</strong>
+                            <span class="font-light">Hacking</span>
                         </div>
                     </div>
-                    <div class="flex flex-col items-start justify-center p-8 text-white border-l-8 border-yellow-600 time-block">
-                        <div class="text-xl font-bold">Saturday</div>
-                        <hr class="my-2 w-50">
-                        <div class="mb-8">
-                            <strong class="block">Welcome / Get-In</strong>
-                            08:00 - 09:00 | Registration
+                    <div class="flex flex-col items-start justify-center p-8 text-white border bg-neutral-900 time-block border-neutral-800">
+                        <div class="mb-6 text-xl font-bold leading-tight uppercase md:mb-8">Sunday, 28.10.2023</div>
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">08:00 - 09:00</strong>
+                            <span class="font-light">Opening + Keynote</span>
                         </div>
-                        <div class="mb-8">
-                            <strong class="block">Pitching</strong>
-                            09:00 - 09:45 | Challenges
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">09:00 - 09:45</strong>
+                            <span class="font-light">Pitching & Challenges</span>
                         </div>
-                        <div>
-                            <strong class="block">Start Hacking</strong>
-                            14:00 - 18:00 | Work
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">09:45 - 12:00</strong>
+                            <span class="font-light">Start Hacking | Let's go!</span>
                         </div>
-                    </div>
-                    <div class="flex flex-col items-start justify-center p-8 text-white border-l-8 border-yellow-600 time-block">
-                        <div class="text-xl font-bold">Sunday</div>
-                        <hr class="my-2 w-50">
-                        <div class="mb-8">
-                            <strong class="block">Door Opening</strong>
-                            08:30 - 12:00 | Work
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">12:00 - 13:00</strong>
+                            <span class="font-light">Lunchbreak | Yum, nice food!</span>
                         </div>
-                        <div class="mb-8">
-                            <strong class="block">Lunch</strong>
-                            12:00 - 14:00 | Foodbreak
-                        </div>
-                        <div class="mb-8">
-                            <strong class="block">Presentation</strong>
-                            14:00 - 16:00 | Jury / Judges
+                        <div class="mb-6 md:mb-8">
+                            <strong class="block text-lg font-normal">13:00 - 18:30</strong>
+                            <span class="font-light">Hacking</span>
                         </div>
                         <div>
-                            <strong class="block">Closing</strong>
-                            16:00 - 17:00 | End
+                            <strong class="block text-lg font-normal">18:30 - 19:30</strong>
+                            <span class="font-light">Hacking</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container my-32">
+            {{-- <div class="container my-32">
                 <div x-cloak x-data="{ selectedId: null, init() { this.$nextTick(() => this.select(this.$id('tab', 1))) }, select(id) { this.selectedId = id }, isSelected(id) { return this.selectedId === id }, whichChild(el, parent) { return Array.from(parent.children).indexOf(el) + 1 }}" x-id="['tab']">
                     <ul x-ref="tablist" @keydown.right.prevent.stop="$focus.wrap().next()" @keydown.home.prevent.stop="$focus.first()" @keydown.page-up.prevent.stop="$focus.first()" @keydown.left.prevent.stop="$focus.wrap().prev()" @keydown.end.prevent.stop="$focus.last()" @keydown.page-down.prevent.stop="$focus.last()" role="tablist" class="flex items-stretch -mb-px">
                         <li>
@@ -124,16 +132,25 @@
                         </section>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="my-8">
-                <h1 class="text-4xl mb-5">How to get there</h1>
-                <p>...</p>
+                <h1 class="mb-5 text-2xl leading-tight md:text-4xl">Directions & Location</h1>
+                <p class="mb-4">
+                    The location is 5 minutes from Pratteln train station at Hardstrasse 1 in the 
+                    Haus der Wirtschaft (large brown building right at the roundabout) in 4133 Pratteln. 
+                    From Pratteln train station, take the northern exit towards IKEA and follow 
+                    Wasenstrasse to the roundabout. From there you can see the entrance to the building. 
+                    There are limited parking spaces available. We recommend traveling by public transport.
+                </p>
+                <div class="flex flex-wrap gap-4 my-8 mb-2 md:my-auto md:gap-8">
+                    <a class="underline text-yellow" target="_blank" href="https://goo.gl/maps/b992RrCwVFgt5BVq8" rel="noopener noreferrer">Google Maps / Route</a>
+                    <a class="underline text-yellow" href="https://www.hdw.ch/" target="_blank">Location Website</a>
+                </div>
             </div>
-            <div class="my-8">
-                <h1 class="text-4xl mb-5">What to bring</h1>
-                <p>Bring a <b>laptop</b> and lots of energy</p>
-                <p class="text-yellow">We got you covered on the rest!</p>
+            <div class="my-12 md:my-24">
+                <h1 class="mb-5 text-2xl md:text-4xl">What to bring</h1>
+                <p>Bring a <strong>laptop</strong> and lots of energy, we got you covered on the rest!</p>
             </div>
         </div>
     </main>
