@@ -10,6 +10,28 @@
                 <div class="prose prose-lg">
                     {!! $body !!}
                 </div>
+
+                {{-- TEAM OVERVIEW --}}
+                <div class="my-16 space-y-12 text-center md:my-32">
+                    <ul class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl">
+                        @foreach($teams as $key => $team)
+                            <li>
+                                <div class="space-y-6">
+                                    <img class="w-32 h-32 mx-auto rounded-full xl:w-48 xl:h-48"
+                                        src="{{ $team->getProfileImage() }}"
+                                        alt="{{ $team->name }}">
+                                    <div class="space-y-2">
+                                        <div class="space-y-1">
+                                            <h4 class="text-lg font-medium leading-6">{{ $team->name }}</h4>
+                                            <span class="text-sm">{{ $team->funktion }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+
                 <div class="my-8 md:my-16">
                     <h2 class="mb-2 text-4xl">Annual Reports</h2>
                     <p class="mb-4 text-neutral-400">Since 2017, we publish an annual report.</p>
