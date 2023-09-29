@@ -34,6 +34,13 @@
 {{--                </div>--}}
 {{--            </div> --}}
             <div class="my-12 md:my-24">
+                {{-- <div class="my-8">
+                    <div class="p-8 text-white border bg-neutral-900 border-neutral-700">
+                        <div class="w-full mb-2 text-xl font-bold leading-tight uppercase">Friday, 27.10.2023</div>
+                        <strong>BaselBoot 2023</strong>
+                        <span>Build and Deploy an AI WebApp powered by ChatGPT</span>
+                    </div>
+                </div> --}}
                 <div class="grid items-start grid-cols-1 gap-12 lg:grid-cols-2">
                     {{-- <div class="flex flex-col items-start justify-center w-48 p-8 text-white border bg-neutral-900 time-block border-neutral-800">
                         <div class="text-xl font-bold uppercase">Friday</div>
@@ -44,7 +51,7 @@
                         </div>
                     </div> --}}
                     <div class="flex flex-col items-start justify-center text-white border bg-neutral-900 time-block border-neutral-700">
-                        <div class="w-full p-8 text-xl font-bold leading-tight uppercase border-b border-neutral-700">Saturday, 27.10.2023</div>
+                        <div class="w-full p-8 text-xl font-bold leading-tight uppercase border-b border-neutral-700">Saturday, 28.10.2023</div>
                         <div class="p-8">
                             <div class="mb-6 md:mb-8">
                                 <div class="text-lg font-normal">
@@ -118,7 +125,7 @@
                     </div>
 
                     <div class="flex flex-col items-start justify-center text-white border bg-neutral-900 time-block border-neutral-700">
-                        <div class="w-full p-8 text-xl font-bold leading-tight uppercase border-b border-neutral-700">Sunday, 28.10.2023</div>
+                        <div class="w-full p-8 text-xl font-bold leading-tight uppercase border-b border-neutral-700">Sunday, 29.10.2023</div>
                         <div class="p-8">
                             <div class="flex flex-col gap-1.5 mb-4">
                                 <span class="inline-block w-[4px] h-[4px] bg-neutral-700"></span>
