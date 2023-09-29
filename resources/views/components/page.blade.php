@@ -1,12 +1,13 @@
 @props(['title','teaser'])
 
 <div>
-    <h1 class="container text-4xl font-extrabold tracking-tight sm:text-5xl">{{ $title }}</h1>
-    @if(!empty($teaser))
-        <div class="container mt-6 space-y-6 text-gray-300">
-            <p class="text-xl">{{ $teaser }}</p>
-        </div>
-    @endif
+    <div class="container my-12 md:my-24">
+        <h1 class="mb-4 text-2xl leading-tight md:mb-2 md:text-6xl">{{ $title }}</h1>
+        @if(!empty($teaser))
+            <h2 class="text-lg font-normal md:text-xl text-neutral-300">{{ $teaser }}</h2>
+        @endif
+    </div>
+
     <div class="container mt-12 md:mt-24">
         {{ $slot }}
     </div>
