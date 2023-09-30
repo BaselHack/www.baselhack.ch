@@ -13,7 +13,7 @@
                             </h2>
                         </div>
                         <div class="flex justify-end me-4">
-                            <img class="w-[28rem]" src="/images/app/baselhack_laptop.png" alt="">
+                            <img style="transform: scaleX(-1)" class="w-[30rem]" src="/images/app/baselhack_laptop_2.png" alt="">
                         </div>
                     </div>
                     {{--

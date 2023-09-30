@@ -18,11 +18,11 @@
                                 </svg>
                                 {{ $challenge->company->name }}
                             </div>
-                            <div>
+                            <div class="mb-auto">
                                 <h1 class="mb-3 text-lg font-bold leading-tight md:mb-2 md:text-xl group-hover:text-yellow-500">{{ $challenge->title }}</h1>
                                 <small class="text-neutral-300 group-hover:text-yellow-500">{{ $challenge->subtitle }}</small>
                             </div>
-                            <hr class="my-2 md:my-4 border-neutral-500">
+                            <hr class="my-2 border-dashed md:my-4 border-neutral-700">
                             <div class="flex items-center gap-4 group">
                                 <svg class="w-5 h-5 text-neutral-400 group-hover:text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
