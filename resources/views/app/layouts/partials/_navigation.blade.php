@@ -32,7 +32,7 @@
     <nav x-cloak class="container py-4 md:py-2 navigation">
         <div class="flex flex-wrap items-center justify-between gap-4">
             <a class="logo shrink-0" href="{{ route('start.index')}}">
-                <img class="h-16" src="https://www.baselhack.ch/images/app/logos/baselhack_white.png" alt="BaselHack" />
+                <img class="h-14" src="https://www.baselhack.ch/images/app/logos/baselhack_white.png" alt="BaselHack" />
             </a>
             <button @click="navOpen = !navOpen" class="text-white transition md:hidden bg-clip-text hover:bg-gradient-to-tr from-yellow-500 to-teal-500" role="button" aria-label="Navigation öffnen">
                 <svg x-show="!navOpen" class="w-7" viewBox="0 0 59 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +45,7 @@
                 </svg>
             </button>
             <div class="items-center justify-center hidden gap-8 md:block">
-                <ul class="flex-row hidden gap-8 my-8 xl:gap-10 md:flex">
+                <ul class="flex-row hidden gap-8 my-6 xl:gap-10 md:flex">
                     <li><a class="{{ request()->routeIs('event.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('event.index') }}" href="{{ route('event.index') }}">{{ __('app/layouts.event') }}</a></li>
                     {{-- <li><a class="{{ request()->routeIs('team.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('team.index') }}" href="{{ route('team.index') }}">{{ __('app/layouts.team') }}</a></li> --}}
                     <li><a class="{{ request()->routeIs('challenges.index') ? 'text-yellow-500 underline' : '' }} uppercase transition hover:underline hover:text-yellow-500" href="{{ route('challenges.index') }}" href="{{ route('challenges.index') }}">{{ __('app/layouts.challenges') }}</a></li>
