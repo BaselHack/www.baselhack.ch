@@ -1,8 +1,22 @@
 @extends('app.layouts.default')
 @section('content')
+    {{-- <style>
+        .background-blur::before {
+            position: absolute;
+            z-index: -1;
+            content: "";
+            top: 0%;
+            bottom: 10%;
+            width: 150%;
+            left: -25%;
+            background: linear-gradient(83.21deg, #aca518 0%, #fff534 100%);
+            -webkit-mask-image: radial-gradient(rgba(0,0,0,.75), transparent 70%);
+            mask-image: radial-gradient(rgba(0,0,0,.45), transparent 70%);
+        }
+    </style> --}}
     <main>
         <div>
-            <div>
+            <div class="background-blur">
                 <div class="container relative py-24">
                     <div class="grid items-center grid-cols-1 gap-8 md:grid-cols-2">
                         <div>
@@ -13,7 +27,7 @@
                             </h2>
                         </div>
                         <div class="flex justify-end me-4">
-                            <img class="w-[28rem]" src="/images/app/baselhack_laptop.png" alt="">
+                            <img style="transform: scaleX(-1)" class="w-[30rem]" src="/images/app/baselhack_laptop_2.png" alt="">
                         </div>
                     </div>
                     {{--

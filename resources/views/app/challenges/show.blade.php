@@ -17,7 +17,12 @@
                 </h2>
             </div>
             <hr class="my-8 border-neutral-700">
-            <div class="mt-8 prose md:mt-12">{!! $challenge->description !!}</div>            
+            <div class="mt-8 prose md:mt-12">{!! $challenge->description !!}</div>
+            <hr class="my-8 border-dashed border-neutral-600">
+            <a class="flex gap-2 px-4 py-2 text-black bg-yellow-500 rounded w-fit" href="{{ route('challenges.index') }}">
+                <i class="bi bi-arrow-left"></i>
+                <span>Back to overview</span>
+            </a>
         </div>
     </div>
 @endsection
