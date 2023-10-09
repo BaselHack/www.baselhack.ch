@@ -17,7 +17,7 @@
                         @foreach($teams as $key => $person)
                             <li>
                                 <div class="space-y-6">
-                                    <img class="max-w-lg mx-auto sm:mx-none sm:max-w-full rounded-2xl" src="{{ $person->getProfileImage() }}" alt="{{ $person->name }}">
+                                    <img class="max-w-[14rem] sm:max-w-full mx-auto sm:mx-none rounded-2xl" src="{{ $person->getProfileImage() }}" alt="{{ $person->name }}">
                                     <div class="space-y-2">
                                         <div class="space-y-1 text-center sm:text-left">
                                             <h4 class="text-lg font-medium">{{ $person->name }}</h4>
