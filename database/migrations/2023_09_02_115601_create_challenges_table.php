@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('challenges', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('slug')->unique();
             $table->string('subtitle');
             $table->text('description');
             $table->unsignedBigInteger('company_id')->nullable();
             $table->boolean('published')->default(false);
-            $table->string('slug');
             $table->timestamps();
 
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade')->onDelete('set null');

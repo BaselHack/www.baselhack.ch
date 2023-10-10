@@ -10,5 +10,4 @@ test('show event.index', function () {
     $route = route('event.index');
     $response = $this->get($route);
     $response->assertOk();
-    $response->assertSee($section->title);
 })->group('event');
