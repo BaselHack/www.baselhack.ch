@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\App\AboutController;
 use App\Http\Controllers\App\ChallengesController;
+use App\Http\Controllers\App\EventController;
 use App\Http\Controllers\App\ContactController;
 use App\Http\Controllers\App\NewsletterController;
 use App\Http\Controllers\App\PartnersController;
@@ -37,6 +38,9 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact.index'
 Route::get('schedule', [ScheduleController::class, 'index'])->name('schedule.index');
 
 Route::get('challenges', [ChallengesController::class, 'index'])->name('challenges.index');
+Route::get('challenges/{challenge}', [ChallengesController::class, 'show'])->name('challenges.show');
+
+Route::get('event', [EventController::class, 'index'])->name('event.index');
 
 Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy.index');
 Route::get('terms', [TermsController::class, 'index'])->name('terms.index');

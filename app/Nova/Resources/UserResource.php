@@ -64,6 +64,9 @@ class UserResource extends Resource
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
 
+            Text::make('Funktion', 'funktion')
+                ->rules('required', 'max:512'),
+
             Password::make('PasswordResource')
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')

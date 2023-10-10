@@ -2,7 +2,7 @@
 
 return [
 
-    'title' => 'NewsletterResource Subscription',
+    'title' => 'Newsletter Subscription',
     'subtitle' => 'Get the latest news about the BaselHack to your inbox. You can unsubscribe anytime.',
 
     'form' => [

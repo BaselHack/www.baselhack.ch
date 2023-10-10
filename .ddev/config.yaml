@@ -1,4 +1,4 @@
-name: www.baselhack.ch
+name: baselhack
 type: laravel
 docroot: public
 php_version: "8.2"
@@ -10,7 +10,7 @@ additional_hostnames: []
 additional_fqdns: []
 database:
     type: mariadb
-    version: "10.4"
+    version: "10.3"
 nfs_mount_enabled: false
 mutagen_enabled: false
 use_dns_when_possible: true
@@ -205,11 +205,11 @@ project_tld: test
 # The default time that ddev waits for all containers to become ready can be increased from
 # the default 120. This helps in importing huge databases, for example.
 
-#web_extra_exposed_ports:
-#- name: nodejs
-#  container_port: 3000
-#  http_port: 2999
-#  https_port: 3000
+web_extra_exposed_ports:
+- name: node-vite
+  container_port: 5173
+  http_port: 5172
+  https_port: 5173
 #- name: something
 #  container_port: 4000
 #  https_port: 4000
@@ -239,8 +239,9 @@ project_tld: test
 # and you can't erase existing hooks or all environment variables.
 # However, with "override_config: true" in a particular config.*.yaml file,
 # 'nfs_mount_enabled: false' can override the existing values, and
-# hooks:
-#   post-start: []
+hooks:
+    post-start:
+      - exec: "npm run dev -- --host"
 # or
 # web_environment: []
 # or

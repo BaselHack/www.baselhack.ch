@@ -33,14 +33,16 @@ html {
     font-style: italic;
 }
 
+/*
 a {
-    @apply transition ease-in-out duration-300;
+    @apply transition duration-300 ease-in-out;
     @apply text-teal;
 }
 
 a:hover {
-    @apply transition ease-in-out duration-300;
+    @apply transition duration-300 ease-in-out;
 }
+*/
 
 p {
     @apply text-base;
@@ -115,4 +117,25 @@ small {
 blockquote,
 cite {
     @apply mx-4;
+}
+
+[x-cloak] { 
+    display: none !important; 
+}
+
+/* General Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+background: black;
+}
+::-webkit-scrollbar-thumb {
+background-color: #4e4e4c;
+}
+
+/* Scrollbar Firefox */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #4e4e4c black;
 }

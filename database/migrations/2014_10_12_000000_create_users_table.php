@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
 
             $table->boolean('profile_published')->default(false);
+            $table->string('profile_funktion')->nullable();
             $table->string('profile_gravatar')->nullable();
             $table->string('profile_website')->nullable();
             $table->string('profile_github')->nullable();

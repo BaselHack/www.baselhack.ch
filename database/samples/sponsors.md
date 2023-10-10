@@ -1,4 +1,4 @@
-## **Become a Sponsor of the BaselHack 2022!**
+## **Become a Sponsor of the BaselHack 2023!**
 
 <br><br>
 We are accepting sponsorships for the BaselHack 2022. The BaselHack 2022 will take place at a unique and modern location in the Haus der Wirtschaft in Pratteln (Basel). Furthermore, the location features the largest LED screen in the region! The BaselHack 2022 is expected to be the biggest in this series to date with an expected audience of around 100 participants.  

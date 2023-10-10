@@ -34,6 +34,7 @@ class UserFactory extends Factory
         return $this->state(function (array $attributes) {
             return [
                 'profile_published' => true,
+                'profile_funktion' => $this->faker->text(50),
                 'profile_gravatar' => null,
                 'profile_website' => $this->faker->url(),
                 'profile_twitter' => $this->faker->url(),

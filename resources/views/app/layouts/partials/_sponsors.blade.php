@@ -1,5 +1,7 @@
-<div class="bg-black text-white">
-    <div class="max-w-screen-xl mx-auto py-8 px-4 overflow-hidden space-y-8 sm:px-6 lg:px-8">
+{{--
+<div>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         @include('app.components._sponsors')
     </div>
 </div>
+--}}
