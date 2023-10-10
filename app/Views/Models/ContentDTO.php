@@ -10,10 +10,10 @@ use Spatie\LaravelData\Data;
 class ContentDTO extends Data
 {
     public function __construct(
-        public Page|null $page,
-        public string|null $title,
-        public string|null $teaser,
-        public string|null $body,
+        public ?Page $page,
+        public ?string $title,
+        public ?string $teaser,
+        public ?string $body,
     ) {
     }
 

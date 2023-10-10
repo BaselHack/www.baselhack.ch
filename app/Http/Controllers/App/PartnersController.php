@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers\App;
 
-use App\Enums\CompanyTypeEnum;
 use App\Http\Controllers\Controller;
-use App\Models\Company;
 use App\Views\Models\ContentDTO;
 
 class PartnersController extends Controller

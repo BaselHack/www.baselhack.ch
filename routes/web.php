@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\App\AboutController;
 use App\Http\Controllers\App\ChallengesController;
-use App\Http\Controllers\App\EventController;
 use App\Http\Controllers\App\ContactController;
+use App\Http\Controllers\App\EventController;
 use App\Http\Controllers\App\NewsletterController;
 use App\Http\Controllers\App\PartnersController;
 use App\Http\Controllers\App\PositionsController;

@@ -39,7 +39,7 @@ class ChallengesController extends Controller
         $page = (object) [
             'robots' => 'index, follow',
             'title' => $challenge->title,
-            'description' => $challenge->subtitle
+            'description' => $challenge->subtitle,
         ];
 
         return view('app.challenges.show')->with([
