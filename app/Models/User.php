@@ -34,11 +34,7 @@ class User extends Authenticatable
 
     public function scopeActive($query)
     {
-<<<<<<< HEAD
         return $query->where(['profile_published' => true, 'alumni' => false]);
-=======
-        return $query->where(['profile_published' => true])->whereIn('id', [1, 8, 11, 17, 12, 15, 14, 16, 6]);
->>>>>>> 95ef9e788a9c5824c35220d9adb2a1e91f3a6dc8
     }
 
     public function scopeAlumni($query)

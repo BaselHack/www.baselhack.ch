@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
+use App\Nova\Resources\ChallengeResource;
 use App\Nova\Resources\ChannelResource;
 use App\Nova\Resources\CompanyResource;
-use App\Nova\Resources\ChallengeResource;
 use App\Nova\Resources\NewsletterResource;
 use App\Nova\Resources\PageResource;
 use App\Nova\Resources\PasswordResource;
