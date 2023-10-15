@@ -10,6 +10,7 @@ class Challenge extends Model
     use HasFactory;
 
     protected $casts = ['published_at' => 'date'];
+
     protected $with = ['company'];
 
     public function getRouteKeyName()
@@ -23,13 +24,15 @@ class Challenge extends Model
     }
 
     protected $fillable = [
-        'title', 'subtitle', 'description', 'company', 'published', 'slug'
+        'title', 'subtitle', 'description', 'company', 'published', 'slug',
     ];
 
-    public function isPublished() {
-        if(! $this->published) {
+    public function isPublished()
+    {
+        if (! $this->published) {
             return false;
         }
+
         return true;
     }
 }
