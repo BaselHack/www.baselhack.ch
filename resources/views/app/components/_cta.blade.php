@@ -20,9 +20,9 @@
             <h1 class="relative mb-4 text-xl leading-tight pointer-events-none md:text-4xl">
                 <strong>Participate in BaselHack 2023 in October?</strong>
             </h1>
-            <h4 class="relative mb-3 font-normal pointer-events-none">Get your ticket in exchange for a deposit of 20 CHF on eventfrog.ch</h4>
+            <h4 class="relative mb-3 font-normal pointer-events-none">To join the waiting list, send us a message to info@baselhack.ch</h4>
             <a class="relative flex self-center gap-4 px-6 py-3 mt-6 mb-4 text-yellow-400 bg-black rounded-lg lg:self-start focus:outline outline-offset-2 outline-2 outline-black w-fit" href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2023-7059415336391468199.html" target="_blank">
-                <span>Grab your ticket</span>
+                <span>infos on eventfrog</span>
                 <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                 </svg>

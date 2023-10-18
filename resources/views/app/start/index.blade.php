@@ -20,7 +20,7 @@
                 <div class="container relative py-24">
                     <div class="grid items-center grid-cols-1 gap-8 md:grid-cols-2">
                         <div>
-                            <h1 class="max-w-screen-xl text-[3em] leading-[1em] sm:leading-tight uppercase sm:text-6xl md:text-7xl md:mb-6">Register now</h1>
+                            <h1 class="max-w-screen-xl text-[3em] leading-[1em] sm:leading-tight uppercase sm:text-6xl md:text-7xl md:mb-6">Booked out</h1>
                             <h2 id="descryption-text" class="max-w-screen-xl mt-4 text-lg font-normal leading-tight md:text-4xl">
                                 <span>28. / 29. October 2023</span><br>
                                 <span>HDW, Pratteln</span>
