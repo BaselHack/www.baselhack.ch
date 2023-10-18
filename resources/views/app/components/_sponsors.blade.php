@@ -106,7 +106,11 @@
             </div>
             <div class="flex flex-col items-start justify-start gap-4 p-4">
                 <span class="self-start px-1 mb-2 text-xs text-black uppercase bg-white rounded-sm">Partner</span>
-                <img class="w-20" src="/images/app/sponsors/swiss-dev-jobs.png" alt="Swiss Dev Jobs" />
+                <img data-sponsor="basel-innovation" class="object-contain max-w-12 max-h-10" src="/images/app/sponsors/basel-innovation.png" alt="Basel Innovation" />
+            </div>
+            <div class="flex flex-col items-start justify-start gap-4 p-4">
+                <span class="self-start px-1 mb-2 text-xs text-black uppercase bg-white rounded-sm">Partner</span>
+                <img data-sponsor="swiss-dev-jobs" class="w-20" src="/images/app/sponsors/swiss-dev-jobs.png" alt="Swiss Dev Jobs" />
             </div>
         </div>
     </div>

@@ -49,8 +49,8 @@
                         <div class="mb-2">
                             <h2 class="text-xl leading-tight md:text-2xl">Pitch your own idea!</h2>
                             <p class="font-light text-md md:text-lg">
-                                Your have your own pitch idea?<br>
-                                Present it within 3 minutes and get your team together!</p>
+                                You have your own pitch idea?<br>
+                                Present it in 3 minutes and form your team!</p>
                         </div>
                         <a class="self-start px-6 py-3 text-black bg-yellow-500 rounded" href="https://github.com/BaselHack/BaselHack-2023#how-does-it-work" target="_blank">Post on Github <nobr>(not required!)</nobr></a> 
                     </div>
@@ -83,6 +83,63 @@
                     </article>
                 </div>
             </div>
+            {{-- <hr class="my-12 md:my-24 border-neutral-700">
+            <div>
+                <h2 class="mb-4 text-2xl leading-tight md:mb-2 md:text-6xl">Meet the Jury of BaselHack 2023</h2>
+                <p class="text-lg font-normal md:text-xl text-neutral-300">We are pleased to announce the five members of the jury for the BaselHack 2023</p>
+                <div class="my-8">Participating with the BaselHack is mainly for fun. Nevertheless, it remains a competition! Here are the members of the jury that will judge the quality and merit of the presentations and prototypes built during the BaselHack 2022 hackathon. We are pleased to have found a good mix between representatives of the industry, past or present sponsors, academics, and local authorities.</div>
+                <div class="grid grid-cols-1 gap-8 my-12 md:my-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div class="p-4 border rounded border-neutral-800">
+                        <h1 class="mb-4 text-lg leading-tight">Elijah Appius</h1>
+                        <p class="text-sm font-light">
+                            Manager Digital Innovation, Business Promotion Division
+                            Office for Economics and Labour, Canton of Basel-Stadt
+                        </p>
+                    </div>
+                    <div class="p-4 border rounded border-neutral-800">
+                        <h1 class="mb-4 text-lg leading-tight">Prof. Dr. Ulrich Fiedler</h1>
+                        <p class="text-sm font-light">
+                            Professor, Bern University of Applied Sciences
+                            Angel Investor, Swiss ICT Investor Club (SICTIC)
+                        </p>
+                    </div>
+                    <div class="p-4 border rounded border-neutral-800">
+                        <h1 class="mb-4 text-lg leading-tight">Brigitte Hulliger</h1>
+                        <p class="text-sm font-light">
+                            Managing Director & Consultant in Requirements 
+                            Engineering & Project Management
+                            Break the Box GmbH
+                        </p>
+                    </div>
+                    <div class="p-4 border rounded border-neutral-800">
+                        <h1 class="mb-4 text-lg leading-tight">Matthias Locher</h1>
+                        <p class="text-sm font-light">
+                            Head of Software Engineering
+                            Coop Genossenschaft
+                        </p>
+                    </div>
+                    <div class="p-4 border rounded border-neutral-800">
+                        <h1 class="mb-4 text-lg leading-tight">Michael Nussbaumer</h1>
+                        <p class="text-sm font-light">
+                            CIO & Executive Board, Regionalwerke AG Baden
+                            E-Commerce Consultant, M8
+                            Lecturer, Lucerne University of Applied Sciences and Arts
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="my-12">
+                <h1>Assessment Criteria</h1>
+                <p>The teams and their presentations & prototypes will be judged by the following criteria:</p>
+                <ol class="p-0 m-0 list-decimal">
+                    <li>Innovation (novelty, value proposition)</li>
+                    <li>Significance (relevance to the society, social aspect)</li>
+                    <li>Quality of the demonstrated prototype</li>
+                    <li>Technical sophistication</li>
+                    <li>Team (teamwork, diversity, learnings)</li>
+                    <li>Compliance with the rules</li>
+                </ol>
+            </div> --}}
         </div>
     </main>
 @endsection

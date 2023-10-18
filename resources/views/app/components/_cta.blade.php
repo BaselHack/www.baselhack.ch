@@ -18,14 +18,14 @@
     <div class="cta-element my-8 text-black md:my-16 bg-[#efe73e] card-shine appearance-none relative overflow-hidden p-8 md:p-12 before:absolute before:content-[''] rounded-sm group outline-none">
         <div class="flex flex-col items-start w-full">
             <h1 class="relative mb-4 text-xl leading-tight pointer-events-none md:text-4xl">
-                <strong>Participate in BaselHack 2023 in October?</strong>
+                <strong>BaselHack 2023 is fully booked!</strong>
             </h1>
-            <h4 class="relative mb-3 font-normal pointer-events-none">To join the waiting list, send us a message to info@baselhack.ch</h4>
+            <h4 class="relative mb-3 font-normal pointer-events-none">Missed the chance to grab a ticket? Join a waiting list and receive notifications if someone cancels. Contact us via info@baselhack.ch to join the waiting list.</h4>
             <a class="relative flex self-center gap-4 px-6 py-3 mt-6 mb-4 text-yellow-400 bg-black rounded-lg lg:self-start focus:outline outline-offset-2 outline-2 outline-black w-fit" href="https://eventfrog.ch/de/p/wissenschaft-und-technik/baselhack-2023-7059415336391468199.html" target="_blank">
-                <span>infos on eventfrog</span>
                 <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                 </svg>
+                <span>Read more on eventfrog</span>
             </a>
             <div class="relative block w-full gap-12 pt-6 mt-8 border-t border-black md:flex md:mt-8 grid-col-1 md:grid-cols-2">
                 <div class="flex items-start justify-start gap-4 md:items-center">
