@@ -83,24 +83,22 @@
                     </article>
                 </div>
             </div>
-            {{-- <hr class="my-12 md:my-24 border-neutral-700">
+            <hr class="my-12 md:my-24 border-neutral-700">
             <div>
                 <h2 class="mb-4 text-2xl leading-tight md:mb-2 md:text-6xl">Meet the Jury of BaselHack 2023</h2>
-                <p class="text-lg font-normal md:text-xl text-neutral-300">We are pleased to announce the five members of the jury for the BaselHack 2023</p>
-                <div class="my-8">Participating with the BaselHack is mainly for fun. Nevertheless, it remains a competition! Here are the members of the jury that will judge the quality and merit of the presentations and prototypes built during the BaselHack 2022 hackathon. We are pleased to have found a good mix between representatives of the industry, past or present sponsors, academics, and local authorities.</div>
-                <div class="grid grid-cols-1 gap-8 my-12 md:my-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <div class="my-8 text-lg">Here are the members of the jury that will judge the quality and merit of the presentations and prototypes built during the BaselHack 2023 hackathon. We rely on a good mix between representatives of the industry, academics, local authorities and the hackathon scene.</div>
+                <div class="grid grid-cols-1 gap-8 my-12 md:my-16 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     <div class="p-4 border rounded border-neutral-800">
                         <h1 class="mb-4 text-lg leading-tight">Elijah Appius</h1>
                         <p class="text-sm font-light">
-                            Manager Digital Innovation, Business Promotion Division
-                            Office for Economics and Labour, Canton of Basel-Stadt
+                            Manager Digital Innovation - Economic Development Canton of Basel-Stadt
                         </p>
                     </div>
                     <div class="p-4 border rounded border-neutral-800">
-                        <h1 class="mb-4 text-lg leading-tight">Prof. Dr. Ulrich Fiedler</h1>
+                        <h1 class="mb-4 text-lg leading-tight">Ulrich Fiedler</h1>
                         <p class="text-sm font-light">
-                            Professor, Bern University of Applied Sciences
-                            Angel Investor, Swiss ICT Investor Club (SICTIC)
+                            Professor @ Bern University of Applied Sciences,
+                            Angel Investor Swiss ICT Investor Club (SICTIC)
                         </p>
                     </div>
                     <div class="p-4 border rounded border-neutral-800">
@@ -112,34 +110,35 @@
                         </p>
                     </div>
                     <div class="p-4 border rounded border-neutral-800">
-                        <h1 class="mb-4 text-lg leading-tight">Matthias Locher</h1>
+                        <h1 class="mb-4 text-lg leading-tight">Daniel Kohler</h1>
                         <p class="text-sm font-light">
-                            Head of Software Engineering
-                            Coop Genossenschaft
+                            Board Member Innovation Basel, Digital Transformation 
+                            Consultant + Software Engineer YOO AG
                         </p>
                     </div>
                     <div class="p-4 border rounded border-neutral-800">
-                        <h1 class="mb-4 text-lg leading-tight">Michael Nussbaumer</h1>
+                        <h1 class="mb-4 text-lg leading-tight">Rolf Bielser</h1>
                         <p class="text-sm font-light">
-                            CIO & Executive Board, Regionalwerke AG Baden
-                            E-Commerce Consultant, M8
-                            Lecturer, Lucerne University of Applied Sciences and Arts
+                            Computare AG: IT-Architekt, Projektleiter, Programm Manager, 
+                            Consultant und agiler Coach
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="my-12">
-                <h1>Assessment Criteria</h1>
+            <div class="my-12 md:my-24">
+                <h1 class="text-2xl md:text-6xl">Assessment Criteria</h1>
                 <p>The teams and their presentations & prototypes will be judged by the following criteria:</p>
-                <ol class="p-0 m-0 list-decimal">
-                    <li>Innovation (novelty, value proposition)</li>
-                    <li>Significance (relevance to the society, social aspect)</li>
-                    <li>Quality of the demonstrated prototype</li>
-                    <li>Technical sophistication</li>
-                    <li>Team (teamwork, diversity, learnings)</li>
-                    <li>Compliance with the rules</li>
-                </ol>
-            </div> --}}
+                <div>
+                    <ul class="flex flex-col gap-2 mt-8 ml-1 list-disc list-inside">
+                        <li>Innovation (novelty, value proposition)</li>
+                        <li>Significance (social, technological or economic relevance)</li>
+                        <li>Quality of the demonstrated prototype</li>
+                        <li>Technical sophistication</li>
+                        <li>Team (teamwork, diversity, learnings)</li>
+                        <li>Compliance with the rules</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
 @endsection
