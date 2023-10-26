@@ -52,7 +52,7 @@
                                 You have your own pitch idea?<br>
                                 Present it in 3 minutes and form your team!</p>
                         </div>
-                        <a class="self-start px-6 py-3 text-black bg-yellow-500 rounded" href="https://github.com/BaselHack/BaselHack-2023#how-does-it-work" target="_blank">Post on Github <nobr>(not required!)</nobr></a> 
+                        <a class="self-start px-6 py-3 text-black bg-yellow-600 rounded" href="https://github.com/BaselHack/BaselHack-2023#how-does-it-work" target="_blank">Post on Github <nobr>(not required!)</nobr></a> 
                     </div>
                 </section>
             </div>

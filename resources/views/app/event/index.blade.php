@@ -255,11 +255,11 @@
                 </div>
             </div> --}}
 
-            <div class="my-12 md:my-32">
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-                    <img style="clip-path: polygon(0 1%, 98% 1%, 100% 100%, 2% 95%);" class="transition-transform duration-300 rounded hover:scale-105" src="/images/app/baselhack_2022_3.jpg" alt="Haus der Wirtschaft">
-                    <img style="clip-path: polygon(5% 3%, 98% 1%, 100% 94%, 2% 97%);" class="transition-transform duration-300 rounded hover:scale-105" src="/images/app/baselhack_2022_2.jpg" alt="Haus der Wirtschaft">
-                    <img style="clip-path: polygon(3% 3%, 100% 0, 94% 99%, 6% 94%);" class="transition-transform duration-300 rounded hover:scale-105" src="/images/app/baselhack_2022_1.jpg" alt="Haus der Wirtschaft">
+            <div class="my-16 md:my-32">
+                <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+                    <img class="transition-transform duration-300 rounded" src="/images/app/baselhack_2022_3.jpg" alt="Haus der Wirtschaft">
+                    <img class="transition-transform duration-300 rounded" src="/images/app/baselhack_2022_2.jpg" alt="Haus der Wirtschaft">
+                    <img class="transition-transform duration-300 rounded" src="/images/app/baselhack_2022_1.jpg" alt="Haus der Wirtschaft">
                     {{-- <img style="clip-path: polygon(3% 0, 98% 3%, 100% 100%, 0 98%);" class="transition-transform duration-300 rounded hover:scale-105" src="/images/app/hdw_1.jpeg" alt="Haus der Wirtschaft">
                     <img style="clip-path: polygon(1% 1%, 100% 0, 98% 99%, 5% 100%);" class="transition-transform duration-300 rounded hover:scale-105" src="/images/app/hdw_6.jpg" alt="Haus der Wirtschaft">
                     <img style="clip-path: polygon(4% 0, 97% 2%, 96% 93%, 0 98%);" class="transition-transform duration-300 rounded hover:scale-105" src="/images/app/hdw_7.jpg" alt="Haus der Wirtschaft"> --}}
