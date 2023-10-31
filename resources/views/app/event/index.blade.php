@@ -349,7 +349,7 @@
                         </div>
                     </li>
                 </ul>
-                <p class="mt-8 prose">We forgot something? Hit us up on our Hackathon Slack Server: <a href="https://join.slack.com/t/baselhack-2023/shared_invite/zt-2468le0gj-Q~JNIQ_HOjSX8E_QczUFYw" target="_blank">https://join.slack.com/</a></p>
+                {{-- <p class="mt-8 prose">We forgot something? Hit us up on our Hackathon Slack Server: <a href="https://join.slack.com/t/baselhack-2023/shared_invite/zt-2468le0gj-Q~JNIQ_HOjSX8E_QczUFYw" target="_blank">https://join.slack.com/</a></p> --}}
                 <p class="mt-8">Remember, a hackathon is about more than just lines of code; it's about camaraderie, creativity, and having a blast. So, pack your essentials, gather your team, and let's code our way into the future while having a ton of fun along the way!</p>
             </div>
         </div>
