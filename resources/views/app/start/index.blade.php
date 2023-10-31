@@ -17,20 +17,21 @@
     <main>
         <div>
             <div class="background-blur">
-                <div class="container relative py-24">
-                    <div class="grid items-center grid-cols-1 gap-8 md:grid-cols-2">
-                        <div>
-                            <h1 class="max-w-screen-xl text-[3em] leading-tight uppercase sm:text-6xl md:text-7xl md:mb-6">
-                                Event booked out!
+                <div class="container py-24 md:py-32">
+                    <div class="grid items-center justify-center grid-cols-1 gap-8">
+                        <div class="text-center">
+                            <h1 class="max-w-screen-lg mx-auto text-[3em] leading-tight uppercase sm:text-6xl md:text-7xl md:mb-3">
+                                What a <span class="text-yellow-500">Hackathon!</span>
                             </h1>
-                            <h2 id="descryption-text" class="max-w-screen-xl mt-4 text-lg font-normal leading-tight md:text-4xl">
-                                <span>28. + 29. October 2023</span>
+                            <h2 id="descryption-text" class="max-w-screen-lg mx-auto mt-4 text-lg font-normal leading-tight md:text-3xl">
+                                <div class="inline">See you at BaselHack 2024!</div>
                             </h2>
                         </div>
-                        <div class="flex justify-end me-4">
+                        {{-- <div class="flex justify-end me-4">
                             <img style="transform: scaleX(-1)" class="w-[30rem]" src="/images/app/baselhack_laptop_2.png" alt="">
-                        </div>
+                        </div> --}}
                     </div>
+                    {{-- <img class="absolute top-8 z-0 h-72 pointer-events-none opacity-[.5] right-50 -rotate-12" src="https://www.baselhack.ch/images/app/logos/baselhack_black.png" alt="BaselHack" /> --}}
                     {{--
                         <div class="absolute inset-0">
                             <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.432/build/spline-viewer.js"></script>
@@ -40,11 +41,11 @@
                 </div>
             </div>
 
-            @include('app.components._cta')
+            {{-- @include('app.components._cta') --}}
 
             @include('app.components._benefits')
 
-            @include('app.components._countdown')
+            {{-- @include('app.components._countdown') --}}
 
             @include('app.components._sponsors')
 
