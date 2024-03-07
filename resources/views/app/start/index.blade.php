@@ -43,7 +43,10 @@
 
             {{-- @include('app.components._cta') --}}
 
-            @include('app.components._benefits')
+            {{--@include('app.components._benefits')--}}
+            <div class="container flex items-center justify-center">
+                <iframe src="https://drive.google.com/file/d/1EsyS-Htvr6rqtGttTQ1PKsEczJBb-e3A/preview" width="640" height="480" allow="autoplay"></iframe>
+            </div>
 
             {{-- @include('app.components._countdown') --}}
 
